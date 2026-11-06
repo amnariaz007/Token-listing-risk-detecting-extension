@@ -1,0 +1,517 @@
+[
+  {
+    "at": "2026-11-06T11:50:42.214Z",
+    "step": "validate",
+    "status": "running",
+    "message": "Validating token input"
+  },
+  {
+    "at": "2026-11-06T11:50:43.379Z",
+    "step": "validate",
+    "status": "done",
+    "message": "Read UNI from its contract 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984 on ethereum"
+  },
+  {
+    "at": "2026-11-06T11:50:43.379Z",
+    "step": "discover",
+    "status": "running",
+    "message": "Discovering live intelligence capabilities"
+  },
+  {
+    "at": "2026-11-06T11:50:46.651Z",
+    "step": "discover",
+    "status": "done",
+    "message": "136 live intents on https://devnode.telegraphprotocol.com"
+  },
+  {
+    "at": "2026-11-06T11:50:46.651Z",
+    "step": "plan",
+    "status": "running",
+    "message": "Planning intelligence purchases"
+  },
+  {
+    "at": "2026-11-06T11:50:47.014Z",
+    "step": "plan",
+    "status": "info",
+    "message": "Largest DEX pool: 0x1d42064Fc4Beb5F8aAF85F4617AE8b3b5B8Bd801"
+  },
+  {
+    "at": "2026-11-06T11:50:56.386Z",
+    "step": "plan",
+    "status": "info",
+    "message": "Contract audit: Reviews the contract source for reentrancy, access-control and integer-overflow flaws. Asking txlens.",
+    "check": {
+      "name": "Contract audit",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "miner_id": "9002",
+      "state": "planned",
+      "quoted": "0.01 USDC"
+    }
+  },
+  {
+    "at": "2026-11-06T11:50:56.386Z",
+    "step": "plan",
+    "status": "info",
+    "message": "Token controls: A different question from the audit: can the owner trap holders, and do a few wallets hold most of the supply? Asking goplus-security.",
+    "check": {
+      "name": "Token controls",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "miner_id": "200001",
+      "state": "planned",
+      "quoted": "0.01 USDC"
+    }
+  },
+  {
+    "at": "2026-11-06T11:50:56.386Z",
+    "step": "plan",
+    "status": "info",
+    "message": "Sanctions screen: Screens the token's identity against consolidated sanctions lists. The network will route this.",
+    "check": {
+      "name": "Sanctions screen",
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "state": "planned",
+      "quoted": "0.01 USDC"
+    }
+  },
+  {
+    "at": "2026-11-06T11:50:56.386Z",
+    "step": "plan",
+    "status": "info",
+    "message": "Wash trading: Scans recent transfers on-chain for round-trip volume. Asking verifywire-wash-trading.",
+    "check": {
+      "name": "Wash trading",
+      "intent": "WASH_TRADING_DETECTION_GENERAL",
+      "miner_id": "7378",
+      "state": "planned",
+      "quoted": "0.01 USDC"
+    }
+  },
+  {
+    "at": "2026-11-06T11:50:56.386Z",
+    "step": "plan",
+    "status": "info",
+    "message": "Holder count: Reads how many distinct addresses hold the token. Asking chainwire-holder-count.",
+    "check": {
+      "name": "Holder count",
+      "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+      "miner_id": "7302",
+      "state": "planned",
+      "quoted": "0.01 USDC"
+    }
+  },
+  {
+    "at": "2026-11-06T11:50:56.386Z",
+    "step": "plan",
+    "status": "info",
+    "message": "Liquidity: Reads the reserve of the token's largest DEX pool, to flag thin markets. Asking verifywire-liquidity-depth.",
+    "check": {
+      "name": "Liquidity",
+      "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+      "miner_id": "7373",
+      "state": "planned",
+      "quoted": "0.01 USDC"
+    }
+  },
+  {
+    "at": "2026-11-06T11:50:56.386Z",
+    "step": "plan",
+    "status": "done",
+    "message": "6 checks planned. Expected 0.06 USDC, authorized up to 0.07 USDC."
+  },
+  {
+    "at": "2026-11-06T11:50:56.386Z",
+    "step": "prepare",
+    "status": "info",
+    "message": "Prepared SMART_CONTRACT_AUDIT_GENERAL request",
+    "check": {
+      "name": "Contract audit",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "state": "prepared"
+    }
+  },
+  {
+    "at": "2026-11-06T11:50:56.387Z",
+    "step": "prepare",
+    "status": "info",
+    "message": "Prepared SMART_CONTRACT_AUDIT_GENERAL request",
+    "check": {
+      "name": "Token controls",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "state": "prepared"
+    }
+  },
+  {
+    "at": "2026-11-06T11:50:56.388Z",
+    "step": "prepare",
+    "status": "info",
+    "message": "Prepared SANCTIONS_SCREENING_MATCH_GENERAL request",
+    "check": {
+      "name": "Sanctions screen",
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "state": "prepared"
+    }
+  },
+  {
+    "at": "2026-11-06T11:50:56.821Z",
+    "step": "challenge",
+    "status": "info",
+    "message": "HTTP 402: 0.01 USDC requested for SMART_CONTRACT_AUDIT_GENERAL",
+    "check": {
+      "name": "Contract audit",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "state": "payment required",
+      "quoted": "0.01 USDC"
+    }
+  },
+  {
+    "at": "2026-11-06T11:50:56.830Z",
+    "step": "pay",
+    "status": "info",
+    "message": "Sent x402 payment for SMART_CONTRACT_AUDIT_GENERAL",
+    "check": {
+      "name": "Contract audit",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "state": "paying"
+    }
+  },
+  {
+    "at": "2026-11-06T11:50:56.879Z",
+    "step": "challenge",
+    "status": "info",
+    "message": "HTTP 402: 0.01 USDC requested for SMART_CONTRACT_AUDIT_GENERAL",
+    "check": {
+      "name": "Token controls",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "state": "payment required",
+      "quoted": "0.01 USDC"
+    }
+  },
+  {
+    "at": "2026-11-06T11:50:56.885Z",
+    "step": "pay",
+    "status": "info",
+    "message": "Sent x402 payment for SMART_CONTRACT_AUDIT_GENERAL",
+    "check": {
+      "name": "Token controls",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "state": "paying"
+    }
+  },
+  {
+    "at": "2026-11-06T11:50:57.392Z",
+    "step": "challenge",
+    "status": "info",
+    "message": "HTTP 402: 0.01 USDC requested for SANCTIONS_SCREENING_MATCH_GENERAL",
+    "check": {
+      "name": "Sanctions screen",
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "state": "payment required",
+      "quoted": "0.01 USDC"
+    }
+  },
+  {
+    "at": "2026-11-06T11:50:57.399Z",
+    "step": "pay",
+    "status": "info",
+    "message": "Sent x402 payment for SANCTIONS_SCREENING_MATCH_GENERAL",
+    "check": {
+      "name": "Sanctions screen",
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "state": "paying"
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:04.612Z",
+    "step": "receive",
+    "status": "info",
+    "message": "Miner response received for SMART_CONTRACT_AUDIT_GENERAL",
+    "check": {
+      "name": "Token controls",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "state": "received",
+      "duration_ms": 8225
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:04.959Z",
+    "step": "receive",
+    "status": "info",
+    "message": "Miner response received for SMART_CONTRACT_AUDIT_GENERAL",
+    "check": {
+      "name": "Contract audit",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "state": "received",
+      "duration_ms": 8573
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:06.166Z",
+    "step": "evidence",
+    "status": "info",
+    "message": "Verified payment for Token controls: 0.01 USDC, receipt 0x57566cecd7a8a11063c91a7d4a76ef12297ba47a5bd984497caee88ab8a47015",
+    "check": {
+      "name": "Token controls",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "miner_id": "200001",
+      "state": "ok",
+      "cost": "0.01 USDC",
+      "duration_ms": 8225
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:06.166Z",
+    "step": "prepare",
+    "status": "info",
+    "message": "Prepared WASH_TRADING_DETECTION_GENERAL request",
+    "check": {
+      "name": "Wash trading",
+      "intent": "WASH_TRADING_DETECTION_GENERAL",
+      "state": "prepared"
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:06.255Z",
+    "step": "evidence",
+    "status": "info",
+    "message": "Verified payment for Contract audit: 0.01 USDC, receipt 0x8236e7f46e9ef7a6c1c84680ab56c0610f9856f06fa78f46fced25ee77cc5860",
+    "check": {
+      "name": "Contract audit",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "miner_id": "9002",
+      "state": "ok",
+      "cost": "0.01 USDC",
+      "duration_ms": 8573
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:06.255Z",
+    "step": "prepare",
+    "status": "info",
+    "message": "Prepared TOKEN_HOLDER_COUNT_GENERAL request",
+    "check": {
+      "name": "Holder count",
+      "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+      "state": "prepared"
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:06.695Z",
+    "step": "challenge",
+    "status": "info",
+    "message": "HTTP 402: 0.01 USDC requested for TOKEN_HOLDER_COUNT_GENERAL",
+    "check": {
+      "name": "Holder count",
+      "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+      "state": "payment required",
+      "quoted": "0.01 USDC"
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:06.698Z",
+    "step": "pay",
+    "status": "info",
+    "message": "Sent x402 payment for TOKEN_HOLDER_COUNT_GENERAL",
+    "check": {
+      "name": "Holder count",
+      "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+      "state": "paying"
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:06.700Z",
+    "step": "challenge",
+    "status": "info",
+    "message": "HTTP 402: 0.01 USDC requested for WASH_TRADING_DETECTION_GENERAL",
+    "check": {
+      "name": "Wash trading",
+      "intent": "WASH_TRADING_DETECTION_GENERAL",
+      "state": "payment required",
+      "quoted": "0.01 USDC"
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:06.703Z",
+    "step": "pay",
+    "status": "info",
+    "message": "Sent x402 payment for WASH_TRADING_DETECTION_GENERAL",
+    "check": {
+      "name": "Wash trading",
+      "intent": "WASH_TRADING_DETECTION_GENERAL",
+      "state": "paying"
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:08.367Z",
+    "step": "receive",
+    "status": "info",
+    "message": "Miner response received for SANCTIONS_SCREENING_MATCH_GENERAL",
+    "check": {
+      "name": "Sanctions screen",
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "state": "received",
+      "duration_ms": 11979
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:09.702Z",
+    "step": "evidence",
+    "status": "info",
+    "message": "Verified payment for Sanctions screen: 0.01 USDC, receipt 0xac70dcf87d1ac0351a84d7109d1153264409c44bf2cbc8e30cba9c9299f477c3",
+    "check": {
+      "name": "Sanctions screen",
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "miner_id": "710637",
+      "state": "ok",
+      "cost": "0.01 USDC",
+      "duration_ms": 11979
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:09.702Z",
+    "step": "prepare",
+    "status": "info",
+    "message": "Prepared LIQUIDITY_DEPTH_VERIFY_GENERAL request",
+    "check": {
+      "name": "Liquidity",
+      "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+      "state": "prepared"
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:10.114Z",
+    "step": "challenge",
+    "status": "info",
+    "message": "HTTP 402: 0.01 USDC requested for LIQUIDITY_DEPTH_VERIFY_GENERAL",
+    "check": {
+      "name": "Liquidity",
+      "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+      "state": "payment required",
+      "quoted": "0.01 USDC"
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:10.117Z",
+    "step": "pay",
+    "status": "info",
+    "message": "Sent x402 payment for LIQUIDITY_DEPTH_VERIFY_GENERAL",
+    "check": {
+      "name": "Liquidity",
+      "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+      "state": "paying"
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:15.706Z",
+    "step": "receive",
+    "status": "info",
+    "message": "Miner response received for WASH_TRADING_DETECTION_GENERAL",
+    "check": {
+      "name": "Wash trading",
+      "intent": "WASH_TRADING_DETECTION_GENERAL",
+      "state": "received",
+      "duration_ms": 9540
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:16.269Z",
+    "step": "receive",
+    "status": "info",
+    "message": "Miner response received for LIQUIDITY_DEPTH_VERIFY_GENERAL",
+    "check": {
+      "name": "Liquidity",
+      "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+      "state": "received",
+      "duration_ms": 6567
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:16.321Z",
+    "step": "receive",
+    "status": "info",
+    "message": "Miner response received for TOKEN_HOLDER_COUNT_GENERAL",
+    "check": {
+      "name": "Holder count",
+      "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+      "state": "received",
+      "duration_ms": 10066
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:17.398Z",
+    "step": "evidence",
+    "status": "info",
+    "message": "Verified payment for Holder count: 0.01 USDC, receipt 0xa5ddea0c2e7ef34319884ab09e75095fcbcad769df22eed52ddc596860e60fd1",
+    "check": {
+      "name": "Holder count",
+      "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+      "miner_id": "7302",
+      "state": "ok",
+      "cost": "0.01 USDC",
+      "duration_ms": 10066
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:17.920Z",
+    "step": "evidence",
+    "status": "info",
+    "message": "Verified payment for Liquidity: 0.01 USDC, receipt 0x9217f88a93a54853c7215bf1f285cbb51bfe3e520d425afe49862a81bb9191cc",
+    "check": {
+      "name": "Liquidity",
+      "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+      "miner_id": "7373",
+      "state": "ok",
+      "cost": "0.01 USDC",
+      "duration_ms": 6567
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:17.975Z",
+    "step": "evidence",
+    "status": "info",
+    "message": "Verified payment for Wash trading: 0.01 USDC, receipt 0x5f8557ffdc787a44537e63159f7fd23dd92ea228a8b6debe4d59482426848cc9",
+    "check": {
+      "name": "Wash trading",
+      "intent": "WASH_TRADING_DETECTION_GENERAL",
+      "miner_id": "7378",
+      "state": "ok",
+      "cost": "0.01 USDC",
+      "duration_ms": 9540
+    }
+  },
+  {
+    "at": "2026-11-06T11:51:17.975Z",
+    "step": "receive",
+    "status": "done",
+    "message": "6 requests completed"
+  },
+  {
+    "at": "2026-11-06T11:51:17.975Z",
+    "step": "evidence",
+    "status": "done",
+    "message": "6 purchases verified"
+  },
+  {
+    "at": "2026-11-06T11:51:17.975Z",
+    "step": "risk",
+    "status": "running",
+    "message": "Evaluating risk with deterministic rules"
+  },
+  {
+    "at": "2026-11-06T11:51:17.976Z",
+    "step": "risk",
+    "status": "done",
+    "message": "CLEAR, confidence high: No material negative indicators across 6 executed checks. This is not a guarantee of safety."
+  },
+  {
+    "at": "2026-11-06T11:51:17.976Z",
+    "step": "sign",
+    "status": "running",
+    "message": "Signing the finished memo"
+  },
+  {
+    "at": "2026-11-06T11:51:17.981Z",
+    "step": "sign",
+    "status": "done",
+    "message": "Signed by 0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c. Memo hash 0x1429dc529e87b82a555489e382586e9635c99561b8c525d9802556759a4b803a"
+  }
+]

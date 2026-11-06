@@ -1,0 +1,72 @@
+APPENDIX: RAW RECEIPTS
+
+Assessment ID: LRM-2026-SMPL
+Network: Ethereum Sepolia Testnet
+Token address: 0x1234567890abcdef1234567890abcdef1234abcd
+
+--------------------------------------------------
+
+Check: Market price
+
+status: ok
+intent: MARKET_PRICE_INTENT
+miner_id: 9002
+cost_usd: $0.01
+payment_amount: 0.01
+payment_currency: USDC
+signal_hash: 0xabababababababababababababababababababababababababababababababab
+signal_hash_rederived: yes
+transaction: 0x0000000000000000000000000000000000000000000000000000000000000001
+receipt_reference: 0xreceipt000000000000000000000000000000000000000000000000000000001
+request_id: req-Market price
+payer: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+raw_response_sha256: 690b9a3bfa5126b2fe87b13c24c82fa08a08e4d45745a836dd8d25cff35a9dd2
+
+result:
+{
+  "synthetic": true,
+  "price_usd": 0.0123
+}
+
+--------------------------------------------------
+
+Check: Adverse media
+
+status: ok
+intent: ADVERSE_MEDIA_INTENT
+miner_id: 9002
+cost_usd: $0.01
+payment_amount: 0.01
+payment_currency: USDC
+signal_hash: 0xabababababababababababababababababababababababababababababababab
+signal_hash_rederived: yes
+transaction: 0x0000000000000000000000000000000000000000000000000000000000000002
+receipt_reference: 0xreceipt000000000000000000000000000000000000000000000000000000002
+request_id: req-Adverse media
+payer: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+raw_response_sha256: a8198524f58e72b56283ab71ebddada22840f108b46ef7165bb3fca9919c5558
+
+result:
+{
+  "synthetic": true
+}
+
+--------------------------------------------------
+
+SKIPPED CHECKS
+
+Contract audit:
+Reason: No live miner for this intent.
+
+--------------------------------------------------
+
+TOTAL CONFIRMED SPENDING: 0.02 USDC
+USD figures: USDC face value (1 USDC = $1); not a market conversion
+
+MEMO HASH: 0xe5d9cdfd399239c482ddf8b4d6eb0e05856bbb8dda312518814896a3d9dcdcd2
+SIGNER ADDRESS: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+SIGNATURE:
+0x8606a821aecf3c47b16622750459c263641e7349c43beca7b1568a5b89baaeb454e90525ea66a1ca19ea3e49343c033b03a50f
+fb01bd62ceb9678f03537c3ca91c
+SIGNATURE SCHEME: lrm-sig/v1
+This signature is the application's own. It is not a Telegraph receipt or a miner signature.

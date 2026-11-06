@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Token Listing Risk",
+  "version": "0.1.0",
+  "description": "Run a signed listing-risk assessment from an Etherscan or DEXScreener token page. Testnet payments only.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "http://localhost/*",
+    "https://api.dexscreener.com/*"
+  ],
+  "optional_host_permissions": ["https://*/*"],
+  "background": { "service_worker": "background.js" },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://etherscan.io/token/*",
+        "https://sepolia.etherscan.io/token/*",
+        "https://basescan.org/token/*",
+        "https://arbiscan.io/token/*",
+        "https://optimistic.etherscan.io/token/*",
+        "https://polygonscan.com/token/*",
+        "https://dexscreener.com/*"
+      ],
+      "js": ["lib.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

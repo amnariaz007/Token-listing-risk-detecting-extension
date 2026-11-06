@@ -1,0 +1,63 @@
+{
+  "id": "B-892E3785",
+  "created_at": "2026-11-06T11:42:22.754Z",
+  "done": true,
+  "budget_atomic": "700000",
+  "rows": [
+    {
+      "token": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "chain": "ethereum",
+      "status": "done",
+      "memo_id": "LRM-2026-NYVQ",
+      "verdict": "CAUTION",
+      "confidence": "high",
+      "top_reason": "Automated audit flagged high-severity patterns. Unconfirmed: needs human review",
+      "cost": "0.06 USDC",
+      "cost_atomic": "60000"
+    },
+    {
+      "token": "0x6982508145454Ce325dDbE47a25d4ec3d2311933",
+      "chain": "ethereum",
+      "status": "done",
+      "memo_id": "LRM-2026-TBG4",
+      "verdict": "CAUTION",
+      "confidence": "high",
+      "top_reason": "Automated audit flagged high-severity patterns. Unconfirmed: needs human review",
+      "cost": "0.06 USDC",
+      "cost_atomic": "60000"
+    },
+    {
+      "token": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "chain": "ethereum",
+      "status": "done",
+      "memo_id": "LRM-2026-WJ49",
+      "verdict": "CAUTION",
+      "confidence": "medium",
+      "top_reason": "Token controls need review: Supply can be minted, Transfers can be paused, Addresses can be blacklisted, Tax can be changed, Makes external calls",
+      "cost": "0.06 USDC",
+      "cost_atomic": "60000"
+    },
+    {
+      "token": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+      "chain": "ethereum",
+      "status": "done",
+      "memo_id": "LRM-2026-ALNP",
+      "verdict": "CLEAR",
+      "confidence": "high",
+      "top_reason": "No material negative indicators across 6 executed checks. This is not a guarantee of safety.",
+      "cost": "0.06 USDC",
+      "cost_atomic": "60000"
+    },
+    {
+      "token": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "chain": "ethereum",
+      "status": "done",
+      "memo_id": "LRM-2026-CA7J",
+      "verdict": "CLEAR",
+      "confidence": "high",
+      "top_reason": "No material negative indicators across 6 executed checks. This is not a guarantee of safety.",
+      "cost": "0.06 USDC",
+      "cost_atomic": "60000"
+    }
+  ]
+}

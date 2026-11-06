@@ -1,0 +1,1063 @@
+{
+  "discovered_at": "2026-11-06T11:55:21.314Z",
+  "node": "https://devnode.telegraphprotocol.com",
+  "intent_count": 136,
+  "capabilities": [
+    {
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "class": "judgment",
+      "miner_count": 15,
+      "params": null,
+      "response_fields": null,
+      "miners": [
+        {
+          "id": "1900999007",
+          "slug": "codewire-smart-contract-audit"
+        },
+        {
+          "id": "151003",
+          "slug": "sca-openchain"
+        },
+        {
+          "id": "151010",
+          "slug": "sca-court"
+        },
+        {
+          "id": "151007",
+          "slug": "sca-ghsa"
+        },
+        {
+          "id": "302",
+          "slug": "chainsight-oracle"
+        },
+        {
+          "id": "151006",
+          "slug": "sca-osv"
+        },
+        {
+          "id": "151001",
+          "slug": "sca-4byte"
+        },
+        {
+          "id": "151005",
+          "slug": "sca-crossref"
+        },
+        {
+          "id": "200001",
+          "slug": "goplus-security"
+        },
+        {
+          "id": "200002",
+          "slug": "sourcify"
+        },
+        {
+          "id": "151004",
+          "slug": "sca-openalex"
+        },
+        {
+          "id": "151009",
+          "slug": "sca-zenodo"
+        },
+        {
+          "id": "151002",
+          "slug": "sca-4byte-own"
+        },
+        {
+          "id": "9002",
+          "slug": "txlens"
+        },
+        {
+          "id": "151008",
+          "slug": "sca-llama"
+        }
+      ]
+    },
+    {
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "class": "judgment",
+      "miner_count": 17,
+      "params": [
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "description": "Person or entity name"
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "matched",
+          "type": "bool"
+        },
+        {
+          "name": "matches",
+          "type": "list"
+        },
+        {
+          "name": "lists",
+          "type": "list"
+        },
+        {
+          "name": "match_score",
+          "type": "number"
+        }
+      ],
+      "miners": [
+        {
+          "id": "4433",
+          "slug": "livecert"
+        },
+        {
+          "id": "78009",
+          "slug": "san-opensanc-issues"
+        },
+        {
+          "id": "78004",
+          "slug": "san-os-ofac"
+        },
+        {
+          "id": "710637",
+          "slug": "zk-sanctions"
+        },
+        {
+          "id": "78006",
+          "slug": "san-opensanc-stats"
+        },
+        {
+          "id": "9002",
+          "slug": "txlens"
+        },
+        {
+          "id": "78003",
+          "slug": "san-ofac-sdn"
+        },
+        {
+          "id": "731002",
+          "slug": "counterproof-sanctions-screener"
+        },
+        {
+          "id": "78001",
+          "slug": "san-os-eu"
+        },
+        {
+          "id": "20260828",
+          "slug": "preflight-ssl-verification"
+        },
+        {
+          "id": "78008",
+          "slug": "san-peps"
+        },
+        {
+          "id": "78022",
+          "slug": "san-un-list"
+        },
+        {
+          "id": "78021",
+          "slug": "san-ofac-entity"
+        },
+        {
+          "id": "302",
+          "slug": "chainsight-oracle"
+        },
+        {
+          "id": "78007",
+          "slug": "san-os-au"
+        },
+        {
+          "id": "78005",
+          "slug": "san-opensanc-idx"
+        },
+        {
+          "id": "78010",
+          "slug": "san-courtlistener"
+        }
+      ]
+    },
+    {
+      "intent": "WASH_TRADING_DETECTION_GENERAL",
+      "class": "judgment",
+      "miner_count": 15,
+      "params": [
+        {
+          "name": "subject",
+          "type": "string",
+          "required": true,
+          "description": "Token, pair, pool or address"
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "subject",
+          "type": "string"
+        },
+        {
+          "name": "verdict",
+          "type": "enum",
+          "allowed": [
+            "wash_trading",
+            "likely_wash_trading",
+            "inconclusive",
+            "organic"
+          ]
+        },
+        {
+          "name": "wash_volume_pct",
+          "type": "number"
+        },
+        {
+          "name": "signals",
+          "type": "list"
+        },
+        {
+          "name": "summary",
+          "type": "string"
+        }
+      ],
+      "miners": [
+        {
+          "id": "80021",
+          "slug": "wash-dex-volume"
+        },
+        {
+          "id": "80009",
+          "slug": "wash-llama-fees"
+        },
+        {
+          "id": "80006",
+          "slug": "wash-gecko-pool"
+        },
+        {
+          "id": "80007",
+          "slug": "wash-llama-dex"
+        },
+        {
+          "id": "80010",
+          "slug": "wash-binance"
+        },
+        {
+          "id": "80003",
+          "slug": "wash-dex-pair"
+        },
+        {
+          "id": "80005",
+          "slug": "wash-gecko-trend"
+        },
+        {
+          "id": "9002",
+          "slug": "txlens"
+        },
+        {
+          "id": "302",
+          "slug": "chainsight-oracle"
+        },
+        {
+          "id": "73181",
+          "slug": "zk-wash-evidence"
+        },
+        {
+          "id": "7378",
+          "slug": "verifywire-wash-trading"
+        },
+        {
+          "id": "80004",
+          "slug": "wash-dex-boost"
+        },
+        {
+          "id": "80002",
+          "slug": "wash-dex-search"
+        },
+        {
+          "id": "80001",
+          "slug": "wash-dex-token"
+        },
+        {
+          "id": "80008",
+          "slug": "wash-llama-uni"
+        }
+      ]
+    },
+    {
+      "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+      "class": "deterministic",
+      "miner_count": 19,
+      "params": [
+        {
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "description": "Token contract address or name"
+        },
+        {
+          "name": "chain",
+          "type": "string",
+          "required": true,
+          "description": "Chain of the token"
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "token",
+          "type": "string"
+        },
+        {
+          "name": "chain",
+          "type": "string"
+        },
+        {
+          "name": "holders_count",
+          "type": "number"
+        },
+        {
+          "name": "token_symbol",
+          "type": "string"
+        }
+      ],
+      "miners": [
+        {
+          "id": "7302",
+          "slug": "chainwire-holder-count"
+        },
+        {
+          "id": "51004",
+          "slug": "tok-bs-usdc-counters"
+        },
+        {
+          "id": "51005",
+          "slug": "tok-bs-usdc-holders"
+        },
+        {
+          "id": "73606",
+          "slug": "zk-holders-fresh"
+        },
+        {
+          "id": "302",
+          "slug": "chainsight-oracle"
+        },
+        {
+          "id": "51009",
+          "slug": "tok-bs-wbtc-counters"
+        },
+        {
+          "id": "51002",
+          "slug": "tok-bs-usdt-holders"
+        },
+        {
+          "id": "51001",
+          "slug": "tok-bs-usdt-counters"
+        },
+        {
+          "id": "51003",
+          "slug": "tok-bs-usdt-info"
+        },
+        {
+          "id": "4433",
+          "slug": "livecert"
+        },
+        {
+          "id": "73102",
+          "slug": "zk-holders-pro"
+        },
+        {
+          "id": "51006",
+          "slug": "tok-bs-weth-counters"
+        },
+        {
+          "id": "900",
+          "slug": "onchain-intel-miner"
+        },
+        {
+          "id": "51008",
+          "slug": "tok-bs-base-usdc-info"
+        },
+        {
+          "id": "51010",
+          "slug": "tok-llama-usdt"
+        },
+        {
+          "id": "152",
+          "slug": "kriterion-pramagraph"
+        },
+        {
+          "id": "20260828",
+          "slug": "preflight-ssl-verification"
+        },
+        {
+          "id": "51007",
+          "slug": "tok-bs-base-usdc-counters"
+        },
+        {
+          "id": "9002",
+          "slug": "txlens"
+        }
+      ]
+    },
+    {
+      "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+      "class": "deterministic",
+      "miner_count": 36,
+      "params": [
+        {
+          "name": "pool",
+          "type": "string",
+          "required": true,
+          "description": "DEX pool address or name"
+        },
+        {
+          "name": "chain",
+          "type": "string",
+          "required": true,
+          "description": "Chain of the pool"
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "liquidity_usd",
+          "type": "number"
+        }
+      ],
+      "miners": [
+        {
+          "id": "190141",
+          "slug": "liq-gate-book"
+        },
+        {
+          "id": "190024",
+          "slug": "liq-gecko-base-trending"
+        },
+        {
+          "id": "190025",
+          "slug": "liq-gecko-eth-usdc-pool"
+        },
+        {
+          "id": "190026",
+          "slug": "liq-gecko-search-eth"
+        },
+        {
+          "id": "190138",
+          "slug": "liq-bybit-book"
+        },
+        {
+          "id": "190143",
+          "slug": "liq-htx-depth"
+        },
+        {
+          "id": "77081",
+          "slug": "zk-liq-verified"
+        },
+        {
+          "id": "190021",
+          "slug": "liq-dexscreener-pair"
+        },
+        {
+          "id": "72003",
+          "slug": "liq-dex-boost"
+        },
+        {
+          "id": "190139",
+          "slug": "liq-coinbase-book"
+        },
+        {
+          "id": "72010",
+          "slug": "liq-paraswap-tokens"
+        },
+        {
+          "id": "7373",
+          "slug": "verifywire-liquidity-depth"
+        },
+        {
+          "id": "9002",
+          "slug": "txlens"
+        },
+        {
+          "id": "72009",
+          "slug": "liq-dex-weth"
+        },
+        {
+          "id": "72004",
+          "slug": "liq-gecko-trending"
+        },
+        {
+          "id": "190140",
+          "slug": "liq-cryptocom-book"
+        },
+        {
+          "id": "190144",
+          "slug": "liq-kraken-depth"
+        },
+        {
+          "id": "20260828",
+          "slug": "preflight-ssl-verification"
+        },
+        {
+          "id": "190146",
+          "slug": "liq-mexc-depth"
+        },
+        {
+          "id": "190136",
+          "slug": "liq-bitget-book"
+        },
+        {
+          "id": "302",
+          "slug": "chainsight-oracle"
+        },
+        {
+          "id": "190134",
+          "slug": "liq-binance-depth"
+        },
+        {
+          "id": "72007",
+          "slug": "liq-llama-dexs"
+        },
+        {
+          "id": "190022",
+          "slug": "liq-dexscreener-search-btc"
+        },
+        {
+          "id": "72002",
+          "slug": "liq-dex-search"
+        },
+        {
+          "id": "190023",
+          "slug": "liq-dexscreener-token-weth"
+        },
+        {
+          "id": "72022",
+          "slug": "liq-dex-pair-cents"
+        },
+        {
+          "id": "72008",
+          "slug": "liq-llama-fees"
+        },
+        {
+          "id": "72006",
+          "slug": "liq-gecko-pool"
+        },
+        {
+          "id": "190137",
+          "slug": "liq-bitstamp-book"
+        },
+        {
+          "id": "72021",
+          "slug": "liq-gecko-pool-cents"
+        },
+        {
+          "id": "190145",
+          "slug": "liq-kucoin-book"
+        },
+        {
+          "id": "72001",
+          "slug": "liq-dex-pair"
+        },
+        {
+          "id": "72005",
+          "slug": "liq-gecko-eth-pools"
+        },
+        {
+          "id": "190142",
+          "slug": "liq-gemini-book"
+        },
+        {
+          "id": "190135",
+          "slug": "liq-bitfinex-book"
+        }
+      ]
+    },
+    {
+      "intent": "CRYPTO_PRICE_USD",
+      "class": "deterministic",
+      "miner_count": 53,
+      "params": [
+        {
+          "name": "symbol",
+          "type": "string",
+          "required": true,
+          "description": "Asset symbol, e.g. BTC"
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "price_usd",
+          "type": "number"
+        }
+      ],
+      "miners": [
+        {
+          "id": "190204",
+          "slug": "cp-bitrue"
+        },
+        {
+          "id": "190071",
+          "slug": "cp-cryptocom"
+        },
+        {
+          "id": "190208",
+          "slug": "cp-bitso"
+        },
+        {
+          "id": "190073",
+          "slug": "cp-gate"
+        },
+        {
+          "id": "190173",
+          "slug": "cp-coinlore"
+        },
+        {
+          "id": "501",
+          "slug": "sentinel-risk-oracle"
+        },
+        {
+          "id": "190066",
+          "slug": "cp-bitget"
+        },
+        {
+          "id": "42",
+          "slug": "koinmix-crypto-price"
+        },
+        {
+          "id": "190072",
+          "slug": "cp-defillama"
+        },
+        {
+          "id": "900",
+          "slug": "onchain-intel-miner"
+        },
+        {
+          "id": "190076",
+          "slug": "cp-kraken"
+        },
+        {
+          "id": "170102",
+          "slug": "crypto-gate"
+        },
+        {
+          "id": "9107",
+          "slug": "cryptopulse-multisource-price"
+        },
+        {
+          "id": "190065",
+          "slug": "cp-bitfinex"
+        },
+        {
+          "id": "7710320",
+          "slug": "zk-usd-price"
+        },
+        {
+          "id": "32005",
+          "slug": "crypto-bitstamp"
+        },
+        {
+          "id": "190203",
+          "slug": "cp-xt"
+        },
+        {
+          "id": "32006",
+          "slug": "crypto-gemini"
+        },
+        {
+          "id": "4433",
+          "slug": "livecert"
+        },
+        {
+          "id": "32010",
+          "slug": "crypto-kucoin"
+        },
+        {
+          "id": "20260828",
+          "slug": "preflight-ssl-verification"
+        },
+        {
+          "id": "32001",
+          "slug": "crypto-coingecko"
+        },
+        {
+          "id": "190070",
+          "slug": "cp-coingecko"
+        },
+        {
+          "id": "20260829",
+          "slug": "agentfeed-base-crypto"
+        },
+        {
+          "id": "190074",
+          "slug": "cp-gemini"
+        },
+        {
+          "id": "190202",
+          "slug": "cp-phemex"
+        },
+        {
+          "id": "170104",
+          "slug": "crypto-bybit"
+        },
+        {
+          "id": "190068",
+          "slug": "cp-bybit"
+        },
+        {
+          "id": "9002",
+          "slug": "txlens"
+        },
+        {
+          "id": "190078",
+          "slug": "cp-mexc"
+        },
+        {
+          "id": "190206",
+          "slug": "cp-digifinex"
+        },
+        {
+          "id": "170100",
+          "slug": "crypto-htx"
+        },
+        {
+          "id": "190067",
+          "slug": "cp-bitstamp"
+        },
+        {
+          "id": "152",
+          "slug": "kriterion-pramagraph"
+        },
+        {
+          "id": "190075",
+          "slug": "cp-htx"
+        },
+        {
+          "id": "190209",
+          "slug": "cp-woo"
+        },
+        {
+          "id": "94217604",
+          "slug": "provenance-price"
+        },
+        {
+          "id": "170103",
+          "slug": "crypto-bitfinex"
+        },
+        {
+          "id": "32003",
+          "slug": "crypto-kraken"
+        },
+        {
+          "id": "190064",
+          "slug": "cp-binance"
+        },
+        {
+          "id": "351",
+          "slug": "alchemy-prices-api"
+        },
+        {
+          "id": "190212",
+          "slug": "cp-p2pb2b"
+        },
+        {
+          "id": "190077",
+          "slug": "cp-kucoin"
+        },
+        {
+          "id": "32002",
+          "slug": "crypto-coinbase"
+        },
+        {
+          "id": "170101",
+          "slug": "crypto-mexc"
+        },
+        {
+          "id": "190069",
+          "slug": "cp-coinbase"
+        },
+        {
+          "id": "302",
+          "slug": "chainsight-oracle"
+        },
+        {
+          "id": "190205",
+          "slug": "cp-hitbtc"
+        },
+        {
+          "id": "7311",
+          "slug": "optivis-crypto-price"
+        },
+        {
+          "id": "190211",
+          "slug": "cp-btse"
+        },
+        {
+          "id": "7320",
+          "slug": "finwire-crypto-price"
+        },
+        {
+          "id": "32004",
+          "slug": "crypto-binance"
+        },
+        {
+          "id": "190174",
+          "slug": "cp-coinpaprika"
+        }
+      ]
+    },
+    {
+      "intent": "NEWS_SEARCH_GENERAL",
+      "class": "judgment",
+      "miner_count": 18,
+      "params": [
+        {
+          "name": "query",
+          "type": "string",
+          "required": true,
+          "description": "Topic, entity or event"
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "answer",
+          "type": "string"
+        },
+        {
+          "name": "result_count",
+          "type": "integer"
+        },
+        {
+          "name": "sources",
+          "type": "list"
+        },
+        {
+          "name": "brief",
+          "type": "string"
+        }
+      ],
+      "miners": [
+        {
+          "id": "43005",
+          "slug": "nsearch-openalex"
+        },
+        {
+          "id": "9004",
+          "slug": "verity-news-search"
+        },
+        {
+          "id": "4433",
+          "slug": "livecert"
+        },
+        {
+          "id": "43003",
+          "slug": "nsearch-spaceflight"
+        },
+        {
+          "id": "9002",
+          "slug": "txlens"
+        },
+        {
+          "id": "5530",
+          "slug": "telegraph-verity-intelligence"
+        },
+        {
+          "id": "43001",
+          "slug": "nsearch-hn-algolia"
+        },
+        {
+          "id": "73109",
+          "slug": "zk-newsbudget"
+        },
+        {
+          "id": "20260828",
+          "slug": "preflight-ssl-verification"
+        },
+        {
+          "id": "43007",
+          "slug": "nsearch-crossref"
+        },
+        {
+          "id": "302",
+          "slug": "chainsight-oracle"
+        },
+        {
+          "id": "43006",
+          "slug": "nsearch-ddg"
+        },
+        {
+          "id": "43002",
+          "slug": "nsearch-hn-date"
+        },
+        {
+          "id": "43008",
+          "slug": "nsearch-hn-ask"
+        },
+        {
+          "id": "43010",
+          "slug": "nsearch-spaceflight-reports"
+        },
+        {
+          "id": "43009",
+          "slug": "nsearch-hn-show"
+        },
+        {
+          "id": "43004",
+          "slug": "nsearch-devto-tag"
+        },
+        {
+          "id": "7329",
+          "slug": "newswire-search"
+        }
+      ]
+    },
+    {
+      "intent": "FRAUD_DETECTION_GENERAL",
+      "class": "judgment",
+      "miner_count": 27,
+      "params": [
+        {
+          "name": "subject",
+          "type": "string",
+          "required": true,
+          "description": "Entity, transaction or action to assess"
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "subject",
+          "type": "string"
+        },
+        {
+          "name": "verdict",
+          "type": "enum",
+          "allowed": [
+            "FRAUD",
+            "LIKELY_FRAUD",
+            "SUSPICIOUS",
+            "LEGITIMATE",
+            "INCONCLUSIVE",
+            "LOW",
+            "ELEVATED",
+            "HIGH"
+          ]
+        },
+        {
+          "name": "risk_score",
+          "type": "number"
+        },
+        {
+          "name": "signals",
+          "type": "list"
+        },
+        {
+          "name": "summary",
+          "type": "string"
+        }
+      ],
+      "miners": [
+        {
+          "id": "120004",
+          "slug": "fdet-bin2"
+        },
+        {
+          "id": "20260828",
+          "slug": "preflight-ssl-verification"
+        },
+        {
+          "id": "120001",
+          "slug": "fdet-openphish"
+        },
+        {
+          "id": "9002",
+          "slug": "txlens"
+        },
+        {
+          "id": "7421",
+          "slug": "riskwire-fraud-detection"
+        },
+        {
+          "id": "120003",
+          "slug": "fdet-bin"
+        },
+        {
+          "id": "1001",
+          "slug": "veridex-contract-risk-miner"
+        },
+        {
+          "id": "95822412",
+          "slug": "refut-onchain-risk"
+        },
+        {
+          "id": "403",
+          "slug": "agentfeed-crypto-markets-lab1"
+        },
+        {
+          "id": "49",
+          "slug": "anchor"
+        },
+        {
+          "id": "120008",
+          "slug": "fdet-ipwho"
+        },
+        {
+          "id": "120009",
+          "slug": "fdet-ipinfo"
+        },
+        {
+          "id": "120005",
+          "slug": "fdet-otx"
+        },
+        {
+          "id": "302",
+          "slug": "chainsight-oracle"
+        },
+        {
+          "id": "120007",
+          "slug": "fdet-geojs"
+        },
+        {
+          "id": "120002",
+          "slug": "fdet-cert"
+        },
+        {
+          "id": "120010",
+          "slug": "fdet-handy"
+        },
+        {
+          "id": "84532",
+          "slug": "zengawd-transaction-guard"
+        },
+        {
+          "id": "94217603",
+          "slug": "telegraph-sentinel"
+        },
+        {
+          "id": "8421",
+          "slug": "trustgate-fraud-detection"
+        },
+        {
+          "id": "232",
+          "slug": "eviplan-evidence-firewall"
+        },
+        {
+          "id": "251",
+          "slug": "sigvora"
+        },
+        {
+          "id": "91001",
+          "slug": "sarzops-transaction-risk"
+        },
+        {
+          "id": "742101",
+          "slug": "zk-fraud-evidence"
+        },
+        {
+          "id": "4433",
+          "slug": "livecert"
+        },
+        {
+          "id": "402",
+          "slug": "agentfeed-crypto-markets"
+        },
+        {
+          "id": "120006",
+          "slug": "fdet-otx-ip"
+        }
+      ]
+    }
+  ]
+}

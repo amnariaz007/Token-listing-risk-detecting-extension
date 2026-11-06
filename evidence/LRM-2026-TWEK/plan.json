@@ -1,0 +1,154 @@
+{
+  "skipped": [],
+  "not_selected": [
+    {
+      "name": "Market price",
+      "intent": "CRYPTO_PRICE_USD",
+      "reason": "The limit of 6 checks was reached by higher-priority checks."
+    },
+    {
+      "name": "Adverse media",
+      "intent": "NEWS_SEARCH_GENERAL",
+      "reason": "The limit of 6 checks was reached by higher-priority checks."
+    },
+    {
+      "name": "Fraud screen",
+      "intent": "FRAUD_DETECTION_GENERAL",
+      "reason": "The limit of 6 checks was reached by higher-priority checks."
+    }
+  ],
+  "expected_atomic": "60000",
+  "budget_atomic": "70000",
+  "checks": [
+    {
+      "name": "Contract audit",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "why": "Reviews the contract source for reentrancy, access-control and integer-overflow flaws.",
+      "tier": 2,
+      "body": {
+        "method": "GET",
+        "endpoint": "/smart-contract-audit",
+        "payload": {
+          "contract": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+          "chain": "eth"
+        }
+      },
+      "miner_count": 15,
+      "miner": {
+        "id": "9002",
+        "slug": "txlens"
+      },
+      "alternates": [],
+      "quoted_atomic": "10000"
+    },
+    {
+      "name": "Token controls",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "why": "A different question from the audit: can the owner trap holders, and do a few wallets hold most of the supply?",
+      "tier": 2,
+      "body": {
+        "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+        "query": "Token security audit of the ERC-20 contract 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984 on ethereum (chain id 1): honeypot, taxes, owner privileges, proxy, mint."
+      },
+      "miner_count": 15,
+      "miner": {
+        "id": "200001",
+        "slug": "goplus-security"
+      },
+      "alternates": [],
+      "quoted_atomic": "10000"
+    },
+    {
+      "name": "Sanctions screen",
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "why": "Screens the token's identity against consolidated sanctions lists.",
+      "tier": 1,
+      "body": {
+        "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+        "params": {
+          "name": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984"
+        }
+      },
+      "miner_count": 17,
+      "miner": null,
+      "alternates": [],
+      "quoted_atomic": "10000"
+    },
+    {
+      "name": "Wash trading",
+      "intent": "WASH_TRADING_DETECTION_GENERAL",
+      "why": "Scans recent transfers on-chain for round-trip volume.",
+      "tier": 2,
+      "body": {
+        "method": "GET",
+        "endpoint": "/washtrade",
+        "payload": {
+          "chain": "ethereum",
+          "token": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+          "blocks": 600
+        }
+      },
+      "miner_count": 15,
+      "miner": {
+        "id": "7378",
+        "slug": "verifywire-wash-trading"
+      },
+      "alternates": [],
+      "quoted_atomic": "10000"
+    },
+    {
+      "name": "Holder count",
+      "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+      "why": "Reads how many distinct addresses hold the token.",
+      "tier": 1,
+      "body": {
+        "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+        "params": {
+          "token": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+          "chain": "ethereum"
+        }
+      },
+      "miner_count": 19,
+      "miner": {
+        "id": "7302",
+        "slug": "chainwire-holder-count"
+      },
+      "alternates": [
+        {
+          "id": "4433",
+          "slug": "livecert"
+        },
+        {
+          "id": "9002",
+          "slug": "txlens"
+        }
+      ],
+      "quoted_atomic": "10000"
+    },
+    {
+      "name": "Liquidity",
+      "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+      "why": "Reads the reserve of the token's largest DEX pool, to flag thin markets.",
+      "tier": 1,
+      "body": {
+        "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+        "params": {
+          "pool": "0x1d42064Fc4Beb5F8aAF85F4617AE8b3b5B8Bd801",
+          "chain": "ethereum"
+        }
+      },
+      "miner_count": 36,
+      "miner": {
+        "id": "7373",
+        "slug": "verifywire-liquidity-depth"
+      },
+      "alternates": [
+        {
+          "id": "77081",
+          "slug": "zk-liq-verified"
+        }
+      ],
+      "quoted_atomic": "10000"
+    }
+  ]
+}

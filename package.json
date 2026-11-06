@@ -1,0 +1,54 @@
+{
+  "name": "telegraph-token-risk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Token listing-risk memos built from intelligence purchased on Telegraph, with signed, independently verifiable evidence.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "next dev -H 127.0.0.1 -p 4402",
+    "build": "next build",
+    "start": "next start -H 127.0.0.1 -p 4402",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --exclude 'test/live/**'",
+    "test:live": "vitest run test/live/free.live.test.ts",
+    "test:paid": "RUN_PAID_TESTS=1 vitest run test/live/paid.live.test.ts",
+    "wallet": "tsx src/scripts/wallet.ts",
+    "fund": "tsx src/scripts/fund.ts",
+    "discover": "tsx src/scripts/discover.ts",
+    "first-purchase": "tsx src/scripts/first-purchase.ts",
+    "assess": "tsx src/scripts/assess.ts",
+    "verify": "tsx src/scripts/verify.ts",
+    "sample": "tsx src/scripts/sample.ts",
+    "code-map": "tsx src/scripts/code-map.ts"
+  },
+  "dependencies": {
+    "@x402/core": "^2.30.0",
+    "@x402/evm": "^2.30.0",
+    "@x402/fetch": "^2.30.0",
+    "clsx": "^2.1.1",
+    "dotenv": "^18.0.9",
+    "lucide-react": "^1.70.0",
+    "next": "^16.4.5",
+    "pdfkit": "^0.20.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tsx": "^4.23.15",
+    "viem": "^2.57.16",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.4",
+    "@types/node": "^26.6.6",
+    "@types/pdfkit": "^0.17.7",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "pdfjs-dist": "^6.5.438",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^4.3.4",
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.0"
+  }
+}

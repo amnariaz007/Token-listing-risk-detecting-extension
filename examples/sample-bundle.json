@@ -1,0 +1,212 @@
+{
+  "format": "lrm-evidence-bundle/v1",
+  "signed": {
+    "scheme": "lrm-sig/v1",
+    "memo": {
+      "memo_id": "LRM-2026-SMPL",
+      "version": 1,
+      "supersedes": null,
+      "token": {
+        "name": "Sample Token",
+        "symbol": "SAMPLE",
+        "address": "0x1234567890abcdef1234567890abcdef1234abcd",
+        "chain": "ethereum-sepolia",
+        "identity_source": "onchain"
+      },
+      "generated_at": "2026-11-06T07:44:30Z",
+      "signed_at": "2026-11-06T07:44:30Z",
+      "network": "testnet",
+      "payment_network": "ethereum-sepolia",
+      "verdict": "CAUTION",
+      "verdict_reason": "Recent adverse media needs review. Not checked: Contract audit.",
+      "confidence": "medium",
+      "coverage": {
+        "planned": 3,
+        "executed": 2
+      },
+      "limitations": [],
+      "checks": [
+        {
+          "name": "Market price",
+          "intent": "MARKET_PRICE_INTENT",
+          "miner_id": "9002",
+          "finding": "$0.0123",
+          "status": "ok",
+          "failure_reason": null,
+          "cost_usd": 0.01,
+          "signal_hash": "0xabababababababababababababababababababababababababababababababab",
+          "signal_hash_status": "available",
+          "signal_verified": true,
+          "receipt_reference": "0xreceipt000000000000000000000000000000000000000000000000000000001",
+          "request_id": "req-Market price",
+          "raw_response_sha256": "690b9a3bfa5126b2fe87b13c24c82fa08a08e4d45745a836dd8d25cff35a9dd2",
+          "signals": [
+            {
+              "level": "clear",
+              "code": "price_clear",
+              "topic": "price",
+              "basis": "miner_reported",
+              "explanation": "price clear"
+            }
+          ],
+          "payment": {
+            "status": "confirmed",
+            "quoted_amount_atomic": "10000",
+            "amount_atomic": "10000",
+            "amount": "0.01",
+            "decimals": 6,
+            "currency": "USDC",
+            "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+            "network": "eip155:11155111",
+            "tx_hash": "0x0000000000000000000000000000000000000000000000000000000000000001",
+            "payer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+            "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+            "block_number": "100"
+          }
+        },
+        {
+          "name": "Adverse media",
+          "intent": "ADVERSE_MEDIA_INTENT",
+          "miner_id": "9002",
+          "finding": "2 adverse mention(s)",
+          "status": "ok",
+          "failure_reason": null,
+          "cost_usd": 0.01,
+          "signal_hash": "0xabababababababababababababababababababababababababababababababab",
+          "signal_hash_status": "available",
+          "signal_verified": true,
+          "receipt_reference": "0xreceipt000000000000000000000000000000000000000000000000000000002",
+          "request_id": "req-Adverse media",
+          "raw_response_sha256": "a8198524f58e72b56283ab71ebddada22840f108b46ef7165bb3fca9919c5558",
+          "signals": [
+            {
+              "level": "soft",
+              "code": "reputation_soft",
+              "topic": "reputation",
+              "basis": "miner_reported",
+              "explanation": "Recent adverse media needs review"
+            }
+          ],
+          "payment": {
+            "status": "confirmed",
+            "quoted_amount_atomic": "10000",
+            "amount_atomic": "10000",
+            "amount": "0.01",
+            "decimals": 6,
+            "currency": "USDC",
+            "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+            "network": "eip155:11155111",
+            "tx_hash": "0x0000000000000000000000000000000000000000000000000000000000000002",
+            "payer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+            "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+            "block_number": "100"
+          }
+        }
+      ],
+      "checks_skipped": [
+        {
+          "name": "Contract audit",
+          "intent": null,
+          "reason": "No live miner for this intent."
+        }
+      ],
+      "cost": {
+        "per_check_usd": 0.01,
+        "checks_paid": 2,
+        "total_usd": 0.02,
+        "usd_basis": "USDC face value (1 USDC = $1); not a market conversion",
+        "currency": "USDC",
+        "totals": [
+          {
+            "currency": "USDC",
+            "decimals": 6,
+            "amount_atomic": "20000",
+            "amount": "0.02"
+          }
+        ],
+        "line_items": [
+          {
+            "check": "Market price",
+            "amount_atomic": "10000",
+            "amount": "0.01",
+            "currency": "USDC",
+            "cost_usd": 0.01,
+            "receipt_reference": "0xreceipt000000000000000000000000000000000000000000000000000000001"
+          },
+          {
+            "check": "Adverse media",
+            "amount_atomic": "10000",
+            "amount": "0.01",
+            "currency": "USDC",
+            "cost_usd": 0.01,
+            "receipt_reference": "0xreceipt000000000000000000000000000000000000000000000000000000002"
+          }
+        ],
+        "failed_attempts": 0,
+        "failed_attempt_spend": []
+      },
+      "disclaimer": "SYNTHETIC SAMPLE. No purchases were made and every receipt here is fake. Not financial advice."
+    },
+    "memo_hash": "0xe5d9cdfd399239c482ddf8b4d6eb0e05856bbb8dda312518814896a3d9dcdcd2",
+    "signer_address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "signature": "0x8606a821aecf3c47b16622750459c263641e7349c43beca7b1568a5b89baaeb454e90525ea66a1ca19ea3e49343c033b03a50ffb01bd62ceb9678f03537c3ca91c"
+  },
+  "raw_evidence": [
+    {
+      "check": "Market price",
+      "method": "GET",
+      "url": "https://fixture.invalid/Market%20price",
+      "request_body": {
+        "intent": "Market price"
+      },
+      "requested_at": "2026-11-06T07:44:30Z",
+      "responded_at": "2026-11-06T07:44:31Z",
+      "duration_ms": 1000,
+      "exchanges": [
+        {
+          "status": 402,
+          "headers": {}
+        },
+        {
+          "status": 200,
+          "headers": {
+            "x-request-id": "req-Market price"
+          }
+        }
+      ],
+      "challenge": null,
+      "settlement": null,
+      "receipt": null,
+      "signal": null,
+      "body_base64": "eyJzeW50aGV0aWMiOnRydWUsInByaWNlX3VzZCI6MC4wMTIzfQ=="
+    },
+    {
+      "check": "Adverse media",
+      "method": "GET",
+      "url": "https://fixture.invalid/Adverse%20media",
+      "request_body": {
+        "intent": "Adverse media"
+      },
+      "requested_at": "2026-11-06T07:44:30Z",
+      "responded_at": "2026-11-06T07:44:31Z",
+      "duration_ms": 1000,
+      "exchanges": [
+        {
+          "status": 402,
+          "headers": {}
+        },
+        {
+          "status": 200,
+          "headers": {
+            "x-request-id": "req-Adverse media"
+          }
+        }
+      ],
+      "challenge": null,
+      "settlement": null,
+      "receipt": null,
+      "signal": null,
+      "body_base64": "eyJzeW50aGV0aWMiOnRydWV9"
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+[
+  {
+    "check": "Contract audit",
+    "challenge": {
+      "amountAtomic": "10000",
+      "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+      "network": "eip155:11155111",
+      "payTo": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+      "scheme": "exact",
+      "maxTimeoutSeconds": 60
+    },
+    "settlement": {
+      "success": true,
+      "transaction": "0xd35a6b186b07e064b437624926f3f068c833c77826d794983cd45953963f6432",
+      "network": "eip155:11155111",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "errorReason": null
+    },
+    "receipt": {
+      "receipt_hash": "0x8236e7f46e9ef7a6c1c84680ab56c0610f9856f06fa78f46fced25ee77cc5860",
+      "rail": "x402",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "miner": "5078",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "amount_uusdc": "10000",
+      "epoch_id": 2026,
+      "settlement": "onchain",
+      "chain": "eip155:11155111",
+      "tx_hash": "0xd35a6b186b07e064b437624926f3f068c833c77826d794983cd45953963f6432",
+      "timestamp": 1793965864
+    },
+    "confirmed": {
+      "status": "confirmed",
+      "quoted_amount_atomic": "10000",
+      "amount_atomic": "10000",
+      "amount": "0.01",
+      "decimals": 6,
+      "currency": "USDC",
+      "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+      "network": "eip155:11155111",
+      "tx_hash": "0xd35a6b186b07e064b437624926f3f068c833c77826d794983cd45953963f6432",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+      "block_number": "12076382"
+    }
+  },
+  {
+    "check": "Token controls",
+    "challenge": {
+      "amountAtomic": "10000",
+      "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+      "network": "eip155:11155111",
+      "payTo": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+      "scheme": "exact",
+      "maxTimeoutSeconds": 60
+    },
+    "settlement": {
+      "success": true,
+      "transaction": "0xe5cec3d00579e53311d185ef7b15c1613af10622afb2bfa36dcbad783e4f2305",
+      "network": "eip155:11155111",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "errorReason": null
+    },
+    "receipt": {
+      "receipt_hash": "0x57566cecd7a8a11063c91a7d4a76ef12297ba47a5bd984497caee88ab8a47015",
+      "rail": "x402",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "miner": "4819",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "amount_uusdc": "10000",
+      "epoch_id": 2026,
+      "settlement": "onchain",
+      "chain": "eip155:11155111",
+      "tx_hash": "0xe5cec3d00579e53311d185ef7b15c1613af10622afb2bfa36dcbad783e4f2305",
+      "timestamp": 1793965864
+    },
+    "confirmed": {
+      "status": "confirmed",
+      "quoted_amount_atomic": "10000",
+      "amount_atomic": "10000",
+      "amount": "0.01",
+      "decimals": 6,
+      "currency": "USDC",
+      "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+      "network": "eip155:11155111",
+      "tx_hash": "0xe5cec3d00579e53311d185ef7b15c1613af10622afb2bfa36dcbad783e4f2305",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+      "block_number": "12076382"
+    }
+  },
+  {
+    "check": "Sanctions screen",
+    "challenge": {
+      "amountAtomic": "10000",
+      "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+      "network": "eip155:11155111",
+      "payTo": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+      "scheme": "exact",
+      "maxTimeoutSeconds": 60
+    },
+    "settlement": {
+      "success": true,
+      "transaction": "0x30e55cdb8ce5213f5b89b4a6e846bb01ff7c3d875db2594015dbc00e6356f9e0",
+      "network": "eip155:11155111",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "errorReason": null
+    },
+    "receipt": {
+      "receipt_hash": "0xac70dcf87d1ac0351a84d7109d1153264409c44bf2cbc8e30cba9c9299f477c3",
+      "rail": "x402",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "miner": "4860",
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "amount_uusdc": "10000",
+      "epoch_id": 2026,
+      "settlement": "onchain",
+      "chain": "eip155:11155111",
+      "tx_hash": "0x30e55cdb8ce5213f5b89b4a6e846bb01ff7c3d875db2594015dbc00e6356f9e0",
+      "timestamp": 1793965868
+    },
+    "confirmed": {
+      "status": "confirmed",
+      "quoted_amount_atomic": "10000",
+      "amount_atomic": "10000",
+      "amount": "0.01",
+      "decimals": 6,
+      "currency": "USDC",
+      "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+      "network": "eip155:11155111",
+      "tx_hash": "0x30e55cdb8ce5213f5b89b4a6e846bb01ff7c3d875db2594015dbc00e6356f9e0",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+      "block_number": "12076382"
+    }
+  },
+  {
+    "check": "Wash trading",
+    "challenge": {
+      "amountAtomic": "10000",
+      "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+      "network": "eip155:11155111",
+      "payTo": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+      "scheme": "exact",
+      "maxTimeoutSeconds": 60
+    },
+    "settlement": {
+      "success": true,
+      "transaction": "0xe7e8cbd2826bc9b16f5d7ae042262567111beaa7f86eb7cfc91548f1a4bb0927",
+      "network": "eip155:11155111",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "errorReason": null
+    },
+    "receipt": {
+      "receipt_hash": "0x5f8557ffdc787a44537e63159f7fd23dd92ea228a8b6debe4d59482426848cc9",
+      "rail": "x402",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "miner": "4438",
+      "intent": "WASH_TRADING_DETECTION_GENERAL",
+      "amount_uusdc": "10000",
+      "epoch_id": 2026,
+      "settlement": "onchain",
+      "chain": "eip155:11155111",
+      "tx_hash": "0xe7e8cbd2826bc9b16f5d7ae042262567111beaa7f86eb7cfc91548f1a4bb0927",
+      "timestamp": 1793965875
+    },
+    "confirmed": {
+      "status": "confirmed",
+      "quoted_amount_atomic": "10000",
+      "amount_atomic": "10000",
+      "amount": "0.01",
+      "decimals": 6,
+      "currency": "USDC",
+      "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+      "network": "eip155:11155111",
+      "tx_hash": "0xe7e8cbd2826bc9b16f5d7ae042262567111beaa7f86eb7cfc91548f1a4bb0927",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+      "block_number": "12076383"
+    }
+  },
+  {
+    "check": "Holder count",
+    "challenge": {
+      "amountAtomic": "10000",
+      "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+      "network": "eip155:11155111",
+      "payTo": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+      "scheme": "exact",
+      "maxTimeoutSeconds": 60
+    },
+    "settlement": {
+      "success": true,
+      "transaction": "0xc5c953f2c680dd0b3e6c19761dcb7df37f3ef5f8631025fa86bbe5cc6c574e76",
+      "network": "eip155:11155111",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "errorReason": null
+    },
+    "receipt": {
+      "receipt_hash": "0xa5ddea0c2e7ef34319884ab09e75095fcbcad769df22eed52ddc596860e60fd1",
+      "rail": "x402",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "miner": "343",
+      "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+      "amount_uusdc": "10000",
+      "epoch_id": 2026,
+      "settlement": "onchain",
+      "chain": "eip155:11155111",
+      "tx_hash": "0xc5c953f2c680dd0b3e6c19761dcb7df37f3ef5f8631025fa86bbe5cc6c574e76",
+      "timestamp": 1793965876
+    },
+    "confirmed": {
+      "status": "confirmed",
+      "quoted_amount_atomic": "10000",
+      "amount_atomic": "10000",
+      "amount": "0.01",
+      "decimals": 6,
+      "currency": "USDC",
+      "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+      "network": "eip155:11155111",
+      "tx_hash": "0xc5c953f2c680dd0b3e6c19761dcb7df37f3ef5f8631025fa86bbe5cc6c574e76",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+      "block_number": "12076383"
+    }
+  },
+  {
+    "check": "Liquidity",
+    "challenge": {
+      "amountAtomic": "10000",
+      "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+      "network": "eip155:11155111",
+      "payTo": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+      "scheme": "exact",
+      "maxTimeoutSeconds": 60
+    },
+    "settlement": {
+      "success": true,
+      "transaction": "0x8ed6c12c8945b9fd1dffadd3ca0cc825b4da9d16c955a6e350e8381050242826",
+      "network": "eip155:11155111",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "errorReason": null
+    },
+    "receipt": {
+      "receipt_hash": "0x9217f88a93a54853c7215bf1f285cbb51bfe3e520d425afe49862a81bb9191cc",
+      "rail": "x402",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "miner": "4434",
+      "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+      "amount_uusdc": "10000",
+      "epoch_id": 2026,
+      "settlement": "onchain",
+      "chain": "eip155:11155111",
+      "tx_hash": "0x8ed6c12c8945b9fd1dffadd3ca0cc825b4da9d16c955a6e350e8381050242826",
+      "timestamp": 1793965876
+    },
+    "confirmed": {
+      "status": "confirmed",
+      "quoted_amount_atomic": "10000",
+      "amount_atomic": "10000",
+      "amount": "0.01",
+      "decimals": 6,
+      "currency": "USDC",
+      "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+      "network": "eip155:11155111",
+      "tx_hash": "0x8ed6c12c8945b9fd1dffadd3ca0cc825b4da9d16c955a6e350e8381050242826",
+      "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+      "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+      "block_number": "12076383"
+    }
+  }
+]

@@ -1,0 +1,403 @@
+{
+ "audit-goplus": {
+  "miner_id": "200001",
+  "miner_name": "GoPlus Security",
+  "endpoint": "/token-security",
+  "result": {
+   "code": 1,
+   "message": "OK",
+   "result": {
+    "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984": {
+     "anti_whale_modifiable": "0",
+     "buy_tax": "0",
+     "can_take_back_ownership": "0",
+     "cannot_buy": "0",
+     "creator_address": "0x41653c7d61609d856f29355e404f310ec4142cfb",
+     "creator_balance": "0.002858162612694493",
+     "creator_percent": "0.000000",
+     "external_call": "0",
+     "hidden_owner": "0",
+     "holder_count": "405230",
+     "holders": [
+      {
+       "address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+       "balance": "262247996.305835021033106178",
+       "is_contract": 1,
+       "is_locked": 0,
+       "percent": "0.262247996305835021",
+       "tag": ""
+      },
+      {
+       "address": "0x000000000000000000000000000000000000dead",
+       "balance": "113839581.213802937903387397",
+       "is_contract": 0,
+       "is_locked": 1,
+       "percent": "0.113839581213802937",
+       "tag": ""
+      },
+      {
+       "address": "0x5a52e96bacdabb82fd05763e25335261b270efcb",
+       "balance": "37378421.44",
+       "is_contract": 0,
+       "is_locked": 0,
+       "percent": "0.037378421440000000",
+       "tag": ""
+      },
+      {
+       "address": "0xf977814e90da44bfa03b6295a0616a897441acec",
+       "balance": "23073400.304",
+       "is_contract": 0,
+       "is_locked": 0,
+       "percent": "0.023073400304000000",
+       "tag": ""
+      },
+      {
+       "address": "0x61cb39bece033c5bda281747db1c15cced2096eb",
+       "balance": "23047480.513298522",
+       "is_contract": 0,
+       "is_locked": 0,
+       "percent": "0.023047480513298522",
+       "tag": ""
+      },
+      {
+       "address": "0x611f7bf868a6212f871e89f7e44684045ddfb09d",
+       "balance": "16384874.50996764",
+       "is_contract": 0,
+       "is_locked": 0,
+       "percent": "0.016384874509967640",
+       "tag": ""
+      },
+      {
+       "address": "0x36ca0abdf3852f00aee7798c7dfb5ead5d3fec2a",
+       "balance": "12611331.35576091",
+       "is_contract": 0,
+       "is_locked": 0,
+       "percent": "0.012611331355760910",
+       "tag": ""
+      },
+      {
+       "address": "0x5069a64bc6616dec1584ee0500b7813a9b680f7e",
+       "balance": "11564112.20195350296996031",
+       "is_contract": 0,
+       "is_locked": 0,
+       "percent": "0.011564112201953502",
+       "tag": ""
+      },
+      {
+       "address": "0x6d278351f4a973d1349ef1e54ed37daed0799e19",
+       "balance": "10286054.26409608",
+       "is_contract": 0,
+       "is_locked": 0,
+       "percent": "0.010286054264096080",
+       "tag": ""
+      },
+      {
+       "address": "0xe49b875a4c4be752489eed3e67aaebbe65397deb",
+       "balance": "9000000.0001",
+       "is_contract": 0,
+       "is_locked": 0,
+       "percent": "0.009000000000100000",
+       "tag": ""
+      }
+     ],
+     "honeypot_with_same_creator": "0",
+     "is_anti_whale": "0",
+     "is_blacklisted": "0",
+     "is_honeypot": "0",
+     "is_in_cex": {
+      "cex_list": [
+       "Binance",
+       "Coinbase"
+      ],
+      "listed": "1"
+     },
+     "is_mintable": "0",
+     "is_open_source": "1",
+     "is_proxy": "0",
+     "is_whitelisted": "0",
+     "owner_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+     "owner_balance": "262247996.30583504",
+     "owner_change_balance": "0",
+     "owner_percent": "0.262248",
+     "personal_slippage_modifiable": "0",
+     "selfdestruct": "0",
+     "sell_tax": "0",
+     "slippage_modifiable": "0",
+     "token_name": "Uniswap",
+     "token_symbol": "UNI",
+     "total_supply": "1000000000",
+     "trading_cooldown": "0",
+     "transfer_pausable": "0",
+     "transfer_tax": "",
+     "trust_list": "1"
+    }
+   }
+  },
+  "result_shape": "raw",
+  "shape_error": "no_format",
+  "cost_usd": 0.01,
+  "duration_ms": 191,
+  "timestamp": "2026-11-06T11:24:55.222052909Z",
+  "reasoning": "Intent: miner goplus-security given by the caller\nMiner: The user is asking for a security audit of a specific ERC-20 token contract on the Ethereum mainnet. The GoPlus Security miner has a '/token-security' endpoint that provides security analysis of token contracts, including honeypot status, buy/sell tax, ownership, proxy flags, mintability, and trading restrictions. This endpoint directly matches the user's intent for a SMART_CONTRACT_AUDIT_GENERAL. The 'chain_id' is set to 1 for Ethereum, and the 'contract_addresses' is set to the provided ERC-20 contract address.",
+  "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+  "signal_hash": "0xbff682aafc6da0342acb181c6b0ae34f989c181591ae18cc9b4e58158127fb43"
+ },
+ "audit-txlens": {
+  "cost_usd": 0.01,
+  "duration_ms": 835,
+  "miner_id": "9002",
+  "miner_name": "TxLens",
+  "result": {
+   "answer": "Automated review of 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984 on Ethereum found no known vulnerability patterns in the verified source (Uni, via Sourcify). Reentrancy: no external call followed by a state change was found. Access control: every sensitive function has an owner, role or sender check. Integer overflow: no unprotected arithmetic pattern was found. This is an automated pattern check, not a full manual audit.",
+   "bytecode_size": 12501,
+   "canonical": "eth:0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984:none-found:0:0:0",
+   "chain": "eth",
+   "checked_at": "2026-11-06T11:24:56.058Z",
+   "compiler": "0.5.16+commit.9c3226ce",
+   "confidence": 0.8,
+   "contract": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+   "contract_name": "Uni",
+   "counts": {
+    "high": 0,
+    "info": 2,
+    "low": 0,
+    "medium": 0
+   },
+   "findings": [
+    {
+     "category": "integer-overflow",
+     "detail": "Overflow is handled by SafeMath, but any arithmetic written without it would still wrap.",
+     "location": "pragma",
+     "severity": "info",
+     "title": "Pre-0.8 Solidity with SafeMath"
+    },
+    {
+     "category": "best-practice",
+     "detail": "The compiler version is not pinned (^0.5.16), so the code can be built with different compilers.",
+     "location": "pragma",
+     "severity": "info",
+     "title": "Floating pragma"
+    }
+   ],
+   "pragma": "^0.5.16",
+   "risk": "none-found",
+   "solidity_0_8_or_later": false,
+   "source_note": null,
+   "source_provider": "Sourcify",
+   "source_verified": true,
+   "status": "ok",
+   "summary": "Automated review of 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984 on Ethereum found no known vulnerability patterns in the verified source (Uni, via Sourcify). Reentrancy: no external call followed by a state change was found. Access control: every sensitive function has an owner, role or sender check. Integer overflow: no unprotected arithmetic pattern was found. This is an automated pattern check, not a full manual audit.",
+   "uses_safemath": true
+  },
+  "result_shape": "raw",
+  "signal_hash": "0xab4059873242ab3ee6bc7da4c4ef34d71bd1e4830fee9e66553cf882ea4f8b43",
+  "timestamp": "2026-11-06T11:24:56.137255214Z"
+ },
+ "wash": {
+  "cost_usd": 0.01,
+  "duration_ms": 2173,
+  "miner_id": "7378",
+  "miner_name": "VerifyWire Wash Trading Detection",
+  "result": {
+   "as_of": "2026-11-06T11:24:57.190Z",
+   "attribution": "On-chain values read from public EVM nodes. Currency mid rates from European Central Bank reference rates via Frankfurter. Crypto quotes and order book depth from the Kraken, Bitstamp and Gemini public markets.",
+   "chain": "ethereum",
+   "chain_id": 1,
+   "confidence": 0.9,
+   "contract_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+   "from_block": 26354897,
+   "head_block": 26355496,
+   "intent": "WASH_TRADING_DETECTION",
+   "readings": "token UNI 0x1f9840a85d5af5bf1d1762f925bdaddc4201f984 on Ethereum, blocks 26354897-26355496 (600), transfers 747, addresses 312, reciprocal pairs 24, round-trip share 14.48%, concentration 26.25%, self 0, risk 0.2794 (LOW), read 2026-11-06T11:24:57.190Z.",
+   "reciprocal_pairs": 24,
+   "risk_label": "LOW",
+   "risk_score": 0.2794,
+   "round_trip_volume_share_percent": 14.48,
+   "self_transfers": 0,
+   "source": "eth_getLogs Transfer events over public RPC",
+   "summary": "Over the last 600 blocks on Ethereum, UNI shows a LOW wash-trading risk (score 0.28): 747 transfers among 312 addresses, with 24 reciprocal address pairs carrying about 14.48% (14.5%) of volume in round trips. The busiest sender moved 26.25% (26.3%) of volume. This is a heuristic over Transfer logs, not a proof of intent.",
+   "symbol": "UNI",
+   "top_sender_concentration_percent": 26.25,
+   "transfers": 747,
+   "unique_addresses": 312,
+   "verified": true,
+   "window_blocks": 600
+  },
+  "result_shape": "raw",
+  "signal_hash": "0x98c105228a11d844da1572e83da191163df0bd27297a99c0d40af74d49b4c81a",
+  "timestamp": "2026-11-06T11:24:57.20335961Z",
+  "warnings": [
+   "parameter \"token\" length 0 violates the miner's declared limit (lte 80): name a token by its address (0x...) or symbol. chain defaults to ethereum. blocks is the scan window and defaults to 120, capped at 600. The score is a heuristic over Transfer logs, not a proof of intent."
+  ]
+ },
+ "liquidity": {
+  "miner_id": "7373",
+  "miner_name": "VerifyWire Liquidity Depth",
+  "endpoint": "/depth",
+  "result": {
+   "liquidity_usd": 14487167.5152
+  },
+  "result_shape": "intent",
+  "format_version": 1,
+  "field_status": {
+   "liquidity_usd": "ok"
+  },
+  "input": {
+   "pool": "0x1d42064Fc4Beb5F8aAF85F4617AE8b3b5B8Bd801",
+   "chain": "ethereum"
+  },
+  "input_schema_version": 1,
+  "cost_usd": 0.01,
+  "duration_ms": 1276,
+  "timestamp": "2026-11-06T11:24:56.29990903Z",
+  "reasoning": "Intent: miner verifywire-liquidity-depth given by the caller\nMiner: The user wants to verify liquidity depth for a specific pool on a specific chain. The `/depth` endpoint is described as serving this intent and accepts `pool` and `chain` as query parameters, which are provided in the prompt.",
+  "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+  "signal_hash": "0xf519ed3c56b3a55c9a6a00dc2e19236af7d4f0e8b364fbff8044ccd692ee715b"
+ },
+ "holders": {
+  "miner_id": "7302",
+  "miner_name": "ChainWire Token Holder Count",
+  "endpoint": "/holders",
+  "result": {
+   "token": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+   "chain": "ethereum",
+   "holders_count": 415730,
+   "token_symbol": "UNI"
+  },
+  "result_shape": "intent",
+  "format_version": 1,
+  "field_status": {
+   "token": "ok",
+   "chain": "ok",
+   "holders_count": "ok",
+   "token_symbol": "ok"
+  },
+  "input": {
+   "token": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+   "chain": "ethereum"
+  },
+  "input_schema_version": 1,
+  "cost_usd": 0.01,
+  "duration_ms": 412,
+  "timestamp": "2026-11-06T11:24:55.439830631Z",
+  "reasoning": "Intent: miner chainwire-holder-count given by the caller\nMiner: The user is asking for the token holder count for a specific token on a specific chain. The ChainWire Token Holder Count miner has a /holders endpoint that accepts 'chain' and 'token' as query parameters and is described as serving the TOKEN_HOLDER_COUNT_GENERAL intent. The provided parameters match these requirements.",
+  "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+  "signal_hash": "0xb438ea5adf126f85f34481af67ca78444aadcfec7fd49b42545a205502181a48",
+  "warnings": [
+   "parameter \"chain\" length 0 violates the miner's declared limit (lte 40): chain must be one of ethereum, base, arbitrum, polygon (the chains with a public Blockscout instance). Token is a 0x contract address or a known symbol."
+  ]
+ },
+ "sanctions": {
+  "miner_id": "710637",
+  "miner_name": "Sanctions Name Evidence",
+  "endpoint": "/screen",
+  "result": {
+   "name": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+   "matched": false,
+   "matches": null,
+   "lists": [
+    "OFAC SDN",
+    "OFAC Consolidated (non-SDN)",
+    "UK Sanctions List (entities only)",
+    "Canada autonomous sanctions (entities only)",
+    "EU Financial Sanctions (entities only)",
+    "US BIS Entity List (export controls)"
+   ],
+   "match_score": 0
+  },
+  "result_shape": "intent",
+  "format_version": 3,
+  "field_status": {
+   "name": "ok",
+   "matched": "ok",
+   "matches": "missing",
+   "lists": "ok",
+   "match_score": "ok"
+  },
+  "input": {
+   "name": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984"
+  },
+  "input_schema_version": 3,
+  "cost_usd": 0.01,
+  "duration_ms": 69,
+  "timestamp": "2026-11-06T11:24:55.09766081Z",
+  "reasoning": "Intent: intent given by the caller\nMiner: request built from the miner's intent_mapping",
+  "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+  "signal_hash": "0x063c7f8297c4aa8926dca29d3c32d9c0957ed0ef2015298ce7d77de12881ce2a",
+  "warnings": [
+   "parameter \"name\" is 44 bytes, exceeding the miner's declared limit of 256 bytes: Name must be at most 256 UTF-8 bytes."
+  ]
+ },
+ "usdc-audit": {
+  "cost_usd": 0.01,
+  "duration_ms": 927,
+  "miner_id": "9002",
+  "miner_name": "TxLens",
+  "result": {
+   "answer": "Automated review of 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 on Ethereum rates it high risk: 2 high, 2 medium, 0 low severity findings in the verified source (FiatTokenProxy, via Sourcify). Reentrancy: no external call followed by a state change was found. Access control: 2 issues, first: upgradeTo() has no visible access check. Integer overflow: Solidity ^0.4.24 without SafeMath. Main findings: upgradeTo() has no visible access check (FiatTokenProxy.sol:246); upgradeToAndCall() has no visible access check (FiatTokenProxy.sol:260); Uses delegatecall (FiatTokenProxy.sol:41). This is an automated pattern check, not a full manual audit.",
+   "bytecode_size": 2143,
+   "canonical": "eth:0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48:high:2:2:0",
+   "chain": "eth",
+   "checked_at": "2026-11-06T11:36:28.923Z",
+   "compiler": "0.4.24+commit.e67f0147",
+   "confidence": 0.8,
+   "contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+   "contract_name": "FiatTokenProxy",
+   "counts": {
+    "high": 2,
+    "info": 1,
+    "low": 0,
+    "medium": 2
+   },
+   "findings": [
+    {
+     "category": "access-control",
+     "detail": "upgradeTo() is publicly callable and changes sensitive state, but has no owner or role modifier and no msg.sender check in its body. Anyone may be able to call it.",
+     "location": "FiatTokenProxy.sol:246",
+     "severity": "high",
+     "title": "upgradeTo() has no visible access check"
+    },
+    {
+     "category": "access-control",
+     "detail": "upgradeToAndCall() is publicly callable and changes sensitive state, but has no owner or role modifier and no msg.sender check in its body. Anyone may be able to call it.",
+     "location": "FiatTokenProxy.sol:260",
+     "severity": "high",
+     "title": "upgradeToAndCall() has no visible access check"
+    },
+    {
+     "category": "dangerous-call",
+     "detail": "delegatecall runs another contract's code with this contract's storage. If the target can be influenced by a caller, it can take over the contract.",
+     "location": "FiatTokenProxy.sol:41",
+     "severity": "medium",
+     "title": "Uses delegatecall"
+    },
+    {
+     "category": "integer-overflow",
+     "detail": "Before Solidity 0.8, arithmetic wraps around silently on overflow and underflow, and this code does not use SafeMath, so any arithmetic without its own range check can be pushed past its limits.",
+     "location": "pragma",
+     "severity": "medium",
+     "title": "Solidity ^0.4.24 without SafeMath"
+    },
+    {
+     "category": "best-practice",
+     "detail": "The compiler version is not pinned (^0.4.24), so the code can be built with different compilers.",
+     "location": "pragma",
+     "severity": "info",
+     "title": "Floating pragma"
+    }
+   ],
+   "pragma": "^0.4.24",
+   "risk": "high",
+   "solidity_0_8_or_later": false,
+   "source_note": null,
+   "source_provider": "Sourcify",
+   "source_verified": true,
+   "status": "ok",
+   "summary": "Automated review of 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 on Ethereum rates it high risk: 2 high, 2 medium, 0 low severity findings in the verified source (FiatTokenProxy, via Sourcify). Reentrancy: no external call followed by a state change was found. Access control: 2 issues, first: upgradeTo() has no visible access check. Integer overflow: Solidity ^0.4.24 without SafeMath. Main findings: upgradeTo() has no visible access check (FiatTokenProxy.sol:246); upgradeToAndCall() has no visible access check (FiatTokenProxy.sol:260); Uses delegatecall (FiatTokenProxy.sol:41). This is an automated pattern check, not a full manual audit.",
+   "uses_safemath": false
+  },
+  "result_shape": "raw",
+  "signal_hash": "0x8d78cacc4bee63793593f7aed944c717d07c748b887845be76884e7f0bbb221c",
+  "timestamp": "2026-11-06T11:36:29.007801241Z"
+ }
+}

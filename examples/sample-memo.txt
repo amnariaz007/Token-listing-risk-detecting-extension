@@ -1,0 +1,38 @@
+TOKEN LISTING-RISK MEMO                                 LRM-2026-SMPL
+=====================================================================
+
+Token:     Sample Token / SAMPLE  (0x1234...abcd)
+Chain:     ethereum-sepolia (testnet)
+Generated: 2026-11-06 07:44 UTC
+
+VERDICT:   CAUTION   (confidence: medium)
+Coverage:  2 of 3 planned checks executed
+
+Reason:    Recent adverse media needs review. Not checked: Contract
+           audit.
+
+---------------------------------------------------------------------
+EVIDENCE
+---------------------------------------------------------------------
+
+Check        Source (intent)  Miner    Finding           Cost    Tier
+Market price MARKET_PRICE_    9002     $0.0123           $0.01
+             INTENT
+Adverse      ADVERSE_MEDIA_   9002     2 adverse         $0.01
+media        INTENT                    mention(s)
+
+Skipped: Contract audit (No live miner for this intent.)
+
+---------------------------------------------------------------------
+COST LINE
+---------------------------------------------------------------------
+
+Checks paid: 2 x $0.01 = TOTAL $0.02 USDC
+
+Receipts: signal hashes in appendix.
+All requests on Telegraph testnet.
+
+SYNTHETIC SAMPLE. No purchases were made and every receipt here is
+fake. Not financial advice.
+
+=====================================================================

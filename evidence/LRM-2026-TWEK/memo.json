@@ -1,0 +1,339 @@
+{
+  "memo_id": "LRM-2026-TWEK",
+  "version": 1,
+  "supersedes": null,
+  "token": {
+    "name": "Uniswap",
+    "symbol": "UNI",
+    "address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+    "chain": "ethereum",
+    "identity_source": "onchain"
+  },
+  "generated_at": "2026-11-06T11:50:42Z",
+  "signed_at": "2026-11-06T11:51:17Z",
+  "network": "testnet",
+  "payment_network": "ethereum-sepolia",
+  "verdict": "CLEAR",
+  "verdict_reason": "No material negative indicators across 6 executed checks. This is not a guarantee of safety.",
+  "confidence": "high",
+  "coverage": {
+    "planned": 6,
+    "executed": 6
+  },
+  "limitations": [
+    "Not requested: Market price, Adverse media, Fraud screen (check limit).",
+    "Liquidity is the largest pool's reserve, found with a free DexScreener lookup. Slippage was not measured."
+  ],
+  "checks": [
+    {
+      "name": "Contract audit",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "miner_id": "9002",
+      "finding": "No high or medium findings",
+      "status": "ok",
+      "failure_reason": null,
+      "cost_usd": 0.01,
+      "signal_hash": "0x09de30cbfb31407571b5dab27f652fc9009324e748326a3062e24dd4c27c5835",
+      "signal_hash_status": "available",
+      "signal_verified": true,
+      "receipt_reference": "0x8236e7f46e9ef7a6c1c84680ab56c0610f9856f06fa78f46fced25ee77cc5860",
+      "request_id": null,
+      "raw_response_sha256": "e1a0fdc68cbef4c7e77f341f273d00b10efed7d048b998b4c49c882ce5a0afe7",
+      "signals": [
+        {
+          "level": "clear",
+          "code": "audit_clean",
+          "topic": "contract",
+          "basis": "miner_reported",
+          "explanation": "Automated audit found no high or medium issues"
+        }
+      ],
+      "tier": 2,
+      "payment": {
+        "status": "confirmed",
+        "quoted_amount_atomic": "10000",
+        "amount_atomic": "10000",
+        "amount": "0.01",
+        "decimals": 6,
+        "currency": "USDC",
+        "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+        "network": "eip155:11155111",
+        "tx_hash": "0xd35a6b186b07e064b437624926f3f068c833c77826d794983cd45953963f6432",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+        "block_number": "12076382"
+      }
+    },
+    {
+      "name": "Token controls",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "miner_id": "200001",
+      "finding": "No risky controls; top wallets 14.3%",
+      "status": "ok",
+      "failure_reason": null,
+      "cost_usd": 0.01,
+      "signal_hash": "0x2874a3955118fd0a50caecff9daa0ef27da3a2307304c6e7b0ee201c45e93a86",
+      "signal_hash_status": "available",
+      "signal_verified": true,
+      "receipt_reference": "0x57566cecd7a8a11063c91a7d4a76ef12297ba47a5bd984497caee88ab8a47015",
+      "request_id": null,
+      "raw_response_sha256": "620797ec2ed78db3a0747f39ae828df701b78d37db6500d022d2eca39a55d624",
+      "signals": [
+        {
+          "level": "clear",
+          "code": "token_controls_clean",
+          "topic": "controls",
+          "basis": "miner_reported",
+          "explanation": "No risky token controls flagged"
+        },
+        {
+          "level": "clear",
+          "code": "holders_dispersed",
+          "topic": "concentration",
+          "basis": "miner_reported",
+          "explanation": "No wallet concentration flagged"
+        }
+      ],
+      "tier": 2,
+      "payment": {
+        "status": "confirmed",
+        "quoted_amount_atomic": "10000",
+        "amount_atomic": "10000",
+        "amount": "0.01",
+        "decimals": 6,
+        "currency": "USDC",
+        "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+        "network": "eip155:11155111",
+        "tx_hash": "0xe5cec3d00579e53311d185ef7b15c1613af10622afb2bfa36dcbad783e4f2305",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+        "block_number": "12076382"
+      }
+    },
+    {
+      "name": "Sanctions screen",
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "miner_id": "710637",
+      "finding": "No list match",
+      "status": "ok",
+      "failure_reason": null,
+      "cost_usd": 0.01,
+      "signal_hash": "0x7654527c85d0a059fa28dba1c3e763640b6b9675a3b5a1561071f74e1cf4b0ba",
+      "signal_hash_status": "available",
+      "signal_verified": true,
+      "receipt_reference": "0xac70dcf87d1ac0351a84d7109d1153264409c44bf2cbc8e30cba9c9299f477c3",
+      "request_id": null,
+      "raw_response_sha256": "c28ea88c5123db022284eb938b25a00a392767575133ec95417f7beeaf79ce0c",
+      "signals": [
+        {
+          "level": "clear",
+          "code": "no_sanctions_match",
+          "topic": "sanctions",
+          "basis": "miner_reported",
+          "explanation": "No sanctions-list match"
+        }
+      ],
+      "tier": 1,
+      "payment": {
+        "status": "confirmed",
+        "quoted_amount_atomic": "10000",
+        "amount_atomic": "10000",
+        "amount": "0.01",
+        "decimals": 6,
+        "currency": "USDC",
+        "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+        "network": "eip155:11155111",
+        "tx_hash": "0x30e55cdb8ce5213f5b89b4a6e846bb01ff7c3d875db2594015dbc00e6356f9e0",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+        "block_number": "12076382"
+      }
+    },
+    {
+      "name": "Wash trading",
+      "intent": "WASH_TRADING_DETECTION_GENERAL",
+      "miner_id": "7378",
+      "finding": "LOW risk, 1.16% round-trip",
+      "status": "ok",
+      "failure_reason": null,
+      "cost_usd": 0.01,
+      "signal_hash": "0x6ab874dc5b92d65da1c8738126472038965e6203c560f6d76fb9da68176b39f3",
+      "signal_hash_status": "available",
+      "signal_verified": true,
+      "receipt_reference": "0x5f8557ffdc787a44537e63159f7fd23dd92ea228a8b6debe4d59482426848cc9",
+      "request_id": null,
+      "raw_response_sha256": "469b85b3e23b89486a0ec2f662f8306c447eba83ea6ae9bce66ef83472066777",
+      "signals": [
+        {
+          "level": "clear",
+          "code": "wash_low",
+          "topic": "market_integrity",
+          "basis": "miner_reported",
+          "explanation": "Wash-trading scan shows low risk"
+        }
+      ],
+      "tier": 2,
+      "payment": {
+        "status": "confirmed",
+        "quoted_amount_atomic": "10000",
+        "amount_atomic": "10000",
+        "amount": "0.01",
+        "decimals": 6,
+        "currency": "USDC",
+        "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+        "network": "eip155:11155111",
+        "tx_hash": "0xe7e8cbd2826bc9b16f5d7ae042262567111beaa7f86eb7cfc91548f1a4bb0927",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+        "block_number": "12076383"
+      }
+    },
+    {
+      "name": "Holder count",
+      "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+      "miner_id": "7302",
+      "finding": "429,171 holders",
+      "status": "ok",
+      "failure_reason": null,
+      "cost_usd": 0.01,
+      "signal_hash": "0x30e9cbbd2118fe2a959f1c734f06c9bfa0a483761a329959bc27fcc9d96f4cac",
+      "signal_hash_status": "available",
+      "signal_verified": true,
+      "receipt_reference": "0xa5ddea0c2e7ef34319884ab09e75095fcbcad769df22eed52ddc596860e60fd1",
+      "request_id": null,
+      "raw_response_sha256": "06685a9a3524b26d39999c2f60da573897c4b96b15dfb3431a3a7e9dd7299745",
+      "signals": [
+        {
+          "level": "clear",
+          "code": "holder_base",
+          "topic": "holders",
+          "basis": "miner_reported",
+          "explanation": "Holder count above minimum"
+        }
+      ],
+      "tier": 1,
+      "payment": {
+        "status": "confirmed",
+        "quoted_amount_atomic": "10000",
+        "amount_atomic": "10000",
+        "amount": "0.01",
+        "decimals": 6,
+        "currency": "USDC",
+        "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+        "network": "eip155:11155111",
+        "tx_hash": "0xc5c953f2c680dd0b3e6c19761dcb7df37f3ef5f8631025fa86bbe5cc6c574e76",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+        "block_number": "12076383"
+      }
+    },
+    {
+      "name": "Liquidity",
+      "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+      "miner_id": "7373",
+      "finding": "$14,540,640 top pool",
+      "status": "ok",
+      "failure_reason": null,
+      "cost_usd": 0.01,
+      "signal_hash": "0x92e0cc999609bf4a1d6006ca6e8969d871027761ed2cf2cba2d374fef50d4268",
+      "signal_hash_status": "available",
+      "signal_verified": true,
+      "receipt_reference": "0x9217f88a93a54853c7215bf1f285cbb51bfe3e520d425afe49862a81bb9191cc",
+      "request_id": null,
+      "raw_response_sha256": "d7097a78c7dd30db5c395d81318fe9bb27bf0b4fb649fe56216ba8176ea48600",
+      "signals": [
+        {
+          "level": "clear",
+          "code": "adequate_liquidity",
+          "topic": "liquidity",
+          "basis": "miner_reported",
+          "explanation": "Top pool liquidity above minimum"
+        }
+      ],
+      "tier": 1,
+      "payment": {
+        "status": "confirmed",
+        "quoted_amount_atomic": "10000",
+        "amount_atomic": "10000",
+        "amount": "0.01",
+        "decimals": 6,
+        "currency": "USDC",
+        "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+        "network": "eip155:11155111",
+        "tx_hash": "0x8ed6c12c8945b9fd1dffadd3ca0cc825b4da9d16c955a6e350e8381050242826",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+        "block_number": "12076383"
+      }
+    }
+  ],
+  "checks_skipped": [],
+  "cost": {
+    "per_check_usd": 0.01,
+    "checks_paid": 6,
+    "total_usd": 0.06,
+    "usd_basis": "USDC face value (1 USDC = $1); not a market conversion",
+    "currency": "USDC",
+    "totals": [
+      {
+        "currency": "USDC",
+        "decimals": 6,
+        "amount_atomic": "60000",
+        "amount": "0.06"
+      }
+    ],
+    "line_items": [
+      {
+        "check": "Contract audit",
+        "amount_atomic": "10000",
+        "amount": "0.01",
+        "currency": "USDC",
+        "cost_usd": 0.01,
+        "receipt_reference": "0x8236e7f46e9ef7a6c1c84680ab56c0610f9856f06fa78f46fced25ee77cc5860"
+      },
+      {
+        "check": "Token controls",
+        "amount_atomic": "10000",
+        "amount": "0.01",
+        "currency": "USDC",
+        "cost_usd": 0.01,
+        "receipt_reference": "0x57566cecd7a8a11063c91a7d4a76ef12297ba47a5bd984497caee88ab8a47015"
+      },
+      {
+        "check": "Sanctions screen",
+        "amount_atomic": "10000",
+        "amount": "0.01",
+        "currency": "USDC",
+        "cost_usd": 0.01,
+        "receipt_reference": "0xac70dcf87d1ac0351a84d7109d1153264409c44bf2cbc8e30cba9c9299f477c3"
+      },
+      {
+        "check": "Wash trading",
+        "amount_atomic": "10000",
+        "amount": "0.01",
+        "currency": "USDC",
+        "cost_usd": 0.01,
+        "receipt_reference": "0x5f8557ffdc787a44537e63159f7fd23dd92ea228a8b6debe4d59482426848cc9"
+      },
+      {
+        "check": "Holder count",
+        "amount_atomic": "10000",
+        "amount": "0.01",
+        "currency": "USDC",
+        "cost_usd": 0.01,
+        "receipt_reference": "0xa5ddea0c2e7ef34319884ab09e75095fcbcad769df22eed52ddc596860e60fd1"
+      },
+      {
+        "check": "Liquidity",
+        "amount_atomic": "10000",
+        "amount": "0.01",
+        "currency": "USDC",
+        "cost_usd": 0.01,
+        "receipt_reference": "0x9217f88a93a54853c7215bf1f285cbb51bfe3e520d425afe49862a81bb9191cc"
+      }
+    ],
+    "failed_attempts": 0,
+    "failed_attempt_spend": []
+  },
+  "disclaimer": "Testnet run. Intelligence bought via Telegraph. Not financial advice."
+}

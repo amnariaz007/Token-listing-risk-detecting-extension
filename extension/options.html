@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Token Listing Risk options</title>
+<style>
+  body { font: 14px/1.5 system-ui, sans-serif; max-width: 460px; margin: 24px; color: #1c1b18; }
+  label { display: block; margin-top: 14px; font-weight: 600; }
+  input { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; }
+  button { margin-top: 16px; padding: 8px 14px; }
+  p { color: #5c5a54; font-size: 13px; }
+</style>
+</head>
+<body>
+<h1>Token Listing Risk</h1>
+<label for="baseUrl">App address</label>
+<input id="baseUrl" placeholder="http://127.0.0.1:4402">
+<label for="apiKey">API key (only if the app sets ASSESS_API_KEY)</label>
+<input id="apiKey" type="password" autocomplete="off">
+<button id="save">Save</button>
+<p id="status" role="status"></p>
+<p>The app holds the wallet and pays for each assessment. This extension only sends it the token address and shows the signed memo.</p>
+<script src="options.js"></script>
+</body>
+</html>

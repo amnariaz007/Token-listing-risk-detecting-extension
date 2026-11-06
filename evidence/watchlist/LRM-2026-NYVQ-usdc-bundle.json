@@ -1,0 +1,1976 @@
+{
+  "format": "lrm-evidence-bundle/v1",
+  "signed": {
+    "scheme": "lrm-sig/v1",
+    "memo": {
+      "memo_id": "LRM-2026-NYVQ",
+      "version": 1,
+      "supersedes": null,
+      "token": {
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        "chain": "ethereum",
+        "identity_source": "onchain"
+      },
+      "generated_at": "2026-11-06T11:42:22Z",
+      "signed_at": "2026-11-06T11:43:10Z",
+      "network": "testnet",
+      "payment_network": "ethereum-sepolia",
+      "verdict": "CAUTION",
+      "verdict_reason": "Automated audit flagged high-severity patterns. Unconfirmed: needs human review. Token controls need review: Upgradeable proxy. Wash-trading signals: ELEVATED risk (score 0.3969).",
+      "confidence": "high",
+      "coverage": {
+        "planned": 6,
+        "executed": 6
+      },
+      "limitations": [
+        "Not requested: Market price, Adverse media, Fraud screen (check limit).",
+        "Liquidity is the largest pool's reserve, found with a free DexScreener lookup. Slippage was not measured."
+      ],
+      "checks": [
+        {
+          "name": "Contract audit",
+          "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+          "miner_id": "9002",
+          "finding": "2 high, unconfirmed",
+          "status": "ok",
+          "failure_reason": null,
+          "cost_usd": 0.01,
+          "signal_hash": "0xf6af7a9cb80244d5f81f7f5c52b5a4f81e9f1cdcf785c97c05a33aa619e8929c",
+          "signal_hash_status": "available",
+          "signal_verified": true,
+          "receipt_reference": "0x20bc8bb47157bfef1d99fe78b65824b461d59eeb83d5128ab309eccc10e63c06",
+          "request_id": null,
+          "raw_response_sha256": "5adaf30ae1e50656c49385168d225da4d884449f6cf2f4e040b8d3d62c47b3c8",
+          "signals": [
+            {
+              "level": "soft",
+              "code": "audit_high_unconfirmed",
+              "topic": "contract",
+              "basis": "miner_reported",
+              "explanation": "Automated audit flagged high-severity patterns. Unconfirmed: needs human review",
+              "details": [
+                "HIGH: upgradeTo() has no visible access check (access-control)",
+                "HIGH: upgradeToAndCall() has no visible access check (access-control)"
+              ]
+            }
+          ],
+          "tier": 2,
+          "payment": {
+            "status": "confirmed",
+            "quoted_amount_atomic": "10000",
+            "amount_atomic": "10000",
+            "amount": "0.01",
+            "decimals": 6,
+            "currency": "USDC",
+            "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+            "network": "eip155:11155111",
+            "tx_hash": "0x051154751e5d1341c70ccb6285205aa9c314dcaca520f2cd846c40331e0be832",
+            "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+            "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+            "block_number": "12076343"
+          }
+        },
+        {
+          "name": "Token controls",
+          "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+          "miner_id": "200001",
+          "finding": "1 flag(s); top wallets 11.2%",
+          "status": "ok",
+          "failure_reason": null,
+          "cost_usd": 0.01,
+          "signal_hash": "0x6eafb7e917642466d0b2dbf6f4640235507a5c269529db578594d499ab0bbf25",
+          "signal_hash_status": "available",
+          "signal_verified": true,
+          "receipt_reference": "0x66dc57d60135d8afddf46c72f2eb8390a1428223f7b074c13c8cfb14ae902354",
+          "request_id": null,
+          "raw_response_sha256": "bef165c1a53f636becea091606b0502854cd6873730964a4125bfe534bc64a17",
+          "signals": [
+            {
+              "level": "soft",
+              "code": "token_control_flags",
+              "topic": "controls",
+              "basis": "miner_reported",
+              "explanation": "Token controls need review: Upgradeable proxy",
+              "details": [
+                "Upgradeable proxy"
+              ]
+            },
+            {
+              "level": "clear",
+              "code": "holders_dispersed",
+              "topic": "concentration",
+              "basis": "miner_reported",
+              "explanation": "No wallet concentration flagged"
+            }
+          ],
+          "tier": 2,
+          "payment": {
+            "status": "confirmed",
+            "quoted_amount_atomic": "10000",
+            "amount_atomic": "10000",
+            "amount": "0.01",
+            "decimals": 6,
+            "currency": "USDC",
+            "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+            "network": "eip155:11155111",
+            "tx_hash": "0xc7bc4067026aa2ca47c13bc2359f5ee19717e5f04b34e889353abb52ec60613b",
+            "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+            "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+            "block_number": "12076343"
+          }
+        },
+        {
+          "name": "Sanctions screen",
+          "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "miner_id": "710637",
+          "finding": "No list match",
+          "status": "ok",
+          "failure_reason": null,
+          "cost_usd": 0.01,
+          "signal_hash": "0xd2de15dc207cdcfa5b59fe4e8b57d182bd82f2950794357839ad994867c6b6d0",
+          "signal_hash_status": "available",
+          "signal_verified": true,
+          "receipt_reference": "0x4ab842d471fc5bfee64dc2f0872c417a5851abb23c44e1b91096ce9b8b0b404a",
+          "request_id": null,
+          "raw_response_sha256": "1ad00f7c73ce7d416ad393ecef6d97ecac0b92202971c9708d57026d10ae0633",
+          "signals": [
+            {
+              "level": "clear",
+              "code": "no_sanctions_match",
+              "topic": "sanctions",
+              "basis": "miner_reported",
+              "explanation": "No sanctions-list match"
+            }
+          ],
+          "tier": 1,
+          "payment": {
+            "status": "confirmed",
+            "quoted_amount_atomic": "10000",
+            "amount_atomic": "10000",
+            "amount": "0.01",
+            "decimals": 6,
+            "currency": "USDC",
+            "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+            "network": "eip155:11155111",
+            "tx_hash": "0x4bb05ff7a3f8e3b2f5b6c167ce151589d8336d16586dd39f6d65cc458d915b6b",
+            "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+            "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+            "block_number": "12076343"
+          }
+        },
+        {
+          "name": "Wash trading",
+          "intent": "WASH_TRADING_DETECTION_GENERAL",
+          "miner_id": "7378",
+          "finding": "ELEVATED risk, 27.72% round-trip",
+          "status": "ok",
+          "failure_reason": null,
+          "cost_usd": 0.01,
+          "signal_hash": "0xa408cb0b29eac40f172dcbce4d05ffdf098d6e683196230a09c60dfdefb78059",
+          "signal_hash_status": "available",
+          "signal_verified": true,
+          "receipt_reference": "0x856414fbafe08d1cc8eb1c926aa3359b99204301856f23e37fcd2dd8bb8e8686",
+          "request_id": null,
+          "raw_response_sha256": "459a75a6112547d8b63d1cc8f8c236c44f41d2835acfb4208e9c93909ad884cf",
+          "signals": [
+            {
+              "level": "soft",
+              "code": "wash_trading_signals",
+              "topic": "market_integrity",
+              "basis": "miner_reported",
+              "explanation": "Wash-trading signals: ELEVATED risk (score 0.3969)"
+            }
+          ],
+          "tier": 2,
+          "payment": {
+            "status": "confirmed",
+            "quoted_amount_atomic": "10000",
+            "amount_atomic": "10000",
+            "amount": "0.01",
+            "decimals": 6,
+            "currency": "USDC",
+            "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+            "network": "eip155:11155111",
+            "tx_hash": "0xcdb5a03646a5d1b635ae6b7de7c5269677e29b328c655412a52d1e470b86129c",
+            "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+            "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+            "block_number": "12076344"
+          }
+        },
+        {
+          "name": "Holder count",
+          "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+          "miner_id": "7302",
+          "finding": "9,564,157 holders",
+          "status": "ok",
+          "failure_reason": null,
+          "cost_usd": 0.01,
+          "signal_hash": "0x8fc3e3c3af7ad8ee5c29e3e0b9437c8c4688d884b138e3006b275911352b86d4",
+          "signal_hash_status": "available",
+          "signal_verified": true,
+          "receipt_reference": "0x22f22fdf0e9efbfaae39f414b4af01497d44a4a8bcb21822c5e34148950193f8",
+          "request_id": null,
+          "raw_response_sha256": "2c9fb7d84067f12c2007183afd5bbe1f66a399cddc5a9737db21ea4d3ddb2efb",
+          "signals": [
+            {
+              "level": "clear",
+              "code": "holder_base",
+              "topic": "holders",
+              "basis": "miner_reported",
+              "explanation": "Holder count above minimum"
+            }
+          ],
+          "tier": 1,
+          "payment": {
+            "status": "confirmed",
+            "quoted_amount_atomic": "10000",
+            "amount_atomic": "10000",
+            "amount": "0.01",
+            "decimals": 6,
+            "currency": "USDC",
+            "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+            "network": "eip155:11155111",
+            "tx_hash": "0x76ddc1d483a8d97d0635baa81d4178c12d852b2f16f056acc15b39ba5d078366",
+            "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+            "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+            "block_number": "12076344"
+          }
+        },
+        {
+          "name": "Liquidity",
+          "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+          "miner_id": "7373",
+          "finding": "$7,681,998 top pool",
+          "status": "ok",
+          "failure_reason": null,
+          "cost_usd": 0.01,
+          "signal_hash": "0x99a5a34f2b35d6d5f2b74bd510d5acf9a02b9a1f0458f01490f67ec2b5c2d1c4",
+          "signal_hash_status": "available",
+          "signal_verified": true,
+          "receipt_reference": "0x06a9f936e0a3a70f0a777389b815dc44e8db9f159a06be1e40d27ce3a4523b10",
+          "request_id": null,
+          "raw_response_sha256": "b0ab35523ce759cf83b722b5f34984cbeee13231c30688f77773c2df6b7cf941",
+          "signals": [
+            {
+              "level": "clear",
+              "code": "adequate_liquidity",
+              "topic": "liquidity",
+              "basis": "miner_reported",
+              "explanation": "Top pool liquidity above minimum"
+            }
+          ],
+          "tier": 1,
+          "payment": {
+            "status": "confirmed",
+            "quoted_amount_atomic": "10000",
+            "amount_atomic": "10000",
+            "amount": "0.01",
+            "decimals": 6,
+            "currency": "USDC",
+            "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+            "network": "eip155:11155111",
+            "tx_hash": "0x7f666b641f75ed47e2f3f3c3a14780b98afa455b77c609c0f76f5e319f14231e",
+            "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+            "pay_to": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+            "block_number": "12076344"
+          }
+        }
+      ],
+      "checks_skipped": [],
+      "cost": {
+        "per_check_usd": 0.01,
+        "checks_paid": 6,
+        "total_usd": 0.06,
+        "usd_basis": "USDC face value (1 USDC = $1); not a market conversion",
+        "currency": "USDC",
+        "totals": [
+          {
+            "currency": "USDC",
+            "decimals": 6,
+            "amount_atomic": "60000",
+            "amount": "0.06"
+          }
+        ],
+        "line_items": [
+          {
+            "check": "Contract audit",
+            "amount_atomic": "10000",
+            "amount": "0.01",
+            "currency": "USDC",
+            "cost_usd": 0.01,
+            "receipt_reference": "0x20bc8bb47157bfef1d99fe78b65824b461d59eeb83d5128ab309eccc10e63c06"
+          },
+          {
+            "check": "Token controls",
+            "amount_atomic": "10000",
+            "amount": "0.01",
+            "currency": "USDC",
+            "cost_usd": 0.01,
+            "receipt_reference": "0x66dc57d60135d8afddf46c72f2eb8390a1428223f7b074c13c8cfb14ae902354"
+          },
+          {
+            "check": "Sanctions screen",
+            "amount_atomic": "10000",
+            "amount": "0.01",
+            "currency": "USDC",
+            "cost_usd": 0.01,
+            "receipt_reference": "0x4ab842d471fc5bfee64dc2f0872c417a5851abb23c44e1b91096ce9b8b0b404a"
+          },
+          {
+            "check": "Wash trading",
+            "amount_atomic": "10000",
+            "amount": "0.01",
+            "currency": "USDC",
+            "cost_usd": 0.01,
+            "receipt_reference": "0x856414fbafe08d1cc8eb1c926aa3359b99204301856f23e37fcd2dd8bb8e8686"
+          },
+          {
+            "check": "Holder count",
+            "amount_atomic": "10000",
+            "amount": "0.01",
+            "currency": "USDC",
+            "cost_usd": 0.01,
+            "receipt_reference": "0x22f22fdf0e9efbfaae39f414b4af01497d44a4a8bcb21822c5e34148950193f8"
+          },
+          {
+            "check": "Liquidity",
+            "amount_atomic": "10000",
+            "amount": "0.01",
+            "currency": "USDC",
+            "cost_usd": 0.01,
+            "receipt_reference": "0x06a9f936e0a3a70f0a777389b815dc44e8db9f159a06be1e40d27ce3a4523b10"
+          }
+        ],
+        "failed_attempts": 0,
+        "failed_attempt_spend": []
+      },
+      "disclaimer": "Testnet run. Intelligence bought via Telegraph. Not financial advice."
+    },
+    "memo_hash": "0x4becbcb0d6b6da5d3c7a0d68668f3958d345365d283c7d78e135ab2c1004fe3b",
+    "signer_address": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+    "signature": "0xfcef24841cb5291483143f8e2260c3ba33a2e2076e9dfabb6bc7a9684cf75e412bac9e2549669e1199f2b1be490665d0e44ece5655de63d1ecbbf6b2680233f71b"
+  },
+  "raw_evidence": [
+    {
+      "check": "Contract audit",
+      "method": "POST",
+      "url": "https://devnode.telegraphprotocol.com/engine/v1/ask/9002",
+      "request_body": {
+        "method": "GET",
+        "endpoint": "/smart-contract-audit",
+        "payload": {
+          "contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "chain": "eth"
+        }
+      },
+      "requested_at": "2026-11-06T11:42:37.534Z",
+      "responded_at": "2026-11-06T11:42:50.581Z",
+      "duration_ms": 13047,
+      "exchanges": [
+        {
+          "status": 402,
+          "headers": {
+            "cf-cache-status": "DYNAMIC",
+            "connection": "keep-alive",
+            "content-length": "917",
+            "content-type": "application/json",
+            "date": "Fri, 06 Nov 2026 11:42:38 GMT",
+            "payment-required": "eyJhY2NlcHRzIjpbeyJhbW91bnQiOiIxMDAwMCIsImFzc2V0IjoiMHhjYzE5NGUxYTg0M0I2NTg1MjZEMEQ1QzQzMWY2NzAwMjg1ODJBZTE3IiwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifSwibWF4VGltZW91dFNlY29uZHMiOjYwLCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRFQjAxMkI1RTk5OEJCNTdCNmJFNkM5Q2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJleGFjdCJ9LHsiYW1vdW50IjoiMTAwMDAiLCJleHRyYSI6eyJkZXNjcmlwdGlvbiI6IkRlZHVjdCBmcm9tIHRoZSBjYWxsZXIncyBUZWxlZ3JhcGggZXNjcm93IGJhbGFuY2UgYXQgdGhlIG5leHQgZXBvY2ggY2xvc2UuIEZ1bmQgaXQgb25jZSB3aXRoIEVzY3Jvd0ZhY2V0LmRlcG9zaXRVU0RDKGFtb3VudCk7IG5vIHBlci1yZXF1ZXN0IHNldHRsZW1lbnQuIiwibWVzc2FnZSI6IlRlbGVncmFwaCBFc2Nyb3cgUGF5bWVudFxuXG5XYWxsZXQ6IHtmcm9tfVxuUGF5IFRvOiAweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWJcbk5ldHdvcms6IGVpcDE1NToxMTE1NTExMVxuQW1vdW50OiAxMDAwMCB1VVNEQ1xuUmVzb3VyY2U6IC92MS9hc2svOTAwMlxuTm9uY2U6IHtub25jZX1cblZhbGlkIEFmdGVyOiB7dmFsaWRBZnRlcn1cblZhbGlkIEJlZm9yZToge3ZhbGlkQmVmb3JlfSIsInJlc291cmNlIjoiL3YxL2Fzay85MDAyIiwic2lnbldpdGgiOiJwZXJzb25hbF9zaWduIChFSVAtMTkxKSJ9LCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJlc2Nyb3cifV0sImVycm9yIjoiUGF5bWVudCByZXF1aXJlZCIsInJlc291cmNlIjp7ImRlc2NyaXB0aW9uIjoiUGF5bWVudCByZXF1aXJlZCBmb3IgZGlyZWN0IHN1Ym5ldCBpbmZlcmVuY2UuIiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIiwidXJsIjoiaHR0cHM6Ly9kZXZub2RlLnRlbGVncmFwaHByb3RvY29sLmNvbS9lbmdpbmUvdjEvYXNrLzkwMDIifSwieDQwMlZlcnNpb24iOjJ9",
+            "vary": "Origin, Origin"
+          }
+        },
+        {
+          "status": 200,
+          "headers": {
+            "cf-cache-status": "DYNAMIC",
+            "connection": "keep-alive",
+            "content-encoding": "br",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 06 Nov 2026 11:42:50 GMT",
+            "payment-response": "eyJzdWNjZXNzIjp0cnVlLCJwYXllciI6IjB4MjAwOTFGRUQwMUYxYUVhM0U4NDBkNjk4NENGYjExMDc1NkI1QWIxYyIsInRyYW5zYWN0aW9uIjoiMHgwNTExNTQ3NTFlNWQxMzQxYzcwY2NiNjI4NTIwNWFhOWMzMTRkY2FjYTUyMGYyY2Q4NDZjNDAzMzFlMGJlODMyIiwibmV0d29yayI6ImVpcDE1NToxMTE1NTExMSJ9",
+            "transfer-encoding": "chunked",
+            "vary": "Origin, Origin",
+            "x-telegraph-receipt": "eyJyZWNlaXB0X2hhc2giOiIweDIwYmM4YmI0NzE1N2JmZWYxZDk5ZmU3OGI2NTgyNGI0NjFkNTllZWI4M2Q1MTI4YWIzMDllY2NjMTBlNjNjMDYiLCJyYWlsIjoieDQwMiIsInBheWVyIjoiMHgyMDA5MUZFRDAxRjFhRWEzRTg0MGQ2OTg0Q0ZiMTEwNzU2QjVBYjFjIiwibWluZXIiOiI1MDc4IiwiaW50ZW50IjoiU01BUlRfQ09OVFJBQ1RfQVVESVRfR0VORVJBTCIsImFtb3VudF91dXNkYyI6IjEwMDAwIiwiZXBvY2hfaWQiOjIwMjYsInNldHRsZW1lbnQiOiJvbmNoYWluIiwiY2hhaW4iOiJlaXAxNTU6MTExNTUxMTEiLCJ0eF9oYXNoIjoiMHgwNTExNTQ3NTFlNWQxMzQxYzcwY2NiNjI4NTIwNWFhOWMzMTRkY2FjYTUyMGYyY2Q4NDZjNDAzMzFlMGJlODMyIiwidGltZXN0YW1wIjoxNzkzOTY1MzcwfQ=="
+          }
+        }
+      ],
+      "challenge": {
+        "amountAtomic": "10000",
+        "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+        "network": "eip155:11155111",
+        "payTo": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+        "scheme": "exact",
+        "maxTimeoutSeconds": 60
+      },
+      "settlement": {
+        "success": true,
+        "transaction": "0x051154751e5d1341c70ccb6285205aa9c314dcaca520f2cd846c40331e0be832",
+        "network": "eip155:11155111",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "errorReason": null
+      },
+      "receipt": {
+        "receipt_hash": "0x20bc8bb47157bfef1d99fe78b65824b461d59eeb83d5128ab309eccc10e63c06",
+        "rail": "x402",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "miner": "5078",
+        "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+        "amount_uusdc": "10000",
+        "epoch_id": 2026,
+        "settlement": "onchain",
+        "chain": "eip155:11155111",
+        "tx_hash": "0x051154751e5d1341c70ccb6285205aa9c314dcaca520f2cd846c40331e0be832",
+        "timestamp": 1793965370
+      },
+      "signal": {
+        "signal_hash": "0xf6af7a9cb80244d5f81f7f5c52b5a4f81e9f1cdcf785c97c05a33aa619e8929c",
+        "kind": "direct_result",
+        "signal": {
+          "id": "8cd607c3-84ed-4a97-b5e2-98ff570007a3",
+          "signal_hash": "0xf6af7a9cb80244d5f81f7f5c52b5a4f81e9f1cdcf785c97c05a33aa619e8929c",
+          "kind": "direct_result",
+          "wallet_address": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+          "miner_slug": "txlens",
+          "subnet_id": "9002",
+          "intent_id": "SMART_CONTRACT_AUDIT_GENERAL",
+          "tx_hash": "0x051154751e5d1341c70ccb6285205aa9c314dcaca520f2cd846c40331e0be832",
+          "result_id": "8f20e5bf-bcd7-47a3-8ea1-9bf47a5c5fe5",
+          "created_at": "2026-11-06T11:42:50.607407Z"
+        },
+        "payload": {
+          "intent_id": "SMART_CONTRACT_AUDIT_GENERAL",
+          "miner_slug": "txlens",
+          "subnet_id": "9002",
+          "wallet_address": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+          "request": "[direct] 9002 → {\"method\":\"GET\",\"endpoint\":\"/smart-contract-audit\",\"payload\":{\"chain\":\"eth\",\"contract\":\"0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48\"}}",
+          "response": {
+            "answer": "Automated review of 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 on Ethereum rates it high risk: 2 high, 2 medium, 0 low severity findings in the verified source (FiatTokenProxy, via Sourcify). Reentrancy: no external call followed by a state change was found. Access control: 2 issues, first: upgradeTo() has no visible access check. Integer overflow: Solidity ^0.4.24 without SafeMath. Main findings: upgradeTo() has no visible access check (FiatTokenProxy.sol:246); upgradeToAndCall() has no visible access check (FiatTokenProxy.sol:260); Uses delegatecall (FiatTokenProxy.sol:41). This is an automated pattern check, not a full manual audit.",
+            "bytecode_size": 2143,
+            "canonical": "eth:0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48:high:2:2:0",
+            "chain": "eth",
+            "checked_at": "2026-11-06T11:42:50.524Z",
+            "compiler": "0.4.24+commit.e67f0147",
+            "confidence": 0.8,
+            "contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+            "contract_name": "FiatTokenProxy",
+            "counts": {
+              "high": 2,
+              "info": 1,
+              "low": 0,
+              "medium": 2
+            },
+            "findings": [
+              {
+                "category": "access-control",
+                "detail": "upgradeTo() is publicly callable and changes sensitive state, but has no owner or role modifier and no msg.sender check in its body. Anyone may be able to call it.",
+                "location": "FiatTokenProxy.sol:246",
+                "severity": "high",
+                "title": "upgradeTo() has no visible access check"
+              },
+              {
+                "category": "access-control",
+                "detail": "upgradeToAndCall() is publicly callable and changes sensitive state, but has no owner or role modifier and no msg.sender check in its body. Anyone may be able to call it.",
+                "location": "FiatTokenProxy.sol:260",
+                "severity": "high",
+                "title": "upgradeToAndCall() has no visible access check"
+              },
+              {
+                "category": "dangerous-call",
+                "detail": "delegatecall runs another contract's code with this contract's storage. If the target can be influenced by a caller, it can take over the contract.",
+                "location": "FiatTokenProxy.sol:41",
+                "severity": "medium",
+                "title": "Uses delegatecall"
+              },
+              {
+                "category": "integer-overflow",
+                "detail": "Before Solidity 0.8, arithmetic wraps around silently on overflow and underflow, and this code does not use SafeMath, so any arithmetic without its own range check can be pushed past its limits.",
+                "location": "pragma",
+                "severity": "medium",
+                "title": "Solidity ^0.4.24 without SafeMath"
+              },
+              {
+                "category": "best-practice",
+                "detail": "The compiler version is not pinned (^0.4.24), so the code can be built with different compilers.",
+                "location": "pragma",
+                "severity": "info",
+                "title": "Floating pragma"
+              }
+            ],
+            "pragma": "^0.4.24",
+            "risk": "high",
+            "solidity_0_8_or_later": false,
+            "source_note": null,
+            "source_provider": "Sourcify",
+            "source_verified": true,
+            "status": "ok",
+            "summary": "Automated review of 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 on Ethereum rates it high risk: 2 high, 2 medium, 0 low severity findings in the verified source (FiatTokenProxy, via Sourcify). Reentrancy: no external call followed by a state change was found. Access control: 2 issues, first: upgradeTo() has no visible access check. Integer overflow: Solidity ^0.4.24 without SafeMath. Main findings: upgradeTo() has no visible access check (FiatTokenProxy.sol:246); upgradeToAndCall() has no visible access check (FiatTokenProxy.sol:260); Uses delegatecall (FiatTokenProxy.sol:41). This is an automated pattern check, not a full manual audit.",
+            "uses_safemath": false
+          },
+          "timestamp": "2026-11-06T11:42:50.602684935Z"
+        },
+        "result": {
+          "id": "8f20e5bf-bcd7-47a3-8ea1-9bf47a5c5fe5",
+          "type": "direct",
+          "source": "user",
+          "status": "success",
+          "created_at": "2026-11-06T11:42:50.602903Z",
+          "signal_hash": "0xf6af7a9cb80244d5f81f7f5c52b5a4f81e9f1cdcf785c97c05a33aa619e8929c",
+          "routing_mode": "direct",
+          "question": {
+            "hash": "a95e0710ac7079e69e9b0ddeab55e9e810dbf980e7e8e08a72a6526af7c1b027",
+            "text": "[direct] 9002 → {\"method\":\"GET\",\"endpoint\":\"/smart-contract-audit\",\"payload\":{\"chain\":\"eth\",\"contract\":\"0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48\"}}",
+            "category": "",
+            "interest_score": 0,
+            "affected_pct": 0,
+            "audience_pct": 0,
+            "source_url": ""
+          },
+          "routing": {
+            "subnet_id": "9002",
+            "subnet_name": "TxLens",
+            "miner_slug": "txlens",
+            "reasoning": "user-directed",
+            "intent": "SMART_CONTRACT_AUDIT_GENERAL"
+          },
+          "execution": {
+            "result": {
+              "answer": "Automated review of 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 on Ethereum rates it high risk: 2 high, 2 medium, 0 low severity findings in the verified source (FiatTokenProxy, via Sourcify). Reentrancy: no external call followed by a state change was found. Access control: 2 issues, first: upgradeTo() has no visible access check. Integer overflow: Solidity ^0.4.24 without SafeMath. Main findings: upgradeTo() has no visible access check (FiatTokenProxy.sol:246); upgradeToAndCall() has no visible access check (FiatTokenProxy.sol:260); Uses delegatecall (FiatTokenProxy.sol:41). This is an automated pattern check, not a full manual audit.",
+              "bytecode_size": 2143,
+              "canonical": "eth:0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48:high:2:2:0",
+              "chain": "eth",
+              "checked_at": "2026-11-06T11:42:50.524Z",
+              "compiler": "0.4.24+commit.e67f0147",
+              "confidence": 0.8,
+              "contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+              "contract_name": "FiatTokenProxy",
+              "counts": {
+                "high": 2,
+                "info": 1,
+                "low": 0,
+                "medium": 2
+              },
+              "findings": [
+                {
+                  "category": "access-control",
+                  "detail": "upgradeTo() is publicly callable and changes sensitive state, but has no owner or role modifier and no msg.sender check in its body. Anyone may be able to call it.",
+                  "location": "FiatTokenProxy.sol:246",
+                  "severity": "high",
+                  "title": "upgradeTo() has no visible access check"
+                },
+                {
+                  "category": "access-control",
+                  "detail": "upgradeToAndCall() is publicly callable and changes sensitive state, but has no owner or role modifier and no msg.sender check in its body. Anyone may be able to call it.",
+                  "location": "FiatTokenProxy.sol:260",
+                  "severity": "high",
+                  "title": "upgradeToAndCall() has no visible access check"
+                },
+                {
+                  "category": "dangerous-call",
+                  "detail": "delegatecall runs another contract's code with this contract's storage. If the target can be influenced by a caller, it can take over the contract.",
+                  "location": "FiatTokenProxy.sol:41",
+                  "severity": "medium",
+                  "title": "Uses delegatecall"
+                },
+                {
+                  "category": "integer-overflow",
+                  "detail": "Before Solidity 0.8, arithmetic wraps around silently on overflow and underflow, and this code does not use SafeMath, so any arithmetic without its own range check can be pushed past its limits.",
+                  "location": "pragma",
+                  "severity": "medium",
+                  "title": "Solidity ^0.4.24 without SafeMath"
+                },
+                {
+                  "category": "best-practice",
+                  "detail": "The compiler version is not pinned (^0.4.24), so the code can be built with different compilers.",
+                  "location": "pragma",
+                  "severity": "info",
+                  "title": "Floating pragma"
+                }
+              ],
+              "pragma": "^0.4.24",
+              "risk": "high",
+              "solidity_0_8_or_later": false,
+              "source_note": null,
+              "source_provider": "Sourcify",
+              "source_verified": true,
+              "status": "ok",
+              "summary": "Automated review of 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 on Ethereum rates it high risk: 2 high, 2 medium, 0 low severity findings in the verified source (FiatTokenProxy, via Sourcify). Reentrancy: no external call followed by a state change was found. Access control: 2 issues, first: upgradeTo() has no visible access check. Integer overflow: Solidity ^0.4.24 without SafeMath. Main findings: upgradeTo() has no visible access check (FiatTokenProxy.sol:246); upgradeToAndCall() has no visible access check (FiatTokenProxy.sol:260); Uses delegatecall (FiatTokenProxy.sol:41). This is an automated pattern check, not a full manual audit.",
+              "uses_safemath": false
+            },
+            "cost_usd": 0.01,
+            "duration_ms": 631,
+            "timestamp": "2026-11-06T11:42:50.602684935Z"
+          }
+        },
+        "verification": {
+          "algorithm": "keccak256",
+          "commitment": "payload",
+          "verified": true
+        }
+      },
+      "body_base64": "eyJjb3N0X3VzZCI6MC4wMSwiZHVyYXRpb25fbXMiOjYzMSwibWluZXJfaWQiOiI5MDAyIiwibWluZXJfbmFtZSI6IlR4TGVucyIsInJlc3VsdCI6eyJhbnN3ZXIiOiJBdXRvbWF0ZWQgcmV2aWV3IG9mIDB4QTBiODY5OTFjNjIxOGIzNmMxZDE5RDRhMmU5RWIwY0UzNjA2ZUI0OCBvbiBFdGhlcmV1bSByYXRlcyBpdCBoaWdoIHJpc2s6IDIgaGlnaCwgMiBtZWRpdW0sIDAgbG93IHNldmVyaXR5IGZpbmRpbmdzIGluIHRoZSB2ZXJpZmllZCBzb3VyY2UgKEZpYXRUb2tlblByb3h5LCB2aWEgU291cmNpZnkpLiBSZWVudHJhbmN5OiBubyBleHRlcm5hbCBjYWxsIGZvbGxvd2VkIGJ5IGEgc3RhdGUgY2hhbmdlIHdhcyBmb3VuZC4gQWNjZXNzIGNvbnRyb2w6IDIgaXNzdWVzLCBmaXJzdDogdXBncmFkZVRvKCkgaGFzIG5vIHZpc2libGUgYWNjZXNzIGNoZWNrLiBJbnRlZ2VyIG92ZXJmbG93OiBTb2xpZGl0eSBeMC40LjI0IHdpdGhvdXQgU2FmZU1hdGguIE1haW4gZmluZGluZ3M6IHVwZ3JhZGVUbygpIGhhcyBubyB2aXNpYmxlIGFjY2VzcyBjaGVjayAoRmlhdFRva2VuUHJveHkuc29sOjI0Nik7IHVwZ3JhZGVUb0FuZENhbGwoKSBoYXMgbm8gdmlzaWJsZSBhY2Nlc3MgY2hlY2sgKEZpYXRUb2tlblByb3h5LnNvbDoyNjApOyBVc2VzIGRlbGVnYXRlY2FsbCAoRmlhdFRva2VuUHJveHkuc29sOjQxKS4gVGhpcyBpcyBhbiBhdXRvbWF0ZWQgcGF0dGVybiBjaGVjaywgbm90IGEgZnVsbCBtYW51YWwgYXVkaXQuIiwiYnl0ZWNvZGVfc2l6ZSI6MjE0MywiY2Fub25pY2FsIjoiZXRoOjB4QTBiODY5OTFjNjIxOGIzNmMxZDE5RDRhMmU5RWIwY0UzNjA2ZUI0ODpoaWdoOjI6MjowIiwiY2hhaW4iOiJldGgiLCJjaGVja2VkX2F0IjoiMjAyNi0xMS0wNlQxMTo0Mjo1MC41MjRaIiwiY29tcGlsZXIiOiIwLjQuMjQrY29tbWl0LmU2N2YwMTQ3IiwiY29uZmlkZW5jZSI6MC44LCJjb250cmFjdCI6IjB4QTBiODY5OTFjNjIxOGIzNmMxZDE5RDRhMmU5RWIwY0UzNjA2ZUI0OCIsImNvbnRyYWN0X25hbWUiOiJGaWF0VG9rZW5Qcm94eSIsImNvdW50cyI6eyJoaWdoIjoyLCJpbmZvIjoxLCJsb3ciOjAsIm1lZGl1bSI6Mn0sImZpbmRpbmdzIjpbeyJjYXRlZ29yeSI6ImFjY2Vzcy1jb250cm9sIiwiZGV0YWlsIjoidXBncmFkZVRvKCkgaXMgcHVibGljbHkgY2FsbGFibGUgYW5kIGNoYW5nZXMgc2Vuc2l0aXZlIHN0YXRlLCBidXQgaGFzIG5vIG93bmVyIG9yIHJvbGUgbW9kaWZpZXIgYW5kIG5vIG1zZy5zZW5kZXIgY2hlY2sgaW4gaXRzIGJvZHkuIEFueW9uZSBtYXkgYmUgYWJsZSB0byBjYWxsIGl0LiIsImxvY2F0aW9uIjoiRmlhdFRva2VuUHJveHkuc29sOjI0NiIsInNldmVyaXR5IjoiaGlnaCIsInRpdGxlIjoidXBncmFkZVRvKCkgaGFzIG5vIHZpc2libGUgYWNjZXNzIGNoZWNrIn0seyJjYXRlZ29yeSI6ImFjY2Vzcy1jb250cm9sIiwiZGV0YWlsIjoidXBncmFkZVRvQW5kQ2FsbCgpIGlzIHB1YmxpY2x5IGNhbGxhYmxlIGFuZCBjaGFuZ2VzIHNlbnNpdGl2ZSBzdGF0ZSwgYnV0IGhhcyBubyBvd25lciBvciByb2xlIG1vZGlmaWVyIGFuZCBubyBtc2cuc2VuZGVyIGNoZWNrIGluIGl0cyBib2R5LiBBbnlvbmUgbWF5IGJlIGFibGUgdG8gY2FsbCBpdC4iLCJsb2NhdGlvbiI6IkZpYXRUb2tlblByb3h5LnNvbDoyNjAiLCJzZXZlcml0eSI6ImhpZ2giLCJ0aXRsZSI6InVwZ3JhZGVUb0FuZENhbGwoKSBoYXMgbm8gdmlzaWJsZSBhY2Nlc3MgY2hlY2sifSx7ImNhdGVnb3J5IjoiZGFuZ2Vyb3VzLWNhbGwiLCJkZXRhaWwiOiJkZWxlZ2F0ZWNhbGwgcnVucyBhbm90aGVyIGNvbnRyYWN0J3MgY29kZSB3aXRoIHRoaXMgY29udHJhY3QncyBzdG9yYWdlLiBJZiB0aGUgdGFyZ2V0IGNhbiBiZSBpbmZsdWVuY2VkIGJ5IGEgY2FsbGVyLCBpdCBjYW4gdGFrZSBvdmVyIHRoZSBjb250cmFjdC4iLCJsb2NhdGlvbiI6IkZpYXRUb2tlblByb3h5LnNvbDo0MSIsInNldmVyaXR5IjoibWVkaXVtIiwidGl0bGUiOiJVc2VzIGRlbGVnYXRlY2FsbCJ9LHsiY2F0ZWdvcnkiOiJpbnRlZ2VyLW92ZXJmbG93IiwiZGV0YWlsIjoiQmVmb3JlIFNvbGlkaXR5IDAuOCwgYXJpdGhtZXRpYyB3cmFwcyBhcm91bmQgc2lsZW50bHkgb24gb3ZlcmZsb3cgYW5kIHVuZGVyZmxvdywgYW5kIHRoaXMgY29kZSBkb2VzIG5vdCB1c2UgU2FmZU1hdGgsIHNvIGFueSBhcml0aG1ldGljIHdpdGhvdXQgaXRzIG93biByYW5nZSBjaGVjayBjYW4gYmUgcHVzaGVkIHBhc3QgaXRzIGxpbWl0cy4iLCJsb2NhdGlvbiI6InByYWdtYSIsInNldmVyaXR5IjoibWVkaXVtIiwidGl0bGUiOiJTb2xpZGl0eSBeMC40LjI0IHdpdGhvdXQgU2FmZU1hdGgifSx7ImNhdGVnb3J5IjoiYmVzdC1wcmFjdGljZSIsImRldGFpbCI6IlRoZSBjb21waWxlciB2ZXJzaW9uIGlzIG5vdCBwaW5uZWQgKF4wLjQuMjQpLCBzbyB0aGUgY29kZSBjYW4gYmUgYnVpbHQgd2l0aCBkaWZmZXJlbnQgY29tcGlsZXJzLiIsImxvY2F0aW9uIjoicHJhZ21hIiwic2V2ZXJpdHkiOiJpbmZvIiwidGl0bGUiOiJGbG9hdGluZyBwcmFnbWEifV0sInByYWdtYSI6Il4wLjQuMjQiLCJyaXNrIjoiaGlnaCIsInNvbGlkaXR5XzBfOF9vcl9sYXRlciI6ZmFsc2UsInNvdXJjZV9ub3RlIjpudWxsLCJzb3VyY2VfcHJvdmlkZXIiOiJTb3VyY2lmeSIsInNvdXJjZV92ZXJpZmllZCI6dHJ1ZSwic3RhdHVzIjoib2siLCJzdW1tYXJ5IjoiQXV0b21hdGVkIHJldmlldyBvZiAweEEwYjg2OTkxYzYyMThiMzZjMWQxOUQ0YTJlOUViMGNFMzYwNmVCNDggb24gRXRoZXJldW0gcmF0ZXMgaXQgaGlnaCByaXNrOiAyIGhpZ2gsIDIgbWVkaXVtLCAwIGxvdyBzZXZlcml0eSBmaW5kaW5ncyBpbiB0aGUgdmVyaWZpZWQgc291cmNlIChGaWF0VG9rZW5Qcm94eSwgdmlhIFNvdXJjaWZ5KS4gUmVlbnRyYW5jeTogbm8gZXh0ZXJuYWwgY2FsbCBmb2xsb3dlZCBieSBhIHN0YXRlIGNoYW5nZSB3YXMgZm91bmQuIEFjY2VzcyBjb250cm9sOiAyIGlzc3VlcywgZmlyc3Q6IHVwZ3JhZGVUbygpIGhhcyBubyB2aXNpYmxlIGFjY2VzcyBjaGVjay4gSW50ZWdlciBvdmVyZmxvdzogU29saWRpdHkgXjAuNC4yNCB3aXRob3V0IFNhZmVNYXRoLiBNYWluIGZpbmRpbmdzOiB1cGdyYWRlVG8oKSBoYXMgbm8gdmlzaWJsZSBhY2Nlc3MgY2hlY2sgKEZpYXRUb2tlblByb3h5LnNvbDoyNDYpOyB1cGdyYWRlVG9BbmRDYWxsKCkgaGFzIG5vIHZpc2libGUgYWNjZXNzIGNoZWNrIChGaWF0VG9rZW5Qcm94eS5zb2w6MjYwKTsgVXNlcyBkZWxlZ2F0ZWNhbGwgKEZpYXRUb2tlblByb3h5LnNvbDo0MSkuIFRoaXMgaXMgYW4gYXV0b21hdGVkIHBhdHRlcm4gY2hlY2ssIG5vdCBhIGZ1bGwgbWFudWFsIGF1ZGl0LiIsInVzZXNfc2FmZW1hdGgiOmZhbHNlfSwicmVzdWx0X3NoYXBlIjoicmF3Iiwic2lnbmFsX2hhc2giOiIweGY2YWY3YTljYjgwMjQ0ZDVmODFmN2Y1YzUyYjVhNGY4MWU5ZjFjZGNmNzg1Yzk3YzA1YTMzYWE2MTllODkyOWMiLCJ0aW1lc3RhbXAiOiIyMDI2LTExLTA2VDExOjQyOjUwLjYwMjY4NDkzNVoifQ=="
+    },
+    {
+      "check": "Token controls",
+      "method": "POST",
+      "url": "https://devnode.telegraphprotocol.com/engine/v1/ask/200001",
+      "request_body": {
+        "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+        "query": "Token security audit of the ERC-20 contract 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 on ethereum (chain id 1): honeypot, taxes, owner privileges, proxy, mint."
+      },
+      "requested_at": "2026-11-06T11:42:37.538Z",
+      "responded_at": "2026-11-06T11:42:50.177Z",
+      "duration_ms": 12639,
+      "exchanges": [
+        {
+          "status": 402,
+          "headers": {
+            "cf-cache-status": "DYNAMIC",
+            "connection": "keep-alive",
+            "content-length": "921",
+            "content-type": "application/json",
+            "date": "Fri, 06 Nov 2026 11:42:38 GMT",
+            "payment-required": "eyJhY2NlcHRzIjpbeyJhbW91bnQiOiIxMDAwMCIsImFzc2V0IjoiMHhjYzE5NGUxYTg0M0I2NTg1MjZEMEQ1QzQzMWY2NzAwMjg1ODJBZTE3IiwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifSwibWF4VGltZW91dFNlY29uZHMiOjYwLCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRFQjAxMkI1RTk5OEJCNTdCNmJFNkM5Q2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJleGFjdCJ9LHsiYW1vdW50IjoiMTAwMDAiLCJleHRyYSI6eyJkZXNjcmlwdGlvbiI6IkRlZHVjdCBmcm9tIHRoZSBjYWxsZXIncyBUZWxlZ3JhcGggZXNjcm93IGJhbGFuY2UgYXQgdGhlIG5leHQgZXBvY2ggY2xvc2UuIEZ1bmQgaXQgb25jZSB3aXRoIEVzY3Jvd0ZhY2V0LmRlcG9zaXRVU0RDKGFtb3VudCk7IG5vIHBlci1yZXF1ZXN0IHNldHRsZW1lbnQuIiwibWVzc2FnZSI6IlRlbGVncmFwaCBFc2Nyb3cgUGF5bWVudFxuXG5XYWxsZXQ6IHtmcm9tfVxuUGF5IFRvOiAweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWJcbk5ldHdvcms6IGVpcDE1NToxMTE1NTExMVxuQW1vdW50OiAxMDAwMCB1VVNEQ1xuUmVzb3VyY2U6IC92MS9hc2svMjAwMDAxXG5Ob25jZToge25vbmNlfVxuVmFsaWQgQWZ0ZXI6IHt2YWxpZEFmdGVyfVxuVmFsaWQgQmVmb3JlOiB7dmFsaWRCZWZvcmV9IiwicmVzb3VyY2UiOiIvdjEvYXNrLzIwMDAwMSIsInNpZ25XaXRoIjoicGVyc29uYWxfc2lnbiAoRUlQLTE5MSkifSwibmV0d29yayI6ImVpcDE1NToxMTE1NTExMSIsInBheVRvIjoiMHgzNjI0ZWIwMTJiNWU5OThiYjU3YjZiZTZjOWNmYzljNGJjNWViOTliIiwic2NoZW1lIjoiZXNjcm93In1dLCJlcnJvciI6IlBheW1lbnQgcmVxdWlyZWQiLCJyZXNvdXJjZSI6eyJkZXNjcmlwdGlvbiI6IlBheW1lbnQgcmVxdWlyZWQgZm9yIGRpcmVjdCBzdWJuZXQgaW5mZXJlbmNlLiIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiIsInVybCI6Imh0dHBzOi8vZGV2bm9kZS50ZWxlZ3JhcGhwcm90b2NvbC5jb20vZW5naW5lL3YxL2Fzay8yMDAwMDEifSwieDQwMlZlcnNpb24iOjJ9",
+            "vary": "Origin, Origin"
+          }
+        },
+        {
+          "status": 200,
+          "headers": {
+            "cf-cache-status": "DYNAMIC",
+            "connection": "keep-alive",
+            "content-encoding": "br",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 06 Nov 2026 11:42:50 GMT",
+            "payment-response": "eyJzdWNjZXNzIjp0cnVlLCJwYXllciI6IjB4MjAwOTFGRUQwMUYxYUVhM0U4NDBkNjk4NENGYjExMDc1NkI1QWIxYyIsInRyYW5zYWN0aW9uIjoiMHhjN2JjNDA2NzAyNmFhMmNhNDdjMTNiYzIzNTlmNWVlMTk3MTdlNWYwNGIzNGU4ODkzNTNhYmI1MmVjNjA2MTNiIiwibmV0d29yayI6ImVpcDE1NToxMTE1NTExMSJ9",
+            "transfer-encoding": "chunked",
+            "vary": "Origin, Origin",
+            "x-telegraph-receipt": "eyJyZWNlaXB0X2hhc2giOiIweDY2ZGM1N2Q2MDEzNWQ4YWZkZGY0NmM3MmYyZWI4MzkwYTE0MjgyMjNmN2IwNzRjMTNjOGNmYjE0YWU5MDIzNTQiLCJyYWlsIjoieDQwMiIsInBheWVyIjoiMHgyMDA5MUZFRDAxRjFhRWEzRTg0MGQ2OTg0Q0ZiMTEwNzU2QjVBYjFjIiwibWluZXIiOiI0ODE5IiwiaW50ZW50IjoiU01BUlRfQ09OVFJBQ1RfQVVESVRfR0VORVJBTCIsImFtb3VudF91dXNkYyI6IjEwMDAwIiwiZXBvY2hfaWQiOjIwMjYsInNldHRsZW1lbnQiOiJvbmNoYWluIiwiY2hhaW4iOiJlaXAxNTU6MTExNTUxMTEiLCJ0eF9oYXNoIjoiMHhjN2JjNDA2NzAyNmFhMmNhNDdjMTNiYzIzNTlmNWVlMTk3MTdlNWYwNGIzNGU4ODkzNTNhYmI1MmVjNjA2MTNiIiwidGltZXN0YW1wIjoxNzkzOTY1MzcwfQ=="
+          }
+        }
+      ],
+      "challenge": {
+        "amountAtomic": "10000",
+        "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+        "network": "eip155:11155111",
+        "payTo": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+        "scheme": "exact",
+        "maxTimeoutSeconds": 60
+      },
+      "settlement": {
+        "success": true,
+        "transaction": "0xc7bc4067026aa2ca47c13bc2359f5ee19717e5f04b34e889353abb52ec60613b",
+        "network": "eip155:11155111",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "errorReason": null
+      },
+      "receipt": {
+        "receipt_hash": "0x66dc57d60135d8afddf46c72f2eb8390a1428223f7b074c13c8cfb14ae902354",
+        "rail": "x402",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "miner": "4819",
+        "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+        "amount_uusdc": "10000",
+        "epoch_id": 2026,
+        "settlement": "onchain",
+        "chain": "eip155:11155111",
+        "tx_hash": "0xc7bc4067026aa2ca47c13bc2359f5ee19717e5f04b34e889353abb52ec60613b",
+        "timestamp": 1793965370
+      },
+      "signal": {
+        "signal_hash": "0x6eafb7e917642466d0b2dbf6f4640235507a5c269529db578594d499ab0bbf25",
+        "kind": "direct_result",
+        "signal": {
+          "id": "af6c11c6-de6d-42c4-9885-fe3c048ab64f",
+          "signal_hash": "0x6eafb7e917642466d0b2dbf6f4640235507a5c269529db578594d499ab0bbf25",
+          "kind": "direct_result",
+          "wallet_address": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+          "miner_slug": "goplus-security",
+          "subnet_id": "200001",
+          "intent_id": "SMART_CONTRACT_AUDIT_GENERAL",
+          "tx_hash": "0xc7bc4067026aa2ca47c13bc2359f5ee19717e5f04b34e889353abb52ec60613b",
+          "result_id": "c447b416-56cb-4bf9-aa47-f2e77db96c79",
+          "created_at": "2026-11-06T11:42:50.121909Z"
+        },
+        "payload": {
+          "intent_id": "SMART_CONTRACT_AUDIT_GENERAL",
+          "miner_slug": "goplus-security",
+          "subnet_id": "200001",
+          "wallet_address": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+          "request": "Token security audit of the ERC-20 contract 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 on ethereum (chain id 1): honeypot, taxes, owner privileges, proxy, mint.",
+          "response": {
+            "code": 1,
+            "message": "OK",
+            "result": {
+              "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+                "buy_tax": "0",
+                "cannot_buy": "0",
+                "creator_address": "0x95ba4cf87d6723ad9c0db21737d862be80e93911",
+                "creator_balance": "2505.454092",
+                "creator_percent": "0.000000",
+                "holder_count": "9392248",
+                "holders": [
+                  {
+                    "address": "0x37305b1cd40574e4c5ce33f8e8306be057fd7341",
+                    "balance": "3350196087.061695",
+                    "is_contract": 0,
+                    "is_locked": 0,
+                    "percent": "0.072466460314150785",
+                    "tag": ""
+                  },
+                  {
+                    "address": "0xffa69c0080582098af595156240214b742735a5e",
+                    "balance": "1582999999.8601",
+                    "is_contract": 1,
+                    "is_locked": 0,
+                    "percent": "0.034241102217922246",
+                    "tag": ""
+                  },
+                  {
+                    "address": "0xad354cfbaa4a8572dd6df021514a3931a8329ef5",
+                    "balance": "1400000000.5201",
+                    "is_contract": 1,
+                    "is_locked": 0,
+                    "percent": "0.030282718336788688",
+                    "tag": ""
+                  },
+                  {
+                    "address": "0x40ec5b33f54e0e8a33a975908c5ba1c14e5bbbdf",
+                    "balance": "1055409744.35205",
+                    "is_contract": 1,
+                    "is_locked": 0,
+                    "percent": "0.022829054290172782",
+                    "tag": ""
+                  },
+                  {
+                    "address": "0xe20d20b0cc4e44cd23d5b0488d5250a9ac426875",
+                    "balance": "1000000000.395477",
+                    "is_contract": 0,
+                    "is_locked": 0,
+                    "percent": "0.021630513098224840",
+                    "tag": ""
+                  },
+                  {
+                    "address": "0x5227f603c1ee34ce3c06efe6477003bdfccb2f8c",
+                    "balance": "823000000",
+                    "is_contract": 0,
+                    "is_locked": 0,
+                    "percent": "0.017801912272798797",
+                    "tag": ""
+                  },
+                  {
+                    "address": "0xe1940f578743367f38d3f25c2d2d32d6636929b6",
+                    "balance": "599999999.039577",
+                    "is_contract": 1,
+                    "is_locked": 0,
+                    "percent": "0.012978307833027840",
+                    "tag": ""
+                  },
+                  {
+                    "address": "0x3b4d794a66304f130a4db8f2551b0070dfcf5ca7",
+                    "balance": "549887858.514636",
+                    "is_contract": 1,
+                    "is_locked": 0,
+                    "percent": "0.011894356521451697",
+                    "tag": ""
+                  },
+                  {
+                    "address": "0x08f619716db7c6245401b543e59acac1d25cb483",
+                    "balance": "529742203.050442",
+                    "is_contract": 1,
+                    "is_locked": 0,
+                    "percent": "0.011458595657233457",
+                    "tag": ""
+                  },
+                  {
+                    "address": "0x36db199f0a1cd131ad0b5cf4fe94286faab9fda5",
+                    "balance": "526480037.764504",
+                    "is_contract": 1,
+                    "is_locked": 0,
+                    "percent": "0.011388033348315307",
+                    "tag": ""
+                  }
+                ],
+                "honeypot_with_same_creator": "0",
+                "is_honeypot": "0",
+                "is_in_cex": {
+                  "cex_list": [
+                    "Binance",
+                    "Coinbase"
+                  ],
+                  "listed": "1"
+                },
+                "is_in_dex": "1",
+                "is_open_source": "1",
+                "is_proxy": "1",
+                "sell_tax": "0",
+                "token_name": "USD Coin",
+                "token_symbol": "USDC",
+                "total_supply": "46230988412.269534",
+                "transfer_tax": "",
+                "trust_list": "1"
+              }
+            }
+          },
+          "timestamp": "2026-11-06T11:42:50.11874711Z"
+        },
+        "result": {
+          "id": "c447b416-56cb-4bf9-aa47-f2e77db96c79",
+          "type": "direct",
+          "source": "user",
+          "status": "success",
+          "created_at": "2026-11-06T11:42:50.118989Z",
+          "signal_hash": "0x6eafb7e917642466d0b2dbf6f4640235507a5c269529db578594d499ab0bbf25",
+          "routing_mode": "auto",
+          "question": {
+            "hash": "3cd2f7ef85bcd2825c07e436d2c34f0ffe383c3d05e20c5a6ea10da0865f51ab",
+            "text": "Token security audit of the ERC-20 contract 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 on ethereum (chain id 1): honeypot, taxes, owner privileges, proxy, mint.",
+            "category": "",
+            "interest_score": 0,
+            "affected_pct": 0,
+            "audience_pct": 0,
+            "source_url": ""
+          },
+          "routing": {
+            "subnet_id": "200001",
+            "subnet_name": "GoPlus Security",
+            "miner_slug": "goplus-security",
+            "reasoning": "Intent: miner goplus-security given by the caller\nMiner: The user is asking for a security audit of a token contract on the Ethereum mainnet. The GoPlus Security miner has a '/token-security' endpoint that provides security analysis of token contracts, including honeypot status, taxes, ownership, proxy, and mintability, which directly matches the user's request and the SMART_CONTRACT_AUDIT_GENERAL intent. The chain ID (1 for Ethereum) and the contract address (0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) are provided in the question and are required parameters for this endpoint.",
+            "intent": "SMART_CONTRACT_AUDIT_GENERAL"
+          },
+          "execution": {
+            "result": {
+              "code": 1,
+              "message": "OK",
+              "result": {
+                "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+                  "buy_tax": "0",
+                  "cannot_buy": "0",
+                  "creator_address": "0x95ba4cf87d6723ad9c0db21737d862be80e93911",
+                  "creator_balance": "2505.454092",
+                  "creator_percent": "0.000000",
+                  "holder_count": "9392248",
+                  "holders": [
+                    {
+                      "address": "0x37305b1cd40574e4c5ce33f8e8306be057fd7341",
+                      "balance": "3350196087.061695",
+                      "is_contract": 0,
+                      "is_locked": 0,
+                      "percent": "0.072466460314150785",
+                      "tag": ""
+                    },
+                    {
+                      "address": "0xffa69c0080582098af595156240214b742735a5e",
+                      "balance": "1582999999.8601",
+                      "is_contract": 1,
+                      "is_locked": 0,
+                      "percent": "0.034241102217922246",
+                      "tag": ""
+                    },
+                    {
+                      "address": "0xad354cfbaa4a8572dd6df021514a3931a8329ef5",
+                      "balance": "1400000000.5201",
+                      "is_contract": 1,
+                      "is_locked": 0,
+                      "percent": "0.030282718336788688",
+                      "tag": ""
+                    },
+                    {
+                      "address": "0x40ec5b33f54e0e8a33a975908c5ba1c14e5bbbdf",
+                      "balance": "1055409744.35205",
+                      "is_contract": 1,
+                      "is_locked": 0,
+                      "percent": "0.022829054290172782",
+                      "tag": ""
+                    },
+                    {
+                      "address": "0xe20d20b0cc4e44cd23d5b0488d5250a9ac426875",
+                      "balance": "1000000000.395477",
+                      "is_contract": 0,
+                      "is_locked": 0,
+                      "percent": "0.021630513098224840",
+                      "tag": ""
+                    },
+                    {
+                      "address": "0x5227f603c1ee34ce3c06efe6477003bdfccb2f8c",
+                      "balance": "823000000",
+                      "is_contract": 0,
+                      "is_locked": 0,
+                      "percent": "0.017801912272798797",
+                      "tag": ""
+                    },
+                    {
+                      "address": "0xe1940f578743367f38d3f25c2d2d32d6636929b6",
+                      "balance": "599999999.039577",
+                      "is_contract": 1,
+                      "is_locked": 0,
+                      "percent": "0.012978307833027840",
+                      "tag": ""
+                    },
+                    {
+                      "address": "0x3b4d794a66304f130a4db8f2551b0070dfcf5ca7",
+                      "balance": "549887858.514636",
+                      "is_contract": 1,
+                      "is_locked": 0,
+                      "percent": "0.011894356521451697",
+                      "tag": ""
+                    },
+                    {
+                      "address": "0x08f619716db7c6245401b543e59acac1d25cb483",
+                      "balance": "529742203.050442",
+                      "is_contract": 1,
+                      "is_locked": 0,
+                      "percent": "0.011458595657233457",
+                      "tag": ""
+                    },
+                    {
+                      "address": "0x36db199f0a1cd131ad0b5cf4fe94286faab9fda5",
+                      "balance": "526480037.764504",
+                      "is_contract": 1,
+                      "is_locked": 0,
+                      "percent": "0.011388033348315307",
+                      "tag": ""
+                    }
+                  ],
+                  "honeypot_with_same_creator": "0",
+                  "is_honeypot": "0",
+                  "is_in_cex": {
+                    "cex_list": [
+                      "Binance",
+                      "Coinbase"
+                    ],
+                    "listed": "1"
+                  },
+                  "is_in_dex": "1",
+                  "is_open_source": "1",
+                  "is_proxy": "1",
+                  "sell_tax": "0",
+                  "token_name": "USD Coin",
+                  "token_symbol": "USDC",
+                  "total_supply": "46230988412.269534",
+                  "transfer_tax": "",
+                  "trust_list": "1"
+                }
+              }
+            },
+            "cost_usd": 0.01,
+            "duration_ms": 191,
+            "timestamp": "2026-11-06T11:42:50.11874711Z"
+          }
+        },
+        "verification": {
+          "algorithm": "keccak256",
+          "commitment": "payload",
+          "verified": true
+        }
+      },
+      "body_base64": "eyJtaW5lcl9pZCI6IjIwMDAwMSIsIm1pbmVyX25hbWUiOiJHb1BsdXMgU2VjdXJpdHkiLCJlbmRwb2ludCI6Ii90b2tlbi1zZWN1cml0eSIsInJlc3VsdCI6eyJjb2RlIjoxLCJtZXNzYWdlIjoiT0siLCJyZXN1bHQiOnsiMHhhMGI4Njk5MWM2MjE4YjM2YzFkMTlkNGEyZTllYjBjZTM2MDZlYjQ4Ijp7ImJ1eV90YXgiOiIwIiwiY2Fubm90X2J1eSI6IjAiLCJjcmVhdG9yX2FkZHJlc3MiOiIweDk1YmE0Y2Y4N2Q2NzIzYWQ5YzBkYjIxNzM3ZDg2MmJlODBlOTM5MTEiLCJjcmVhdG9yX2JhbGFuY2UiOiIyNTA1LjQ1NDA5MiIsImNyZWF0b3JfcGVyY2VudCI6IjAuMDAwMDAwIiwiaG9sZGVyX2NvdW50IjoiOTM5MjI0OCIsImhvbGRlcnMiOlt7ImFkZHJlc3MiOiIweDM3MzA1YjFjZDQwNTc0ZTRjNWNlMzNmOGU4MzA2YmUwNTdmZDczNDEiLCJiYWxhbmNlIjoiMzM1MDE5NjA4Ny4wNjE2OTUiLCJpc19jb250cmFjdCI6MCwiaXNfbG9ja2VkIjowLCJwZXJjZW50IjoiMC4wNzI0NjY0NjAzMTQxNTA3ODUiLCJ0YWciOiIifSx7ImFkZHJlc3MiOiIweGZmYTY5YzAwODA1ODIwOThhZjU5NTE1NjI0MDIxNGI3NDI3MzVhNWUiLCJiYWxhbmNlIjoiMTU4Mjk5OTk5OS44NjAxIiwiaXNfY29udHJhY3QiOjEsImlzX2xvY2tlZCI6MCwicGVyY2VudCI6IjAuMDM0MjQxMTAyMjE3OTIyMjQ2IiwidGFnIjoiIn0seyJhZGRyZXNzIjoiMHhhZDM1NGNmYmFhNGE4NTcyZGQ2ZGYwMjE1MTRhMzkzMWE4MzI5ZWY1IiwiYmFsYW5jZSI6IjE0MDAwMDAwMDAuNTIwMSIsImlzX2NvbnRyYWN0IjoxLCJpc19sb2NrZWQiOjAsInBlcmNlbnQiOiIwLjAzMDI4MjcxODMzNjc4ODY4OCIsInRhZyI6IiJ9LHsiYWRkcmVzcyI6IjB4NDBlYzViMzNmNTRlMGU4YTMzYTk3NTkwOGM1YmExYzE0ZTViYmJkZiIsImJhbGFuY2UiOiIxMDU1NDA5NzQ0LjM1MjA1IiwiaXNfY29udHJhY3QiOjEsImlzX2xvY2tlZCI6MCwicGVyY2VudCI6IjAuMDIyODI5MDU0MjkwMTcyNzgyIiwidGFnIjoiIn0seyJhZGRyZXNzIjoiMHhlMjBkMjBiMGNjNGU0NGNkMjNkNWIwNDg4ZDUyNTBhOWFjNDI2ODc1IiwiYmFsYW5jZSI6IjEwMDAwMDAwMDAuMzk1NDc3IiwiaXNfY29udHJhY3QiOjAsImlzX2xvY2tlZCI6MCwicGVyY2VudCI6IjAuMDIxNjMwNTEzMDk4MjI0ODQwIiwidGFnIjoiIn0seyJhZGRyZXNzIjoiMHg1MjI3ZjYwM2MxZWUzNGNlM2MwNmVmZTY0NzcwMDNiZGZjY2IyZjhjIiwiYmFsYW5jZSI6IjgyMzAwMDAwMCIsImlzX2NvbnRyYWN0IjowLCJpc19sb2NrZWQiOjAsInBlcmNlbnQiOiIwLjAxNzgwMTkxMjI3Mjc5ODc5NyIsInRhZyI6IiJ9LHsiYWRkcmVzcyI6IjB4ZTE5NDBmNTc4NzQzMzY3ZjM4ZDNmMjVjMmQyZDMyZDY2MzY5MjliNiIsImJhbGFuY2UiOiI1OTk5OTk5OTkuMDM5NTc3IiwiaXNfY29udHJhY3QiOjEsImlzX2xvY2tlZCI6MCwicGVyY2VudCI6IjAuMDEyOTc4MzA3ODMzMDI3ODQwIiwidGFnIjoiIn0seyJhZGRyZXNzIjoiMHgzYjRkNzk0YTY2MzA0ZjEzMGE0ZGI4ZjI1NTFiMDA3MGRmY2Y1Y2E3IiwiYmFsYW5jZSI6IjU0OTg4Nzg1OC41MTQ2MzYiLCJpc19jb250cmFjdCI6MSwiaXNfbG9ja2VkIjowLCJwZXJjZW50IjoiMC4wMTE4OTQzNTY1MjE0NTE2OTciLCJ0YWciOiIifSx7ImFkZHJlc3MiOiIweDA4ZjYxOTcxNmRiN2M2MjQ1NDAxYjU0M2U1OWFjYWMxZDI1Y2I0ODMiLCJiYWxhbmNlIjoiNTI5NzQyMjAzLjA1MDQ0MiIsImlzX2NvbnRyYWN0IjoxLCJpc19sb2NrZWQiOjAsInBlcmNlbnQiOiIwLjAxMTQ1ODU5NTY1NzIzMzQ1NyIsInRhZyI6IiJ9LHsiYWRkcmVzcyI6IjB4MzZkYjE5OWYwYTFjZDEzMWFkMGI1Y2Y0ZmU5NDI4NmZhYWI5ZmRhNSIsImJhbGFuY2UiOiI1MjY0ODAwMzcuNzY0NTA0IiwiaXNfY29udHJhY3QiOjEsImlzX2xvY2tlZCI6MCwicGVyY2VudCI6IjAuMDExMzg4MDMzMzQ4MzE1MzA3IiwidGFnIjoiIn1dLCJob25leXBvdF93aXRoX3NhbWVfY3JlYXRvciI6IjAiLCJpc19ob25leXBvdCI6IjAiLCJpc19pbl9jZXgiOnsiY2V4X2xpc3QiOlsiQmluYW5jZSIsIkNvaW5iYXNlIl0sImxpc3RlZCI6IjEifSwiaXNfaW5fZGV4IjoiMSIsImlzX29wZW5fc291cmNlIjoiMSIsImlzX3Byb3h5IjoiMSIsInNlbGxfdGF4IjoiMCIsInRva2VuX25hbWUiOiJVU0QgQ29pbiIsInRva2VuX3N5bWJvbCI6IlVTREMiLCJ0b3RhbF9zdXBwbHkiOiI0NjIzMDk4ODQxMi4yNjk1MzQiLCJ0cmFuc2Zlcl90YXgiOiIiLCJ0cnVzdF9saXN0IjoiMSJ9fX0sInJlc3VsdF9zaGFwZSI6InJhdyIsInNoYXBlX2Vycm9yIjoibm9fZm9ybWF0IiwiY29zdF91c2QiOjAuMDEsImR1cmF0aW9uX21zIjoxOTEsInRpbWVzdGFtcCI6IjIwMjYtMTEtMDZUMTE6NDI6NTAuMTE4NzQ3MTFaIiwicmVhc29uaW5nIjoiSW50ZW50OiBtaW5lciBnb3BsdXMtc2VjdXJpdHkgZ2l2ZW4gYnkgdGhlIGNhbGxlclxuTWluZXI6IFRoZSB1c2VyIGlzIGFza2luZyBmb3IgYSBzZWN1cml0eSBhdWRpdCBvZiBhIHRva2VuIGNvbnRyYWN0IG9uIHRoZSBFdGhlcmV1bSBtYWlubmV0LiBUaGUgR29QbHVzIFNlY3VyaXR5IG1pbmVyIGhhcyBhICcvdG9rZW4tc2VjdXJpdHknIGVuZHBvaW50IHRoYXQgcHJvdmlkZXMgc2VjdXJpdHkgYW5hbHlzaXMgb2YgdG9rZW4gY29udHJhY3RzLCBpbmNsdWRpbmcgaG9uZXlwb3Qgc3RhdHVzLCB0YXhlcywgb3duZXJzaGlwLCBwcm94eSwgYW5kIG1pbnRhYmlsaXR5LCB3aGljaCBkaXJlY3RseSBtYXRjaGVzIHRoZSB1c2VyJ3MgcmVxdWVzdCBhbmQgdGhlIFNNQVJUX0NPTlRSQUNUX0FVRElUX0dFTkVSQUwgaW50ZW50LiBUaGUgY2hhaW4gSUQgKDEgZm9yIEV0aGVyZXVtKSBhbmQgdGhlIGNvbnRyYWN0IGFkZHJlc3MgKDB4QTBiODY5OTFjNjIxOGIzNmMxZDE5RDRhMmU5RWIwY0UzNjA2ZUI0OCkgYXJlIHByb3ZpZGVkIGluIHRoZSBxdWVzdGlvbiBhbmQgYXJlIHJlcXVpcmVkIHBhcmFtZXRlcnMgZm9yIHRoaXMgZW5kcG9pbnQuIiwiaW50ZW50IjoiU01BUlRfQ09OVFJBQ1RfQVVESVRfR0VORVJBTCIsInNpZ25hbF9oYXNoIjoiMHg2ZWFmYjdlOTE3NjQyNDY2ZDBiMmRiZjZmNDY0MDIzNTUwN2E1YzI2OTUyOWRiNTc4NTk0ZDQ5OWFiMGJiZjI1In0="
+    },
+    {
+      "check": "Sanctions screen",
+      "method": "POST",
+      "url": "https://devnode.telegraphprotocol.com/engine/v1/ask",
+      "request_body": {
+        "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+        "params": {
+          "name": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+        }
+      },
+      "requested_at": "2026-11-06T11:42:37.539Z",
+      "responded_at": "2026-11-06T11:42:54.280Z",
+      "duration_ms": 16741,
+      "exchanges": [
+        {
+          "status": 402,
+          "headers": {
+            "cf-cache-status": "DYNAMIC",
+            "connection": "keep-alive",
+            "content-length": "907",
+            "content-type": "application/json",
+            "date": "Fri, 06 Nov 2026 11:42:38 GMT",
+            "payment-required": "eyJhY2NlcHRzIjpbeyJhbW91bnQiOiIxMDAwMCIsImFzc2V0IjoiMHhjYzE5NGUxYTg0M0I2NTg1MjZEMEQ1QzQzMWY2NzAwMjg1ODJBZTE3IiwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifSwibWF4VGltZW91dFNlY29uZHMiOjYwLCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRFQjAxMkI1RTk5OEJCNTdCNmJFNkM5Q2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJleGFjdCJ9LHsiYW1vdW50IjoiMTAwMDAiLCJleHRyYSI6eyJkZXNjcmlwdGlvbiI6IkRlZHVjdCBmcm9tIHRoZSBjYWxsZXIncyBUZWxlZ3JhcGggZXNjcm93IGJhbGFuY2UgYXQgdGhlIG5leHQgZXBvY2ggY2xvc2UuIEZ1bmQgaXQgb25jZSB3aXRoIEVzY3Jvd0ZhY2V0LmRlcG9zaXRVU0RDKGFtb3VudCk7IG5vIHBlci1yZXF1ZXN0IHNldHRsZW1lbnQuIiwibWVzc2FnZSI6IlRlbGVncmFwaCBFc2Nyb3cgUGF5bWVudFxuXG5XYWxsZXQ6IHtmcm9tfVxuUGF5IFRvOiAweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWJcbk5ldHdvcms6IGVpcDE1NToxMTE1NTExMVxuQW1vdW50OiAxMDAwMCB1VVNEQ1xuUmVzb3VyY2U6IC92MS9hc2tcbk5vbmNlOiB7bm9uY2V9XG5WYWxpZCBBZnRlcjoge3ZhbGlkQWZ0ZXJ9XG5WYWxpZCBCZWZvcmU6IHt2YWxpZEJlZm9yZX0iLCJyZXNvdXJjZSI6Ii92MS9hc2siLCJzaWduV2l0aCI6InBlcnNvbmFsX3NpZ24gKEVJUC0xOTEpIn0sIm5ldHdvcmsiOiJlaXAxNTU6MTExNTUxMTEiLCJwYXlUbyI6IjB4MzYyNGViMDEyYjVlOTk4YmI1N2I2YmU2YzljZmM5YzRiYzVlYjk5YiIsInNjaGVtZSI6ImVzY3JvdyJ9XSwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsiZGVzY3JpcHRpb24iOiJQYXltZW50IHJlcXVpcmVkIGZvciBMTE0tcm91dGVkIGluZmVyZW5jZS4iLCJtaW1lVHlwZSI6ImFwcGxpY2F0aW9uL2pzb24iLCJ1cmwiOiJodHRwczovL2Rldm5vZGUudGVsZWdyYXBocHJvdG9jb2wuY29tL2VuZ2luZS92MS9hc2sifSwieDQwMlZlcnNpb24iOjJ9",
+            "vary": "Origin, Origin"
+          }
+        },
+        {
+          "status": 200,
+          "headers": {
+            "cf-cache-status": "DYNAMIC",
+            "connection": "keep-alive",
+            "content-encoding": "br",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 06 Nov 2026 11:42:54 GMT",
+            "payment-response": "eyJzdWNjZXNzIjp0cnVlLCJwYXllciI6IjB4MjAwOTFGRUQwMUYxYUVhM0U4NDBkNjk4NENGYjExMDc1NkI1QWIxYyIsInRyYW5zYWN0aW9uIjoiMHg0YmIwNWZmN2EzZjhlM2IyZjViNmMxNjdjZTE1MTU4OWQ4MzM2ZDE2NTg2ZGQzOWY2ZDY1Y2M0NThkOTE1YjZiIiwibmV0d29yayI6ImVpcDE1NToxMTE1NTExMSJ9",
+            "transfer-encoding": "chunked",
+            "vary": "Origin, Origin",
+            "x-telegraph-receipt": "eyJyZWNlaXB0X2hhc2giOiIweDRhYjg0MmQ0NzFmYzViZmVlNjRkYzJmMDg3MmM0MTdhNTg1MWFiYjIzYzQ0ZTFiOTEwOTZjZTliOGIwYjQwNGEiLCJyYWlsIjoieDQwMiIsInBheWVyIjoiMHgyMDA5MUZFRDAxRjFhRWEzRTg0MGQ2OTg0Q0ZiMTEwNzU2QjVBYjFjIiwibWluZXIiOiI0ODYwIiwiaW50ZW50IjoiU0FOQ1RJT05TX1NDUkVFTklOR19NQVRDSF9HRU5FUkFMIiwiYW1vdW50X3V1c2RjIjoiMTAwMDAiLCJlcG9jaF9pZCI6MjAyNiwic2V0dGxlbWVudCI6Im9uY2hhaW4iLCJjaGFpbiI6ImVpcDE1NToxMTE1NTExMSIsInR4X2hhc2giOiIweDRiYjA1ZmY3YTNmOGUzYjJmNWI2YzE2N2NlMTUxNTg5ZDgzMzZkMTY1ODZkZDM5ZjZkNjVjYzQ1OGQ5MTViNmIiLCJ0aW1lc3RhbXAiOjE3OTM5NjUzNzR9"
+          }
+        }
+      ],
+      "challenge": {
+        "amountAtomic": "10000",
+        "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+        "network": "eip155:11155111",
+        "payTo": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+        "scheme": "exact",
+        "maxTimeoutSeconds": 60
+      },
+      "settlement": {
+        "success": true,
+        "transaction": "0x4bb05ff7a3f8e3b2f5b6c167ce151589d8336d16586dd39f6d65cc458d915b6b",
+        "network": "eip155:11155111",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "errorReason": null
+      },
+      "receipt": {
+        "receipt_hash": "0x4ab842d471fc5bfee64dc2f0872c417a5851abb23c44e1b91096ce9b8b0b404a",
+        "rail": "x402",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "miner": "4860",
+        "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+        "amount_uusdc": "10000",
+        "epoch_id": 2026,
+        "settlement": "onchain",
+        "chain": "eip155:11155111",
+        "tx_hash": "0x4bb05ff7a3f8e3b2f5b6c167ce151589d8336d16586dd39f6d65cc458d915b6b",
+        "timestamp": 1793965374
+      },
+      "signal": {
+        "signal_hash": "0xd2de15dc207cdcfa5b59fe4e8b57d182bd82f2950794357839ad994867c6b6d0",
+        "kind": "direct_result",
+        "signal": {
+          "id": "146521ea-8522-4fd0-a929-5f8f0b210e8f",
+          "signal_hash": "0xd2de15dc207cdcfa5b59fe4e8b57d182bd82f2950794357839ad994867c6b6d0",
+          "kind": "direct_result",
+          "wallet_address": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+          "miner_slug": "zk-sanctions",
+          "subnet_id": "710637",
+          "intent_id": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "tx_hash": "0x4bb05ff7a3f8e3b2f5b6c167ce151589d8336d16586dd39f6d65cc458d915b6b",
+          "result_id": "849ef0d8-7128-4e7b-915e-d53937439a3e",
+          "created_at": "2026-11-06T11:42:54.313511Z"
+        },
+        "payload": {
+          "intent_id": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "miner_slug": "zk-sanctions",
+          "subnet_id": "710637",
+          "wallet_address": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+          "request": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48\"}",
+          "response": {
+            "as_of": "2026-09-22",
+            "attribution": "US Treasury OFAC public data. Contains public sector information licensed under the Open Government Licence v3.0. Contains information licensed under the Open Government Licence – Canada. European Union, 2026, European Commission DG FISMA, CC BY 4.0 reuse policy. EU entity-only normalized extraction from the Financial Sanctions Database; changes indicated. US Department of Commerce ITA Consolidated Screening List and BIS Entity List public data; literal legal-table corroborated fields.",
+            "checked_at": "2026-11-06T11:42:50.094Z",
+            "confidence": 0.95,
+            "limits": [
+              "Equal-similarity results retain source precedence, then prefer primary names, explicitly strong aliases, ungraded aliases, and explicitly weak aliases within each list. This is record presentation, not identity adjudication or alias reclassification.",
+              "Name similarity is not identity confirmation.",
+              "Non-SDN restrictions differ from SDN asset blocking.",
+              "UN and Australian lists are not checked; UK, Canadian and EU coverage is entities only.",
+              "EU names are literal XML fields corroborated by CSV entry and name IDs, exact or token-order only; individual records are excluded. The EU consolidated list is administrative; adopted Official Journal texts are authoritative.",
+              "Canadian aliases are limited to PDF-corroborated single fields, exact or token-order only; compound alias fields and ships are not checked. Its consolidated list is administrative, not law.",
+              "BIS Entity List names use literal ITA JSON values corroborated by CSV and the BIS legal table, exact or token-order only. ITA-reported licensing metadata is separate from quoted primary BIS legal-table rows; primary legal text takes precedence where they differ. Export licensing restrictions differ from asset blocking; Entity List parties can include persons and unspecified party types remain null. Other Commerce/State CSL lists are not checked. CSL file dates are HTTP Last-Modified, not individual designation dates.",
+              "Ownership-based sanctions and unlisted subsidiaries are not checked.",
+              "Additional OFAC formatted names use literal enhanced XML values corroborated in advanced XML, exact or token-order only. No unlisted transliteration or phonetic expansion is guessed.",
+              "Dotted-initial compaction is punctuation normalization, not a new published alias or identity confirmation; a weak published alias remains weak."
+            ],
+            "lists": [
+              "OFAC SDN",
+              "OFAC Consolidated (non-SDN)",
+              "UK Sanctions List (entities only)",
+              "Canada autonomous sanctions (entities only)",
+              "EU Financial Sanctions (entities only)",
+              "US BIS Entity List (export controls)"
+            ],
+            "match_score": 0,
+            "matched": false,
+            "matches": [],
+            "method": "Exact-first NFKD casefold, accent removal, unordered tokens, bidirectional explicit dotted-initial punctuation compaction; bounded Levenshtein with conservative character-count pruning and equal-boundary trimming only without a score-1 exact hit",
+            "name": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+            "snapshot_sha256": "766cdeeffe13314f9e6ea482cf9b4af15ffb7a75242af0f9de409da338aed4e9",
+            "source": [
+              {
+                "additional_published_names": 5602,
+                "alias_corroboration_sha256": "1e9363331a88cdb6eb42a386b30ac9aab9866ba228c1d84f7eea6bab1e94f232",
+                "alias_corroboration_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ALT.CSV",
+                "corroboration_sha256": "8e94d8715b81f54a7d769c52af7fcefea19d48eead54bb9d974f4a62dadd9536",
+                "corroboration_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.CSV",
+                "fetched_at": "2026-11-06T01:26:23.707094+00:00",
+                "license": "US federal government work, 17 USC 105",
+                "name": "OFAC SDN",
+                "name_scope": "Literal enhanced formatted names corroborated by entry/script/quality in advanced XML; additional names exact/token-order only.",
+                "name_sources": [
+                  {
+                    "fetched_at": "2026-11-06T01:28:27.429760+00:00",
+                    "name": "OFAC enhanced XML literal names",
+                    "published_at": "2026-11-05",
+                    "sha256": "d4ddbe2afe6935b1fed9c877804cd0da21a692bb2ef103a8dc6b6a999dd3d5b4",
+                    "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN_ENHANCED.XML"
+                  },
+                  {
+                    "fetched_at": "2026-11-06T01:28:39.053001+00:00",
+                    "name": "OFAC advanced XML corroboration",
+                    "published_at": "2026-11-05",
+                    "sha256": "9e8a53221edbe1388c95722da42ef8d1d487df84e018ee02841251200a10b19a",
+                    "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN_ADVANCED.XML"
+                  }
+                ],
+                "published_at": "2026-11-05",
+                "records": 19555,
+                "sha256": "ee7fc73e9f3b4ca4dd3a304446c8cdd03bf2595f049a9d8f8dff7314d4c02d58",
+                "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML"
+              },
+              {
+                "fetched_at": "2026-11-03T17:56:35.038541+00:00",
+                "license": "US federal government work, 17 USC 105",
+                "name": "OFAC Consolidated (non-SDN)",
+                "published_at": "2026-10-19",
+                "records": 486,
+                "sha256": "06323d16735a0461d9dc03332ce1fed74d8525244df8b27a47ef12174b8c38f1",
+                "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/CONSOLIDATED.XML"
+              },
+              {
+                "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+                "excluded_non_entities": 4753,
+                "fetched_at": "2026-11-03T17:56:41.813567+00:00",
+                "license": "Open Government Licence v3.0",
+                "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+                "name": "UK Sanctions List (entities only)",
+                "published_at": "2026-11-03",
+                "records": 1667,
+                "sha256": "b9edf715b3eae03c5e6ea0f6e060ebb19a6b3ebba06d6b98d038f5d12376d4ab",
+                "source_url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.xml"
+              },
+              {
+                "attribution": "Contains information licensed under the Open Government Licence – Canada.",
+                "corroboration_url": "https://www.international.gc.ca/world-monde/assets/pdfs/international_relations-relations_internationales/sanctions/sema-lmes.pdf",
+                "fetched_at": "2026-11-03T17:58:32.840855+00:00",
+                "license": "Open Government Licence - Canada v2.0",
+                "license_url": "https://open.canada.ca/en/open-government-licence-canada",
+                "name": "Canada autonomous sanctions (entities only)",
+                "note": "Administrative consolidated list, not a regulation; consult relevant law for restrictions.",
+                "published_at": "2026-09-22",
+                "records": 1450,
+                "scope": "PDF-corroborated entity primary names and 578 unsplit published aliases; individuals, ships and compound alias fields excluded.",
+                "sha256": "61a9064720d9f35884ead9387158b708882d63c615981034cb9557d038d55bcf",
+                "source_url": "https://www.international.gc.ca/world-monde/assets/office_docs/international_relations-relations_internationales/sanctions/sema-lmes.xml"
+              },
+              {
+                "attribution": "European Union, 2026, European Commission DG FISMA. Entity-only normalized extraction from the Financial Sanctions Database; changes indicated.",
+                "corroboration_sha256": "1fc5fcff6ee1777ec7f00db7d1c672ff41be7d12cdd32bee514047b6cede4868",
+                "corroboration_url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList/content?token=dG9rZW4tMjAxNw",
+                "excluded_non_entities": 4490,
+                "fetched_at": "2026-11-04T00:55:16.577726+00:00",
+                "license": "Commission document reuse policy / CC BY 4.0",
+                "license_url": "https://commission.europa.eu/legal-notice_en",
+                "name": "EU Financial Sanctions (entities only)",
+                "published_at": "2026-10-23",
+                "records": 1779,
+                "regulatory_note": "Administrative consolidated financial sanctions list; adopted Official Journal texts are authoritative.",
+                "scope": "Enterprise-classified entities only. Literal XML names corroborated by CSV ID/name fields; exact or token-order only. Individuals excluded.",
+                "sha256": "636800c3e494b2ef8934f51f5e23c914a6208a383ac850e674b1b35a7d49d34f",
+                "source_url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/xmlFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw"
+              },
+              {
+                "attribution": "US Department of Commerce, ITA Consolidated Screening List; BIS Entity List. Literal names; restricted to legal-table corroborated fields.",
+                "corroboration_sha256": "f9bae754537e7f61fdc954ed8d6c6075c6e7ebf6ed38746bc96eb076920ce7a9",
+                "corroboration_url": "https://data.trade.gov/downloadable_consolidated_screening_list/v1/consolidated.csv",
+                "date_basis": "HTTP Last-Modified of official CSL JSON and CSV, not each designation date",
+                "fetched_at": "2026-11-04T05:58:37.990559+00:00",
+                "legal_source_sha256": "d1910606b3ea48fb8ce8d2bccc375ef7aef54c348ce012a0129a6009efea7168",
+                "legal_source_url": "https://www.bis.gov/regulations/ear/744#supplement-4-744",
+                "license": "US federal government work, 17 USC 105",
+                "name": "US BIS Entity List (export controls)",
+                "published_at": "2026-11-04",
+                "records": 3349,
+                "scope": "BIS Entity List parties only, exact/token-order literal names; unspecified party types remain null. Export licensing restrictions differ from asset blocking. ITA-reported metadata is distinguished from literal primary BIS legal-table fields; discrepancies disclosed without an invented legal conclusion.",
+                "sha256": "862ca9a7498828434c32fb3b5117a2680f4e79e97947898554e74d8acadfbc90",
+                "source_url": "https://data.trade.gov/downloadable_consolidated_screening_list/v1/consolidated.json"
+              }
+            ],
+            "status": "ok",
+            "summary": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48: no name match at threshold 0.88 in the dated OFAC SDN/non-SDN, UK entity, Canadian entity, EU entity and BIS snapshots. Not sanctions clearance; UN/Australia, UK/Canada/EU individuals and ownership are not checked. Source dates supplied below.",
+            "threshold": 0.88,
+            "total_matches": 0,
+            "truncated": false
+          },
+          "timestamp": "2026-11-06T11:42:50.356939156Z"
+        },
+        "result": {
+          "id": "849ef0d8-7128-4e7b-915e-d53937439a3e",
+          "type": "direct",
+          "source": "user",
+          "status": "success",
+          "created_at": "2026-11-06T11:42:54.311049Z",
+          "signal_hash": "0xd2de15dc207cdcfa5b59fe4e8b57d182bd82f2950794357839ad994867c6b6d0",
+          "routing_mode": "auto",
+          "question": {
+            "hash": "484ae4bbb6fda3debdc77cea0cc9dd52ee712767210f97b71bb04b296c9dae9a",
+            "text": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48\"}",
+            "category": "",
+            "interest_score": 0,
+            "affected_pct": 0,
+            "audience_pct": 0,
+            "source_url": ""
+          },
+          "routing": {
+            "subnet_id": "710637",
+            "subnet_name": "Sanctions Name Evidence",
+            "miner_slug": "zk-sanctions",
+            "reasoning": "Intent: intent given by the caller\nMiner: request built from the miner's intent_mapping",
+            "intent": "SANCTIONS_SCREENING_MATCH_GENERAL"
+          },
+          "execution": {
+            "result": {
+              "as_of": "2026-09-22",
+              "attribution": "US Treasury OFAC public data. Contains public sector information licensed under the Open Government Licence v3.0. Contains information licensed under the Open Government Licence – Canada. European Union, 2026, European Commission DG FISMA, CC BY 4.0 reuse policy. EU entity-only normalized extraction from the Financial Sanctions Database; changes indicated. US Department of Commerce ITA Consolidated Screening List and BIS Entity List public data; literal legal-table corroborated fields.",
+              "checked_at": "2026-11-06T11:42:50.094Z",
+              "confidence": 0.95,
+              "limits": [
+                "Equal-similarity results retain source precedence, then prefer primary names, explicitly strong aliases, ungraded aliases, and explicitly weak aliases within each list. This is record presentation, not identity adjudication or alias reclassification.",
+                "Name similarity is not identity confirmation.",
+                "Non-SDN restrictions differ from SDN asset blocking.",
+                "UN and Australian lists are not checked; UK, Canadian and EU coverage is entities only.",
+                "EU names are literal XML fields corroborated by CSV entry and name IDs, exact or token-order only; individual records are excluded. The EU consolidated list is administrative; adopted Official Journal texts are authoritative.",
+                "Canadian aliases are limited to PDF-corroborated single fields, exact or token-order only; compound alias fields and ships are not checked. Its consolidated list is administrative, not law.",
+                "BIS Entity List names use literal ITA JSON values corroborated by CSV and the BIS legal table, exact or token-order only. ITA-reported licensing metadata is separate from quoted primary BIS legal-table rows; primary legal text takes precedence where they differ. Export licensing restrictions differ from asset blocking; Entity List parties can include persons and unspecified party types remain null. Other Commerce/State CSL lists are not checked. CSL file dates are HTTP Last-Modified, not individual designation dates.",
+                "Ownership-based sanctions and unlisted subsidiaries are not checked.",
+                "Additional OFAC formatted names use literal enhanced XML values corroborated in advanced XML, exact or token-order only. No unlisted transliteration or phonetic expansion is guessed.",
+                "Dotted-initial compaction is punctuation normalization, not a new published alias or identity confirmation; a weak published alias remains weak."
+              ],
+              "lists": [
+                "OFAC SDN",
+                "OFAC Consolidated (non-SDN)",
+                "UK Sanctions List (entities only)",
+                "Canada autonomous sanctions (entities only)",
+                "EU Financial Sanctions (entities only)",
+                "US BIS Entity List (export controls)"
+              ],
+              "match_score": 0,
+              "matched": false,
+              "matches": [],
+              "method": "Exact-first NFKD casefold, accent removal, unordered tokens, bidirectional explicit dotted-initial punctuation compaction; bounded Levenshtein with conservative character-count pruning and equal-boundary trimming only without a score-1 exact hit",
+              "name": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+              "snapshot_sha256": "766cdeeffe13314f9e6ea482cf9b4af15ffb7a75242af0f9de409da338aed4e9",
+              "source": [
+                {
+                  "additional_published_names": 5602,
+                  "alias_corroboration_sha256": "1e9363331a88cdb6eb42a386b30ac9aab9866ba228c1d84f7eea6bab1e94f232",
+                  "alias_corroboration_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ALT.CSV",
+                  "corroboration_sha256": "8e94d8715b81f54a7d769c52af7fcefea19d48eead54bb9d974f4a62dadd9536",
+                  "corroboration_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.CSV",
+                  "fetched_at": "2026-11-06T01:26:23.707094+00:00",
+                  "license": "US federal government work, 17 USC 105",
+                  "name": "OFAC SDN",
+                  "name_scope": "Literal enhanced formatted names corroborated by entry/script/quality in advanced XML; additional names exact/token-order only.",
+                  "name_sources": [
+                    {
+                      "fetched_at": "2026-11-06T01:28:27.429760+00:00",
+                      "name": "OFAC enhanced XML literal names",
+                      "published_at": "2026-11-05",
+                      "sha256": "d4ddbe2afe6935b1fed9c877804cd0da21a692bb2ef103a8dc6b6a999dd3d5b4",
+                      "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN_ENHANCED.XML"
+                    },
+                    {
+                      "fetched_at": "2026-11-06T01:28:39.053001+00:00",
+                      "name": "OFAC advanced XML corroboration",
+                      "published_at": "2026-11-05",
+                      "sha256": "9e8a53221edbe1388c95722da42ef8d1d487df84e018ee02841251200a10b19a",
+                      "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN_ADVANCED.XML"
+                    }
+                  ],
+                  "published_at": "2026-11-05",
+                  "records": 19555,
+                  "sha256": "ee7fc73e9f3b4ca4dd3a304446c8cdd03bf2595f049a9d8f8dff7314d4c02d58",
+                  "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML"
+                },
+                {
+                  "fetched_at": "2026-11-03T17:56:35.038541+00:00",
+                  "license": "US federal government work, 17 USC 105",
+                  "name": "OFAC Consolidated (non-SDN)",
+                  "published_at": "2026-10-19",
+                  "records": 486,
+                  "sha256": "06323d16735a0461d9dc03332ce1fed74d8525244df8b27a47ef12174b8c38f1",
+                  "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/CONSOLIDATED.XML"
+                },
+                {
+                  "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+                  "excluded_non_entities": 4753,
+                  "fetched_at": "2026-11-03T17:56:41.813567+00:00",
+                  "license": "Open Government Licence v3.0",
+                  "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+                  "name": "UK Sanctions List (entities only)",
+                  "published_at": "2026-11-03",
+                  "records": 1667,
+                  "sha256": "b9edf715b3eae03c5e6ea0f6e060ebb19a6b3ebba06d6b98d038f5d12376d4ab",
+                  "source_url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.xml"
+                },
+                {
+                  "attribution": "Contains information licensed under the Open Government Licence – Canada.",
+                  "corroboration_url": "https://www.international.gc.ca/world-monde/assets/pdfs/international_relations-relations_internationales/sanctions/sema-lmes.pdf",
+                  "fetched_at": "2026-11-03T17:58:32.840855+00:00",
+                  "license": "Open Government Licence - Canada v2.0",
+                  "license_url": "https://open.canada.ca/en/open-government-licence-canada",
+                  "name": "Canada autonomous sanctions (entities only)",
+                  "note": "Administrative consolidated list, not a regulation; consult relevant law for restrictions.",
+                  "published_at": "2026-09-22",
+                  "records": 1450,
+                  "scope": "PDF-corroborated entity primary names and 578 unsplit published aliases; individuals, ships and compound alias fields excluded.",
+                  "sha256": "61a9064720d9f35884ead9387158b708882d63c615981034cb9557d038d55bcf",
+                  "source_url": "https://www.international.gc.ca/world-monde/assets/office_docs/international_relations-relations_internationales/sanctions/sema-lmes.xml"
+                },
+                {
+                  "attribution": "European Union, 2026, European Commission DG FISMA. Entity-only normalized extraction from the Financial Sanctions Database; changes indicated.",
+                  "corroboration_sha256": "1fc5fcff6ee1777ec7f00db7d1c672ff41be7d12cdd32bee514047b6cede4868",
+                  "corroboration_url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList/content?token=dG9rZW4tMjAxNw",
+                  "excluded_non_entities": 4490,
+                  "fetched_at": "2026-11-04T00:55:16.577726+00:00",
+                  "license": "Commission document reuse policy / CC BY 4.0",
+                  "license_url": "https://commission.europa.eu/legal-notice_en",
+                  "name": "EU Financial Sanctions (entities only)",
+                  "published_at": "2026-10-23",
+                  "records": 1779,
+                  "regulatory_note": "Administrative consolidated financial sanctions list; adopted Official Journal texts are authoritative.",
+                  "scope": "Enterprise-classified entities only. Literal XML names corroborated by CSV ID/name fields; exact or token-order only. Individuals excluded.",
+                  "sha256": "636800c3e494b2ef8934f51f5e23c914a6208a383ac850e674b1b35a7d49d34f",
+                  "source_url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/xmlFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw"
+                },
+                {
+                  "attribution": "US Department of Commerce, ITA Consolidated Screening List; BIS Entity List. Literal names; restricted to legal-table corroborated fields.",
+                  "corroboration_sha256": "f9bae754537e7f61fdc954ed8d6c6075c6e7ebf6ed38746bc96eb076920ce7a9",
+                  "corroboration_url": "https://data.trade.gov/downloadable_consolidated_screening_list/v1/consolidated.csv",
+                  "date_basis": "HTTP Last-Modified of official CSL JSON and CSV, not each designation date",
+                  "fetched_at": "2026-11-04T05:58:37.990559+00:00",
+                  "legal_source_sha256": "d1910606b3ea48fb8ce8d2bccc375ef7aef54c348ce012a0129a6009efea7168",
+                  "legal_source_url": "https://www.bis.gov/regulations/ear/744#supplement-4-744",
+                  "license": "US federal government work, 17 USC 105",
+                  "name": "US BIS Entity List (export controls)",
+                  "published_at": "2026-11-04",
+                  "records": 3349,
+                  "scope": "BIS Entity List parties only, exact/token-order literal names; unspecified party types remain null. Export licensing restrictions differ from asset blocking. ITA-reported metadata is distinguished from literal primary BIS legal-table fields; discrepancies disclosed without an invented legal conclusion.",
+                  "sha256": "862ca9a7498828434c32fb3b5117a2680f4e79e97947898554e74d8acadfbc90",
+                  "source_url": "https://data.trade.gov/downloadable_consolidated_screening_list/v1/consolidated.json"
+                }
+              ],
+              "status": "ok",
+              "summary": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48: no name match at threshold 0.88 in the dated OFAC SDN/non-SDN, UK entity, Canadian entity, EU entity and BIS snapshots. Not sanctions clearance; UN/Australia, UK/Canada/EU individuals and ownership are not checked. Source dates supplied below.",
+              "threshold": 0.88,
+              "total_matches": 0,
+              "truncated": false
+            },
+            "cost_usd": 0.01,
+            "duration_ms": 391,
+            "timestamp": "2026-11-06T11:42:50.356939156Z"
+          }
+        },
+        "verification": {
+          "algorithm": "keccak256",
+          "commitment": "payload",
+          "verified": true
+        }
+      },
+      "body_base64": "eyJtaW5lcl9pZCI6IjcxMDYzNyIsIm1pbmVyX25hbWUiOiJTYW5jdGlvbnMgTmFtZSBFdmlkZW5jZSIsImVuZHBvaW50IjoiL3NjcmVlbiIsInJlc3VsdCI6eyJuYW1lIjoiMHhBMGI4Njk5MWM2MjE4YjM2YzFkMTlENGEyZTlFYjBjRTM2MDZlQjQ4IiwibWF0Y2hlZCI6ZmFsc2UsIm1hdGNoZXMiOm51bGwsImxpc3RzIjpbIk9GQUMgU0ROIiwiT0ZBQyBDb25zb2xpZGF0ZWQgKG5vbi1TRE4pIiwiVUsgU2FuY3Rpb25zIExpc3QgKGVudGl0aWVzIG9ubHkpIiwiQ2FuYWRhIGF1dG9ub21vdXMgc2FuY3Rpb25zIChlbnRpdGllcyBvbmx5KSIsIkVVIEZpbmFuY2lhbCBTYW5jdGlvbnMgKGVudGl0aWVzIG9ubHkpIiwiVVMgQklTIEVudGl0eSBMaXN0IChleHBvcnQgY29udHJvbHMpIl0sIm1hdGNoX3Njb3JlIjowfSwicmVzdWx0X3NoYXBlIjoiaW50ZW50IiwiZm9ybWF0X3ZlcnNpb24iOjMsImZpZWxkX3N0YXR1cyI6eyJuYW1lIjoib2siLCJtYXRjaGVkIjoib2siLCJtYXRjaGVzIjoibWlzc2luZyIsImxpc3RzIjoib2siLCJtYXRjaF9zY29yZSI6Im9rIn0sImlucHV0Ijp7Im5hbWUiOiIweEEwYjg2OTkxYzYyMThiMzZjMWQxOUQ0YTJlOUViMGNFMzYwNmVCNDgifSwiaW5wdXRfc2NoZW1hX3ZlcnNpb24iOjMsImNvc3RfdXNkIjowLjAxLCJkdXJhdGlvbl9tcyI6MzkxLCJ0aW1lc3RhbXAiOiIyMDI2LTExLTA2VDExOjQyOjUwLjM1NjkzOTE1NloiLCJyZWFzb25pbmciOiJJbnRlbnQ6IGludGVudCBnaXZlbiBieSB0aGUgY2FsbGVyXG5NaW5lcjogcmVxdWVzdCBidWlsdCBmcm9tIHRoZSBtaW5lcidzIGludGVudF9tYXBwaW5nIiwiaW50ZW50IjoiU0FOQ1RJT05TX1NDUkVFTklOR19NQVRDSF9HRU5FUkFMIiwic2lnbmFsX2hhc2giOiIweGQyZGUxNWRjMjA3Y2RjZmE1YjU5ZmU0ZThiNTdkMTgyYmQ4MmYyOTUwNzk0MzU3ODM5YWQ5OTQ4NjdjNmI2ZDAiLCJ3YXJuaW5ncyI6WyJwYXJhbWV0ZXIgXCJuYW1lXCIgaXMgNDQgYnl0ZXMsIGV4Y2VlZGluZyB0aGUgbWluZXIncyBkZWNsYXJlZCBsaW1pdCBvZiAyNTYgYnl0ZXM6IE5hbWUgbXVzdCBiZSBhdCBtb3N0IDI1NiBVVEYtOCBieXRlcy4iXX0="
+    },
+    {
+      "check": "Wash trading",
+      "method": "POST",
+      "url": "https://devnode.telegraphprotocol.com/engine/v1/ask/7378",
+      "request_body": {
+        "method": "GET",
+        "endpoint": "/washtrade",
+        "payload": {
+          "chain": "ethereum",
+          "token": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "blocks": 600
+        }
+      },
+      "requested_at": "2026-11-06T11:42:51.766Z",
+      "responded_at": "2026-11-06T11:43:09.700Z",
+      "duration_ms": 17934,
+      "exchanges": [
+        {
+          "status": 402,
+          "headers": {
+            "cf-cache-status": "DYNAMIC",
+            "connection": "keep-alive",
+            "content-length": "917",
+            "content-type": "application/json",
+            "date": "Fri, 06 Nov 2026 11:42:52 GMT",
+            "payment-required": "eyJhY2NlcHRzIjpbeyJhbW91bnQiOiIxMDAwMCIsImFzc2V0IjoiMHhjYzE5NGUxYTg0M0I2NTg1MjZEMEQ1QzQzMWY2NzAwMjg1ODJBZTE3IiwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifSwibWF4VGltZW91dFNlY29uZHMiOjYwLCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRFQjAxMkI1RTk5OEJCNTdCNmJFNkM5Q2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJleGFjdCJ9LHsiYW1vdW50IjoiMTAwMDAiLCJleHRyYSI6eyJkZXNjcmlwdGlvbiI6IkRlZHVjdCBmcm9tIHRoZSBjYWxsZXIncyBUZWxlZ3JhcGggZXNjcm93IGJhbGFuY2UgYXQgdGhlIG5leHQgZXBvY2ggY2xvc2UuIEZ1bmQgaXQgb25jZSB3aXRoIEVzY3Jvd0ZhY2V0LmRlcG9zaXRVU0RDKGFtb3VudCk7IG5vIHBlci1yZXF1ZXN0IHNldHRsZW1lbnQuIiwibWVzc2FnZSI6IlRlbGVncmFwaCBFc2Nyb3cgUGF5bWVudFxuXG5XYWxsZXQ6IHtmcm9tfVxuUGF5IFRvOiAweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWJcbk5ldHdvcms6IGVpcDE1NToxMTE1NTExMVxuQW1vdW50OiAxMDAwMCB1VVNEQ1xuUmVzb3VyY2U6IC92MS9hc2svNzM3OFxuTm9uY2U6IHtub25jZX1cblZhbGlkIEFmdGVyOiB7dmFsaWRBZnRlcn1cblZhbGlkIEJlZm9yZToge3ZhbGlkQmVmb3JlfSIsInJlc291cmNlIjoiL3YxL2Fzay83Mzc4Iiwic2lnbldpdGgiOiJwZXJzb25hbF9zaWduIChFSVAtMTkxKSJ9LCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJlc2Nyb3cifV0sImVycm9yIjoiUGF5bWVudCByZXF1aXJlZCIsInJlc291cmNlIjp7ImRlc2NyaXB0aW9uIjoiUGF5bWVudCByZXF1aXJlZCBmb3IgZGlyZWN0IHN1Ym5ldCBpbmZlcmVuY2UuIiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIiwidXJsIjoiaHR0cHM6Ly9kZXZub2RlLnRlbGVncmFwaHByb3RvY29sLmNvbS9lbmdpbmUvdjEvYXNrLzczNzgifSwieDQwMlZlcnNpb24iOjJ9",
+            "vary": "Origin, Origin"
+          }
+        },
+        {
+          "status": 200,
+          "headers": {
+            "cf-cache-status": "DYNAMIC",
+            "connection": "keep-alive",
+            "content-encoding": "br",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 06 Nov 2026 11:43:09 GMT",
+            "payment-response": "eyJzdWNjZXNzIjp0cnVlLCJwYXllciI6IjB4MjAwOTFGRUQwMUYxYUVhM0U4NDBkNjk4NENGYjExMDc1NkI1QWIxYyIsInRyYW5zYWN0aW9uIjoiMHhjZGI1YTAzNjQ2YTVkMWI2MzVhZTZiN2RlN2M1MjY5Njc3ZTI5YjMyOGM2NTU0MTJhNTJkMWU0NzBiODYxMjljIiwibmV0d29yayI6ImVpcDE1NToxMTE1NTExMSJ9",
+            "transfer-encoding": "chunked",
+            "vary": "Origin, Origin",
+            "x-telegraph-receipt": "eyJyZWNlaXB0X2hhc2giOiIweDg1NjQxNGZiYWZlMDhkMWNjOGViMWM5MjZhYTMzNTliOTkyMDQzMDE4NTZmMjNlMzdmY2QyZGQ4YmI4ZTg2ODYiLCJyYWlsIjoieDQwMiIsInBheWVyIjoiMHgyMDA5MUZFRDAxRjFhRWEzRTg0MGQ2OTg0Q0ZiMTEwNzU2QjVBYjFjIiwibWluZXIiOiI0NDM4IiwiaW50ZW50IjoiV0FTSF9UUkFESU5HX0RFVEVDVElPTl9HRU5FUkFMIiwiYW1vdW50X3V1c2RjIjoiMTAwMDAiLCJlcG9jaF9pZCI6MjAyNiwic2V0dGxlbWVudCI6Im9uY2hhaW4iLCJjaGFpbiI6ImVpcDE1NToxMTE1NTExMSIsInR4X2hhc2giOiIweGNkYjVhMDM2NDZhNWQxYjYzNWFlNmI3ZGU3YzUyNjk2NzdlMjliMzI4YzY1NTQxMmE1MmQxZTQ3MGI4NjEyOWMiLCJ0aW1lc3RhbXAiOjE3OTM5NjUzODl9"
+          }
+        }
+      ],
+      "challenge": {
+        "amountAtomic": "10000",
+        "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+        "network": "eip155:11155111",
+        "payTo": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+        "scheme": "exact",
+        "maxTimeoutSeconds": 60
+      },
+      "settlement": {
+        "success": true,
+        "transaction": "0xcdb5a03646a5d1b635ae6b7de7c5269677e29b328c655412a52d1e470b86129c",
+        "network": "eip155:11155111",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "errorReason": null
+      },
+      "receipt": {
+        "receipt_hash": "0x856414fbafe08d1cc8eb1c926aa3359b99204301856f23e37fcd2dd8bb8e8686",
+        "rail": "x402",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "miner": "4438",
+        "intent": "WASH_TRADING_DETECTION_GENERAL",
+        "amount_uusdc": "10000",
+        "epoch_id": 2026,
+        "settlement": "onchain",
+        "chain": "eip155:11155111",
+        "tx_hash": "0xcdb5a03646a5d1b635ae6b7de7c5269677e29b328c655412a52d1e470b86129c",
+        "timestamp": 1793965389
+      },
+      "signal": {
+        "signal_hash": "0xa408cb0b29eac40f172dcbce4d05ffdf098d6e683196230a09c60dfdefb78059",
+        "kind": "direct_result",
+        "signal": {
+          "id": "6b5ed246-ab9a-4221-8067-c10cf43eac5b",
+          "signal_hash": "0xa408cb0b29eac40f172dcbce4d05ffdf098d6e683196230a09c60dfdefb78059",
+          "kind": "direct_result",
+          "wallet_address": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+          "miner_slug": "verifywire-wash-trading",
+          "subnet_id": "7378",
+          "intent_id": "WASH_TRADING_DETECTION_GENERAL",
+          "tx_hash": "0xcdb5a03646a5d1b635ae6b7de7c5269677e29b328c655412a52d1e470b86129c",
+          "result_id": "7af54191-2de7-415d-9f2b-41086607426b",
+          "created_at": "2026-11-06T11:43:09.765585Z"
+        },
+        "payload": {
+          "intent_id": "WASH_TRADING_DETECTION_GENERAL",
+          "miner_slug": "verifywire-wash-trading",
+          "subnet_id": "7378",
+          "wallet_address": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+          "request": "[direct] 7378 → {\"method\":\"GET\",\"endpoint\":\"/washtrade\",\"payload\":{\"blocks\":600,\"chain\":\"ethereum\",\"token\":\"0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48\"}}",
+          "response": {
+            "as_of": "2026-11-06T11:43:09.509Z",
+            "attribution": "On-chain values read from public EVM nodes. Currency mid rates from European Central Bank reference rates via Frankfurter. Crypto quotes and order book depth from the Kraken, Bitstamp and Gemini public markets.",
+            "chain": "ethereum",
+            "chain_id": 1,
+            "confidence": 0.9,
+            "contract_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "from_block": 26354988,
+            "head_block": 26355587,
+            "intent": "WASH_TRADING_DETECTION",
+            "readings": "token USDC 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 on Ethereum, blocks 26354988-26355587 (600), transfers 2500, addresses 2281, reciprocal pairs 45, round-trip share 27.72%, concentration 13.34%, self 1, risk 0.3969 (ELEVATED), read 2026-11-06T11:43:09.509Z.",
+            "reciprocal_pairs": 45,
+            "risk_label": "ELEVATED",
+            "risk_score": 0.3969,
+            "round_trip_volume_share_percent": 27.72,
+            "self_transfers": 1,
+            "source": "eth_getLogs Transfer events over public RPC",
+            "summary": "Over the last 600 blocks on Ethereum, USDC shows a ELEVATED wash-trading risk (score 0.40): 2,500 transfers among 2,281 addresses, with 45 reciprocal address pairs carrying about 27.72% (27.7%) of volume in round trips. The busiest sender moved 13.34% (13.3%) of volume. This is a heuristic over Transfer logs, not a proof of intent.",
+            "symbol": "USDC",
+            "top_sender_concentration_percent": 13.34,
+            "transfers": 2500,
+            "unique_addresses": 2281,
+            "verified": false,
+            "window_blocks": 600
+          },
+          "timestamp": "2026-11-06T11:43:09.65014408Z"
+        },
+        "result": {
+          "id": "7af54191-2de7-415d-9f2b-41086607426b",
+          "type": "direct",
+          "source": "user",
+          "status": "success",
+          "created_at": "2026-11-06T11:43:09.762309Z",
+          "signal_hash": "0xa408cb0b29eac40f172dcbce4d05ffdf098d6e683196230a09c60dfdefb78059",
+          "routing_mode": "direct",
+          "question": {
+            "hash": "621dcbb42cc156f27c88429571886e5012b0bf16843f2dc678a9bfe4ed44ce0e",
+            "text": "[direct] 7378 → {\"method\":\"GET\",\"endpoint\":\"/washtrade\",\"payload\":{\"blocks\":600,\"chain\":\"ethereum\",\"token\":\"0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48\"}}",
+            "category": "",
+            "interest_score": 0,
+            "affected_pct": 0,
+            "audience_pct": 0,
+            "source_url": ""
+          },
+          "routing": {
+            "subnet_id": "7378",
+            "subnet_name": "VerifyWire Wash Trading Detection",
+            "miner_slug": "verifywire-wash-trading",
+            "reasoning": "user-directed",
+            "intent": "WASH_TRADING_DETECTION_GENERAL"
+          },
+          "execution": {
+            "result": {
+              "as_of": "2026-11-06T11:43:09.509Z",
+              "attribution": "On-chain values read from public EVM nodes. Currency mid rates from European Central Bank reference rates via Frankfurter. Crypto quotes and order book depth from the Kraken, Bitstamp and Gemini public markets.",
+              "chain": "ethereum",
+              "chain_id": 1,
+              "confidence": 0.9,
+              "contract_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "from_block": 26354988,
+              "head_block": 26355587,
+              "intent": "WASH_TRADING_DETECTION",
+              "readings": "token USDC 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 on Ethereum, blocks 26354988-26355587 (600), transfers 2500, addresses 2281, reciprocal pairs 45, round-trip share 27.72%, concentration 13.34%, self 1, risk 0.3969 (ELEVATED), read 2026-11-06T11:43:09.509Z.",
+              "reciprocal_pairs": 45,
+              "risk_label": "ELEVATED",
+              "risk_score": 0.3969,
+              "round_trip_volume_share_percent": 27.72,
+              "self_transfers": 1,
+              "source": "eth_getLogs Transfer events over public RPC",
+              "summary": "Over the last 600 blocks on Ethereum, USDC shows a ELEVATED wash-trading risk (score 0.40): 2,500 transfers among 2,281 addresses, with 45 reciprocal address pairs carrying about 27.72% (27.7%) of volume in round trips. The busiest sender moved 13.34% (13.3%) of volume. This is a heuristic over Transfer logs, not a proof of intent.",
+              "symbol": "USDC",
+              "top_sender_concentration_percent": 13.34,
+              "transfers": 2500,
+              "unique_addresses": 2281,
+              "verified": false,
+              "window_blocks": 600
+            },
+            "cost_usd": 0.01,
+            "duration_ms": 5796,
+            "timestamp": "2026-11-06T11:43:09.65014408Z"
+          }
+        },
+        "verification": {
+          "algorithm": "keccak256",
+          "commitment": "payload",
+          "verified": true
+        }
+      },
+      "body_base64": "eyJjb3N0X3VzZCI6MC4wMSwiZHVyYXRpb25fbXMiOjU3OTYsIm1pbmVyX2lkIjoiNzM3OCIsIm1pbmVyX25hbWUiOiJWZXJpZnlXaXJlIFdhc2ggVHJhZGluZyBEZXRlY3Rpb24iLCJyZXN1bHQiOnsiYXNfb2YiOiIyMDI2LTExLTA2VDExOjQzOjA5LjUwOVoiLCJhdHRyaWJ1dGlvbiI6Ik9uLWNoYWluIHZhbHVlcyByZWFkIGZyb20gcHVibGljIEVWTSBub2Rlcy4gQ3VycmVuY3kgbWlkIHJhdGVzIGZyb20gRXVyb3BlYW4gQ2VudHJhbCBCYW5rIHJlZmVyZW5jZSByYXRlcyB2aWEgRnJhbmtmdXJ0ZXIuIENyeXB0byBxdW90ZXMgYW5kIG9yZGVyIGJvb2sgZGVwdGggZnJvbSB0aGUgS3Jha2VuLCBCaXRzdGFtcCBhbmQgR2VtaW5pIHB1YmxpYyBtYXJrZXRzLiIsImNoYWluIjoiZXRoZXJldW0iLCJjaGFpbl9pZCI6MSwiY29uZmlkZW5jZSI6MC45LCJjb250cmFjdF9hZGRyZXNzIjoiMHhhMGI4Njk5MWM2MjE4YjM2YzFkMTlkNGEyZTllYjBjZTM2MDZlYjQ4IiwiZnJvbV9ibG9jayI6MjYzNTQ5ODgsImhlYWRfYmxvY2siOjI2MzU1NTg3LCJpbnRlbnQiOiJXQVNIX1RSQURJTkdfREVURUNUSU9OIiwicmVhZGluZ3MiOiJ0b2tlbiBVU0RDIDB4YTBiODY5OTFjNjIxOGIzNmMxZDE5ZDRhMmU5ZWIwY2UzNjA2ZWI0OCBvbiBFdGhlcmV1bSwgYmxvY2tzIDI2MzU0OTg4LTI2MzU1NTg3ICg2MDApLCB0cmFuc2ZlcnMgMjUwMCwgYWRkcmVzc2VzIDIyODEsIHJlY2lwcm9jYWwgcGFpcnMgNDUsIHJvdW5kLXRyaXAgc2hhcmUgMjcuNzIlLCBjb25jZW50cmF0aW9uIDEzLjM0JSwgc2VsZiAxLCByaXNrIDAuMzk2OSAoRUxFVkFURUQpLCByZWFkIDIwMjYtMTEtMDZUMTE6NDM6MDkuNTA5Wi4iLCJyZWNpcHJvY2FsX3BhaXJzIjo0NSwicmlza19sYWJlbCI6IkVMRVZBVEVEIiwicmlza19zY29yZSI6MC4zOTY5LCJyb3VuZF90cmlwX3ZvbHVtZV9zaGFyZV9wZXJjZW50IjoyNy43Miwic2VsZl90cmFuc2ZlcnMiOjEsInNvdXJjZSI6ImV0aF9nZXRMb2dzIFRyYW5zZmVyIGV2ZW50cyBvdmVyIHB1YmxpYyBSUEMiLCJzdW1tYXJ5IjoiT3ZlciB0aGUgbGFzdCA2MDAgYmxvY2tzIG9uIEV0aGVyZXVtLCBVU0RDIHNob3dzIGEgRUxFVkFURUQgd2FzaC10cmFkaW5nIHJpc2sgKHNjb3JlIDAuNDApOiAyLDUwMCB0cmFuc2ZlcnMgYW1vbmcgMiwyODEgYWRkcmVzc2VzLCB3aXRoIDQ1IHJlY2lwcm9jYWwgYWRkcmVzcyBwYWlycyBjYXJyeWluZyBhYm91dCAyNy43MiUgKDI3LjclKSBvZiB2b2x1bWUgaW4gcm91bmQgdHJpcHMuIFRoZSBidXNpZXN0IHNlbmRlciBtb3ZlZCAxMy4zNCUgKDEzLjMlKSBvZiB2b2x1bWUuIFRoaXMgaXMgYSBoZXVyaXN0aWMgb3ZlciBUcmFuc2ZlciBsb2dzLCBub3QgYSBwcm9vZiBvZiBpbnRlbnQuIiwic3ltYm9sIjoiVVNEQyIsInRvcF9zZW5kZXJfY29uY2VudHJhdGlvbl9wZXJjZW50IjoxMy4zNCwidHJhbnNmZXJzIjoyNTAwLCJ1bmlxdWVfYWRkcmVzc2VzIjoyMjgxLCJ2ZXJpZmllZCI6ZmFsc2UsIndpbmRvd19ibG9ja3MiOjYwMH0sInJlc3VsdF9zaGFwZSI6InJhdyIsInNpZ25hbF9oYXNoIjoiMHhhNDA4Y2IwYjI5ZWFjNDBmMTcyZGNiY2U0ZDA1ZmZkZjA5OGQ2ZTY4MzE5NjIzMGEwOWM2MGRmZGVmYjc4MDU5IiwidGltZXN0YW1wIjoiMjAyNi0xMS0wNlQxMTo0MzowOS42NTAxNDQwOFoiLCJ3YXJuaW5ncyI6WyJwYXJhbWV0ZXIgXCJ0b2tlblwiIGxlbmd0aCAwIHZpb2xhdGVzIHRoZSBtaW5lcidzIGRlY2xhcmVkIGxpbWl0IChsdGUgODApOiBuYW1lIGEgdG9rZW4gYnkgaXRzIGFkZHJlc3MgKDB4Li4uKSBvciBzeW1ib2wuIGNoYWluIGRlZmF1bHRzIHRvIGV0aGVyZXVtLiBibG9ja3MgaXMgdGhlIHNjYW4gd2luZG93IGFuZCBkZWZhdWx0cyB0byAxMjAsIGNhcHBlZCBhdCA2MDAuIFRoZSBzY29yZSBpcyBhIGhldXJpc3RpYyBvdmVyIFRyYW5zZmVyIGxvZ3MsIG5vdCBhIHByb29mIG9mIGludGVudC4iXX0="
+    },
+    {
+      "check": "Holder count",
+      "method": "POST",
+      "url": "https://devnode.telegraphprotocol.com/engine/v1/ask/7302",
+      "request_body": {
+        "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+        "params": {
+          "token": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "chain": "ethereum"
+        }
+      },
+      "requested_at": "2026-11-06T11:42:51.779Z",
+      "responded_at": "2026-11-06T11:43:07.083Z",
+      "duration_ms": 15304,
+      "exchanges": [
+        {
+          "status": 402,
+          "headers": {
+            "cf-cache-status": "DYNAMIC",
+            "connection": "keep-alive",
+            "content-length": "917",
+            "content-type": "application/json",
+            "date": "Fri, 06 Nov 2026 11:42:52 GMT",
+            "payment-required": "eyJhY2NlcHRzIjpbeyJhbW91bnQiOiIxMDAwMCIsImFzc2V0IjoiMHhjYzE5NGUxYTg0M0I2NTg1MjZEMEQ1QzQzMWY2NzAwMjg1ODJBZTE3IiwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifSwibWF4VGltZW91dFNlY29uZHMiOjYwLCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRFQjAxMkI1RTk5OEJCNTdCNmJFNkM5Q2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJleGFjdCJ9LHsiYW1vdW50IjoiMTAwMDAiLCJleHRyYSI6eyJkZXNjcmlwdGlvbiI6IkRlZHVjdCBmcm9tIHRoZSBjYWxsZXIncyBUZWxlZ3JhcGggZXNjcm93IGJhbGFuY2UgYXQgdGhlIG5leHQgZXBvY2ggY2xvc2UuIEZ1bmQgaXQgb25jZSB3aXRoIEVzY3Jvd0ZhY2V0LmRlcG9zaXRVU0RDKGFtb3VudCk7IG5vIHBlci1yZXF1ZXN0IHNldHRsZW1lbnQuIiwibWVzc2FnZSI6IlRlbGVncmFwaCBFc2Nyb3cgUGF5bWVudFxuXG5XYWxsZXQ6IHtmcm9tfVxuUGF5IFRvOiAweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWJcbk5ldHdvcms6IGVpcDE1NToxMTE1NTExMVxuQW1vdW50OiAxMDAwMCB1VVNEQ1xuUmVzb3VyY2U6IC92MS9hc2svNzMwMlxuTm9uY2U6IHtub25jZX1cblZhbGlkIEFmdGVyOiB7dmFsaWRBZnRlcn1cblZhbGlkIEJlZm9yZToge3ZhbGlkQmVmb3JlfSIsInJlc291cmNlIjoiL3YxL2Fzay83MzAyIiwic2lnbldpdGgiOiJwZXJzb25hbF9zaWduIChFSVAtMTkxKSJ9LCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJlc2Nyb3cifV0sImVycm9yIjoiUGF5bWVudCByZXF1aXJlZCIsInJlc291cmNlIjp7ImRlc2NyaXB0aW9uIjoiUGF5bWVudCByZXF1aXJlZCBmb3IgZGlyZWN0IHN1Ym5ldCBpbmZlcmVuY2UuIiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIiwidXJsIjoiaHR0cHM6Ly9kZXZub2RlLnRlbGVncmFwaHByb3RvY29sLmNvbS9lbmdpbmUvdjEvYXNrLzczMDIifSwieDQwMlZlcnNpb24iOjJ9",
+            "vary": "Origin, Origin"
+          }
+        },
+        {
+          "status": 200,
+          "headers": {
+            "cf-cache-status": "DYNAMIC",
+            "connection": "keep-alive",
+            "content-encoding": "br",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 06 Nov 2026 11:43:07 GMT",
+            "payment-response": "eyJzdWNjZXNzIjp0cnVlLCJwYXllciI6IjB4MjAwOTFGRUQwMUYxYUVhM0U4NDBkNjk4NENGYjExMDc1NkI1QWIxYyIsInRyYW5zYWN0aW9uIjoiMHg3NmRkYzFkNDgzYThkOTdkMDYzNWJhYTgxZDQxNzhjMTJkODUyYjJmMTZmMDU2YWNjMTViMzliYTVkMDc4MzY2IiwibmV0d29yayI6ImVpcDE1NToxMTE1NTExMSJ9",
+            "transfer-encoding": "chunked",
+            "vary": "Origin, Origin",
+            "x-telegraph-receipt": "eyJyZWNlaXB0X2hhc2giOiIweDIyZjIyZmRmMGU5ZWZiZmFhZTM5ZjQxNGI0YWYwMTQ5N2Q0NGE0YThiY2IyMTgyMmM1ZTM0MTQ4OTUwMTkzZjgiLCJyYWlsIjoieDQwMiIsInBheWVyIjoiMHgyMDA5MUZFRDAxRjFhRWEzRTg0MGQ2OTg0Q0ZiMTEwNzU2QjVBYjFjIiwibWluZXIiOiIzNDMiLCJpbnRlbnQiOiJUT0tFTl9IT0xERVJfQ09VTlRfR0VORVJBTCIsImFtb3VudF91dXNkYyI6IjEwMDAwIiwiZXBvY2hfaWQiOjIwMjYsInNldHRsZW1lbnQiOiJvbmNoYWluIiwiY2hhaW4iOiJlaXAxNTU6MTExNTUxMTEiLCJ0eF9oYXNoIjoiMHg3NmRkYzFkNDgzYThkOTdkMDYzNWJhYTgxZDQxNzhjMTJkODUyYjJmMTZmMDU2YWNjMTViMzliYTVkMDc4MzY2IiwidGltZXN0YW1wIjoxNzkzOTY1Mzg3fQ=="
+          }
+        }
+      ],
+      "challenge": {
+        "amountAtomic": "10000",
+        "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+        "network": "eip155:11155111",
+        "payTo": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+        "scheme": "exact",
+        "maxTimeoutSeconds": 60
+      },
+      "settlement": {
+        "success": true,
+        "transaction": "0x76ddc1d483a8d97d0635baa81d4178c12d852b2f16f056acc15b39ba5d078366",
+        "network": "eip155:11155111",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "errorReason": null
+      },
+      "receipt": {
+        "receipt_hash": "0x22f22fdf0e9efbfaae39f414b4af01497d44a4a8bcb21822c5e34148950193f8",
+        "rail": "x402",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "miner": "343",
+        "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+        "amount_uusdc": "10000",
+        "epoch_id": 2026,
+        "settlement": "onchain",
+        "chain": "eip155:11155111",
+        "tx_hash": "0x76ddc1d483a8d97d0635baa81d4178c12d852b2f16f056acc15b39ba5d078366",
+        "timestamp": 1793965387
+      },
+      "signal": {
+        "signal_hash": "0x8fc3e3c3af7ad8ee5c29e3e0b9437c8c4688d884b138e3006b275911352b86d4",
+        "kind": "direct_result",
+        "signal": {
+          "id": "7a900b05-f045-41c7-b666-e04a9798c552",
+          "signal_hash": "0x8fc3e3c3af7ad8ee5c29e3e0b9437c8c4688d884b138e3006b275911352b86d4",
+          "kind": "direct_result",
+          "wallet_address": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+          "miner_slug": "chainwire-holder-count",
+          "subnet_id": "7302",
+          "intent_id": "TOKEN_HOLDER_COUNT_GENERAL",
+          "tx_hash": "0x76ddc1d483a8d97d0635baa81d4178c12d852b2f16f056acc15b39ba5d078366",
+          "result_id": "08b40b72-91df-4040-931e-0a3ba3791705",
+          "created_at": "2026-11-06T11:43:04.566421Z"
+        },
+        "payload": {
+          "intent_id": "TOKEN_HOLDER_COUNT_GENERAL",
+          "miner_slug": "chainwire-holder-count",
+          "subnet_id": "7302",
+          "wallet_address": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+          "request": "[intent] TOKEN_HOLDER_COUNT_GENERAL → {\"chain\":\"ethereum\",\"token\":\"0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48\"}",
+          "response": {
+            "as_of": "2026-11-06T11:43:04.555Z",
+            "attribution": "Balances and transactions read from public EVM nodes. Holder counts from Blockscout.",
+            "chain": "ethereum",
+            "chain_id": 1,
+            "confidence": 0.95,
+            "contract_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "holders": 9564157,
+            "holders_count": 9564157,
+            "intent": "TOKEN_HOLDER_COUNT",
+            "name": "USDC",
+            "read_at": "2026-11-06T11:43:03.987Z",
+            "readings": "token USDC (USDC), ERC-20 on Ethereum, chain id 1, contract 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48, holders 9564157 (9,564,157) distinct addresses, read 2026-11-06T11:43:03.987Z.",
+            "source": "Blockscout eth.blockscout.com token API",
+            "summary": "The token USDC (USDC) at 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 on Ethereum has approximately 9,564,157 (9.56 million) holders.",
+            "symbol": "USDC",
+            "token": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "token_symbol": "USDC",
+            "token_type": "ERC-20"
+          },
+          "timestamp": "2026-11-06T11:43:04.563205943Z"
+        },
+        "result": {
+          "id": "08b40b72-91df-4040-931e-0a3ba3791705",
+          "type": "direct",
+          "source": "user",
+          "status": "success",
+          "created_at": "2026-11-06T11:43:04.563321Z",
+          "signal_hash": "0x8fc3e3c3af7ad8ee5c29e3e0b9437c8c4688d884b138e3006b275911352b86d4",
+          "routing_mode": "auto",
+          "question": {
+            "hash": "57a0036307beb6804155f4c754a598dd63d6fb6d0e556f89db494681944c7806",
+            "text": "[intent] TOKEN_HOLDER_COUNT_GENERAL → {\"chain\":\"ethereum\",\"token\":\"0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48\"}",
+            "category": "",
+            "interest_score": 0,
+            "affected_pct": 0,
+            "audience_pct": 0,
+            "source_url": ""
+          },
+          "routing": {
+            "subnet_id": "7302",
+            "subnet_name": "ChainWire Token Holder Count",
+            "miner_slug": "chainwire-holder-count",
+            "reasoning": "Intent: miner chainwire-holder-count given by the caller\nMiner: The user is asking for the token holder count for a specific token on a specific chain. The ChainWire Token Holder Count miner has a GET endpoint at /holders that accepts 'chain' and 'token' as query parameters, and its description states it is used for TOKEN_HOLDER_COUNT_GENERAL. The provided parameters match these requirements.",
+            "intent": "TOKEN_HOLDER_COUNT_GENERAL"
+          },
+          "execution": {
+            "result": {
+              "as_of": "2026-11-06T11:43:04.555Z",
+              "attribution": "Balances and transactions read from public EVM nodes. Holder counts from Blockscout.",
+              "chain": "ethereum",
+              "chain_id": 1,
+              "confidence": 0.95,
+              "contract_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "holders": 9564157,
+              "holders_count": 9564157,
+              "intent": "TOKEN_HOLDER_COUNT",
+              "name": "USDC",
+              "read_at": "2026-11-06T11:43:03.987Z",
+              "readings": "token USDC (USDC), ERC-20 on Ethereum, chain id 1, contract 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48, holders 9564157 (9,564,157) distinct addresses, read 2026-11-06T11:43:03.987Z.",
+              "source": "Blockscout eth.blockscout.com token API",
+              "summary": "The token USDC (USDC) at 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 on Ethereum has approximately 9,564,157 (9.56 million) holders.",
+              "symbol": "USDC",
+              "token": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "token_symbol": "USDC",
+              "token_type": "ERC-20"
+            },
+            "cost_usd": 0.01,
+            "duration_ms": 924,
+            "timestamp": "2026-11-06T11:43:04.563205943Z"
+          }
+        },
+        "verification": {
+          "algorithm": "keccak256",
+          "commitment": "payload",
+          "verified": true
+        }
+      },
+      "body_base64": "eyJtaW5lcl9pZCI6IjczMDIiLCJtaW5lcl9uYW1lIjoiQ2hhaW5XaXJlIFRva2VuIEhvbGRlciBDb3VudCIsImVuZHBvaW50IjoiL2hvbGRlcnMiLCJyZXN1bHQiOnsidG9rZW4iOiIweGEwYjg2OTkxYzYyMThiMzZjMWQxOWQ0YTJlOWViMGNlMzYwNmViNDgiLCJjaGFpbiI6ImV0aGVyZXVtIiwiaG9sZGVyc19jb3VudCI6OTU2NDE1NywidG9rZW5fc3ltYm9sIjoiVVNEQyJ9LCJyZXN1bHRfc2hhcGUiOiJpbnRlbnQiLCJmb3JtYXRfdmVyc2lvbiI6MSwiZmllbGRfc3RhdHVzIjp7InRva2VuIjoib2siLCJjaGFpbiI6Im9rIiwiaG9sZGVyc19jb3VudCI6Im9rIiwidG9rZW5fc3ltYm9sIjoib2sifSwiaW5wdXQiOnsidG9rZW4iOiIweEEwYjg2OTkxYzYyMThiMzZjMWQxOUQ0YTJlOUViMGNFMzYwNmVCNDgiLCJjaGFpbiI6ImV0aGVyZXVtIn0sImlucHV0X3NjaGVtYV92ZXJzaW9uIjoxLCJjb3N0X3VzZCI6MC4wMSwiZHVyYXRpb25fbXMiOjkyNCwidGltZXN0YW1wIjoiMjAyNi0xMS0wNlQxMTo0MzowNC41NjMyMDU5NDNaIiwicmVhc29uaW5nIjoiSW50ZW50OiBtaW5lciBjaGFpbndpcmUtaG9sZGVyLWNvdW50IGdpdmVuIGJ5IHRoZSBjYWxsZXJcbk1pbmVyOiBUaGUgdXNlciBpcyBhc2tpbmcgZm9yIHRoZSB0b2tlbiBob2xkZXIgY291bnQgZm9yIGEgc3BlY2lmaWMgdG9rZW4gb24gYSBzcGVjaWZpYyBjaGFpbi4gVGhlIENoYWluV2lyZSBUb2tlbiBIb2xkZXIgQ291bnQgbWluZXIgaGFzIGEgR0VUIGVuZHBvaW50IGF0IC9ob2xkZXJzIHRoYXQgYWNjZXB0cyAnY2hhaW4nIGFuZCAndG9rZW4nIGFzIHF1ZXJ5IHBhcmFtZXRlcnMsIGFuZCBpdHMgZGVzY3JpcHRpb24gc3RhdGVzIGl0IGlzIHVzZWQgZm9yIFRPS0VOX0hPTERFUl9DT1VOVF9HRU5FUkFMLiBUaGUgcHJvdmlkZWQgcGFyYW1ldGVycyBtYXRjaCB0aGVzZSByZXF1aXJlbWVudHMuIiwiaW50ZW50IjoiVE9LRU5fSE9MREVSX0NPVU5UX0dFTkVSQUwiLCJzaWduYWxfaGFzaCI6IjB4OGZjM2UzYzNhZjdhZDhlZTVjMjllM2UwYjk0MzdjOGM0Njg4ZDg4NGIxMzhlMzAwNmIyNzU5MTEzNTJiODZkNCIsIndhcm5pbmdzIjpbInBhcmFtZXRlciBcImNoYWluXCIgbGVuZ3RoIDAgdmlvbGF0ZXMgdGhlIG1pbmVyJ3MgZGVjbGFyZWQgbGltaXQgKGx0ZSA0MCk6IGNoYWluIG11c3QgYmUgb25lIG9mIGV0aGVyZXVtLCBiYXNlLCBhcmJpdHJ1bSwgcG9seWdvbiAodGhlIGNoYWlucyB3aXRoIGEgcHVibGljIEJsb2Nrc2NvdXQgaW5zdGFuY2UpLiBUb2tlbiBpcyBhIDB4IGNvbnRyYWN0IGFkZHJlc3Mgb3IgYSBrbm93biBzeW1ib2wuIl19"
+    },
+    {
+      "check": "Liquidity",
+      "method": "POST",
+      "url": "https://devnode.telegraphprotocol.com/engine/v1/ask/7373",
+      "request_body": {
+        "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+        "params": {
+          "pool": "0x2b21c65d9a7dc6926ee330a1c6e5a8037fd81774f3dc066536f800128e39f634",
+          "chain": "ethereum"
+        }
+      },
+      "requested_at": "2026-11-06T11:42:55.598Z",
+      "responded_at": "2026-11-06T11:43:06.279Z",
+      "duration_ms": 10681,
+      "exchanges": [
+        {
+          "status": 402,
+          "headers": {
+            "cf-cache-status": "DYNAMIC",
+            "connection": "keep-alive",
+            "content-length": "917",
+            "content-type": "application/json",
+            "date": "Fri, 06 Nov 2026 11:42:56 GMT",
+            "payment-required": "eyJhY2NlcHRzIjpbeyJhbW91bnQiOiIxMDAwMCIsImFzc2V0IjoiMHhjYzE5NGUxYTg0M0I2NTg1MjZEMEQ1QzQzMWY2NzAwMjg1ODJBZTE3IiwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifSwibWF4VGltZW91dFNlY29uZHMiOjYwLCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRFQjAxMkI1RTk5OEJCNTdCNmJFNkM5Q2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJleGFjdCJ9LHsiYW1vdW50IjoiMTAwMDAiLCJleHRyYSI6eyJkZXNjcmlwdGlvbiI6IkRlZHVjdCBmcm9tIHRoZSBjYWxsZXIncyBUZWxlZ3JhcGggZXNjcm93IGJhbGFuY2UgYXQgdGhlIG5leHQgZXBvY2ggY2xvc2UuIEZ1bmQgaXQgb25jZSB3aXRoIEVzY3Jvd0ZhY2V0LmRlcG9zaXRVU0RDKGFtb3VudCk7IG5vIHBlci1yZXF1ZXN0IHNldHRsZW1lbnQuIiwibWVzc2FnZSI6IlRlbGVncmFwaCBFc2Nyb3cgUGF5bWVudFxuXG5XYWxsZXQ6IHtmcm9tfVxuUGF5IFRvOiAweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWJcbk5ldHdvcms6IGVpcDE1NToxMTE1NTExMVxuQW1vdW50OiAxMDAwMCB1VVNEQ1xuUmVzb3VyY2U6IC92MS9hc2svNzM3M1xuTm9uY2U6IHtub25jZX1cblZhbGlkIEFmdGVyOiB7dmFsaWRBZnRlcn1cblZhbGlkIEJlZm9yZToge3ZhbGlkQmVmb3JlfSIsInJlc291cmNlIjoiL3YxL2Fzay83MzczIiwic2lnbldpdGgiOiJwZXJzb25hbF9zaWduIChFSVAtMTkxKSJ9LCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJlc2Nyb3cifV0sImVycm9yIjoiUGF5bWVudCByZXF1aXJlZCIsInJlc291cmNlIjp7ImRlc2NyaXB0aW9uIjoiUGF5bWVudCByZXF1aXJlZCBmb3IgZGlyZWN0IHN1Ym5ldCBpbmZlcmVuY2UuIiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIiwidXJsIjoiaHR0cHM6Ly9kZXZub2RlLnRlbGVncmFwaHByb3RvY29sLmNvbS9lbmdpbmUvdjEvYXNrLzczNzMifSwieDQwMlZlcnNpb24iOjJ9",
+            "vary": "Origin, Origin"
+          }
+        },
+        {
+          "status": 200,
+          "headers": {
+            "cf-cache-status": "DYNAMIC",
+            "connection": "keep-alive",
+            "content-encoding": "br",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 06 Nov 2026 11:43:06 GMT",
+            "payment-response": "eyJzdWNjZXNzIjp0cnVlLCJwYXllciI6IjB4MjAwOTFGRUQwMUYxYUVhM0U4NDBkNjk4NENGYjExMDc1NkI1QWIxYyIsInRyYW5zYWN0aW9uIjoiMHg3ZjY2NmI2NDFmNzVlZDQ3ZTJmM2YzYzNhMTQ3ODBiOThhZmE0NTViNzdjNjA5YzBmNzZmNWUzMTlmMTQyMzFlIiwibmV0d29yayI6ImVpcDE1NToxMTE1NTExMSJ9",
+            "transfer-encoding": "chunked",
+            "vary": "Origin, Origin",
+            "x-telegraph-receipt": "eyJyZWNlaXB0X2hhc2giOiIweDA2YTlmOTM2ZTBhM2E3MGYwYTc3NzM4OWI4MTVkYzQ0ZThkYjlmMTU5YTA2YmUxZTQwZDI3Y2UzYTQ1MjNiMTAiLCJyYWlsIjoieDQwMiIsInBheWVyIjoiMHgyMDA5MUZFRDAxRjFhRWEzRTg0MGQ2OTg0Q0ZiMTEwNzU2QjVBYjFjIiwibWluZXIiOiI0NDM0IiwiaW50ZW50IjoiTElRVUlESVRZX0RFUFRIX1ZFUklGWV9HRU5FUkFMIiwiYW1vdW50X3V1c2RjIjoiMTAwMDAiLCJlcG9jaF9pZCI6MjAyNiwic2V0dGxlbWVudCI6Im9uY2hhaW4iLCJjaGFpbiI6ImVpcDE1NToxMTE1NTExMSIsInR4X2hhc2giOiIweDdmNjY2YjY0MWY3NWVkNDdlMmYzZjNjM2ExNDc4MGI5OGFmYTQ1NWI3N2M2MDljMGY3NmY1ZTMxOWYxNDIzMWUiLCJ0aW1lc3RhbXAiOjE3OTM5NjUzODZ9"
+          }
+        }
+      ],
+      "challenge": {
+        "amountAtomic": "10000",
+        "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+        "network": "eip155:11155111",
+        "payTo": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+        "scheme": "exact",
+        "maxTimeoutSeconds": 60
+      },
+      "settlement": {
+        "success": true,
+        "transaction": "0x7f666b641f75ed47e2f3f3c3a14780b98afa455b77c609c0f76f5e319f14231e",
+        "network": "eip155:11155111",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "errorReason": null
+      },
+      "receipt": {
+        "receipt_hash": "0x06a9f936e0a3a70f0a777389b815dc44e8db9f159a06be1e40d27ce3a4523b10",
+        "rail": "x402",
+        "payer": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+        "miner": "4434",
+        "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+        "amount_uusdc": "10000",
+        "epoch_id": 2026,
+        "settlement": "onchain",
+        "chain": "eip155:11155111",
+        "tx_hash": "0x7f666b641f75ed47e2f3f3c3a14780b98afa455b77c609c0f76f5e319f14231e",
+        "timestamp": 1793965386
+      },
+      "signal": {
+        "signal_hash": "0x99a5a34f2b35d6d5f2b74bd510d5acf9a02b9a1f0458f01490f67ec2b5c2d1c4",
+        "kind": "direct_result",
+        "signal": {
+          "id": "15ffc5e5-5208-4d9f-8829-c63e5028bc4d",
+          "signal_hash": "0x99a5a34f2b35d6d5f2b74bd510d5acf9a02b9a1f0458f01490f67ec2b5c2d1c4",
+          "kind": "direct_result",
+          "wallet_address": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+          "miner_slug": "verifywire-liquidity-depth",
+          "subnet_id": "7373",
+          "intent_id": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+          "tx_hash": "0x7f666b641f75ed47e2f3f3c3a14780b98afa455b77c609c0f76f5e319f14231e",
+          "result_id": "4d737f11-a054-4f2f-8243-3be9401e2e1b",
+          "created_at": "2026-11-06T11:43:04.785865Z"
+        },
+        "payload": {
+          "intent_id": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+          "miner_slug": "verifywire-liquidity-depth",
+          "subnet_id": "7373",
+          "wallet_address": "0x20091FED01F1aEa3E840d6984CFb110756B5Ab1c",
+          "request": "[intent] LIQUIDITY_DEPTH_VERIFY_GENERAL → {\"chain\":\"ethereum\",\"pool\":\"0x2b21c65d9a7dc6926ee330a1c6e5a8037fd81774f3dc066536f800128e39f634\"}",
+          "response": {
+            "as_of": "2026-11-06T11:43:04.629Z",
+            "attribution": "Powered by CoinGecko / GeckoTerminal (https://www.geckoterminal.com); independent analytical comparison: DEX Screener (https://dexscreener.com). No affiliation or endorsement.",
+            "cache_age_seconds": 0.145,
+            "cache_status": "source_read",
+            "chain": "ethereum",
+            "confidence": 0.7,
+            "cross_check": {
+              "difference_percent": null,
+              "status": "unavailable",
+              "tolerance_percent": 3
+            },
+            "dex": "uniswap",
+            "edge_cache": {
+              "available": true,
+              "read_error": null,
+              "write_error": null
+            },
+            "failures": [
+              {
+                "error": "Public source HTTP 429.",
+                "provider": "GeckoTerminal"
+              }
+            ],
+            "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+            "liquidity_usd": 7681998.19,
+            "market_type": "DEX pool",
+            "metric": "total pool reserve value",
+            "observations": [
+              {
+                "field": "pairs[matching chainId and pairAddress].liquidity.usd",
+                "observed_at": "2026-11-06T11:43:04.629Z",
+                "provider": "DEX Screener",
+                "raw_value": "7681998.19",
+                "url": "https://api.dexscreener.com/latest/dex/pairs/ethereum/0x2b21c65d9a7dc6926ee330a1c6e5a8037fd81774f3dc066536f800128e39f634",
+                "value": 7681998.19
+              }
+            ],
+            "pool_address": "0x2b21c65d9a7dc6926ee330a1c6e5a8037fd81774f3dc066536f800128e39f634",
+            "pool_name": "USDC / USDT",
+            "reason": "USDC / USDT on ethereum, pool 0x2b21c65d9a7dc6926ee330a1c6e5a8037fd81774f3dc066536f800128e39f634, has total reserve liquidity of $7,681,998.19 USD per DEX Screener, fetched 2026-11-06T11:43:04.629Z. Only one source supplied a usable value; independent confirmation is unavailable. This is total pool reserve value, not executable trade depth or slippage.",
+            "requested_pool": "0x2b21c65d9a7dc6926ee330a1c6e5a8037fd81774f3dc066536f800128e39f634",
+            "resolution": "Exact requested pool address and network",
+            "resolution_source": null,
+            "shared_storage": {
+              "available": true,
+              "persisted": true,
+              "read_error": null,
+              "write_error": null
+            },
+            "source": "DEX Screener",
+            "source_data_as_of": null,
+            "source_observed_at": "2026-11-06T11:43:04.629Z",
+            "summary": "USDC / USDT on ethereum, pool 0x2b21c65d9a7dc6926ee330a1c6e5a8037fd81774f3dc066536f800128e39f634, has total reserve liquidity of $7,681,998.19 USD per DEX Screener, fetched 2026-11-06T11:43:04.629Z. Only one source supplied a usable value; independent confirmation is unavailable. This is total pool reserve value, not executable trade depth or slippage.",
+            "unit": "USD",
+            "verdict": "single_source",
+            "verified": false
+          },
+          "timestamp": "2026-11-06T11:43:04.783311438Z"
+        },
+        "result": {
+          "id": "4d737f11-a054-4f2f-8243-3be9401e2e1b",
+          "type": "direct",
+          "source": "user",
+          "status": "success",
+          "created_at": "2026-11-06T11:43:04.783609Z",
+          "signal_hash": "0x99a5a34f2b35d6d5f2b74bd510d5acf9a02b9a1f0458f01490f67ec2b5c2d1c4",
+          "routing_mode": "auto",
+          "question": {
+            "hash": "aa324bca1adc052eab3580b905de86373b50cde542ebd5467b0655da6028f150",
+            "text": "[intent] LIQUIDITY_DEPTH_VERIFY_GENERAL → {\"chain\":\"ethereum\",\"pool\":\"0x2b21c65d9a7dc6926ee330a1c6e5a8037fd81774f3dc066536f800128e39f634\"}",
+            "category": "",
+            "interest_score": 0,
+            "affected_pct": 0,
+            "audience_pct": 0,
+            "source_url": ""
+          },
+          "routing": {
+            "subnet_id": "7373",
+            "subnet_name": "VerifyWire Liquidity Depth",
+            "miner_slug": "verifywire-liquidity-depth",
+            "reasoning": "Intent: miner verifywire-liquidity-depth given by the caller\nMiner: The user provided a specific pool address and chain for which to verify liquidity depth. The '/depth' endpoint is described as serving this intent and accepts 'pool' and 'chain' as query parameters, which are directly mapped to the 'body' for this GET request.",
+            "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL"
+          },
+          "execution": {
+            "result": {
+              "as_of": "2026-11-06T11:43:04.629Z",
+              "attribution": "Powered by CoinGecko / GeckoTerminal (https://www.geckoterminal.com); independent analytical comparison: DEX Screener (https://dexscreener.com). No affiliation or endorsement.",
+              "cache_age_seconds": 0.145,
+              "cache_status": "source_read",
+              "chain": "ethereum",
+              "confidence": 0.7,
+              "cross_check": {
+                "difference_percent": null,
+                "status": "unavailable",
+                "tolerance_percent": 3
+              },
+              "dex": "uniswap",
+              "edge_cache": {
+                "available": true,
+                "read_error": null,
+                "write_error": null
+              },
+              "failures": [
+                {
+                  "error": "Public source HTTP 429.",
+                  "provider": "GeckoTerminal"
+                }
+              ],
+              "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+              "liquidity_usd": 7681998.19,
+              "market_type": "DEX pool",
+              "metric": "total pool reserve value",
+              "observations": [
+                {
+                  "field": "pairs[matching chainId and pairAddress].liquidity.usd",
+                  "observed_at": "2026-11-06T11:43:04.629Z",
+                  "provider": "DEX Screener",
+                  "raw_value": "7681998.19",
+                  "url": "https://api.dexscreener.com/latest/dex/pairs/ethereum/0x2b21c65d9a7dc6926ee330a1c6e5a8037fd81774f3dc066536f800128e39f634",
+                  "value": 7681998.19
+                }
+              ],
+              "pool_address": "0x2b21c65d9a7dc6926ee330a1c6e5a8037fd81774f3dc066536f800128e39f634",
+              "pool_name": "USDC / USDT",
+              "reason": "USDC / USDT on ethereum, pool 0x2b21c65d9a7dc6926ee330a1c6e5a8037fd81774f3dc066536f800128e39f634, has total reserve liquidity of $7,681,998.19 USD per DEX Screener, fetched 2026-11-06T11:43:04.629Z. Only one source supplied a usable value; independent confirmation is unavailable. This is total pool reserve value, not executable trade depth or slippage.",
+              "requested_pool": "0x2b21c65d9a7dc6926ee330a1c6e5a8037fd81774f3dc066536f800128e39f634",
+              "resolution": "Exact requested pool address and network",
+              "resolution_source": null,
+              "shared_storage": {
+                "available": true,
+                "persisted": true,
+                "read_error": null,
+                "write_error": null
+              },
+              "source": "DEX Screener",
+              "source_data_as_of": null,
+              "source_observed_at": "2026-11-06T11:43:04.629Z",
+              "summary": "USDC / USDT on ethereum, pool 0x2b21c65d9a7dc6926ee330a1c6e5a8037fd81774f3dc066536f800128e39f634, has total reserve liquidity of $7,681,998.19 USD per DEX Screener, fetched 2026-11-06T11:43:04.629Z. Only one source supplied a usable value; independent confirmation is unavailable. This is total pool reserve value, not executable trade depth or slippage.",
+              "unit": "USD",
+              "verdict": "single_source",
+              "verified": false
+            },
+            "cost_usd": 0.01,
+            "duration_ms": 1153,
+            "timestamp": "2026-11-06T11:43:04.783311438Z"
+          }
+        },
+        "verification": {
+          "algorithm": "keccak256",
+          "commitment": "payload",
+          "verified": true
+        }
+      },
+      "body_base64": "eyJtaW5lcl9pZCI6IjczNzMiLCJtaW5lcl9uYW1lIjoiVmVyaWZ5V2lyZSBMaXF1aWRpdHkgRGVwdGgiLCJlbmRwb2ludCI6Ii9kZXB0aCIsInJlc3VsdCI6eyJsaXF1aWRpdHlfdXNkIjo3NjgxOTk4LjE5fSwicmVzdWx0X3NoYXBlIjoiaW50ZW50IiwiZm9ybWF0X3ZlcnNpb24iOjEsImZpZWxkX3N0YXR1cyI6eyJsaXF1aWRpdHlfdXNkIjoib2sifSwiaW5wdXQiOnsicG9vbCI6IjB4MmIyMWM2NWQ5YTdkYzY5MjZlZTMzMGExYzZlNWE4MDM3ZmQ4MTc3NGYzZGMwNjY1MzZmODAwMTI4ZTM5ZjYzNCIsImNoYWluIjoiZXRoZXJldW0ifSwiaW5wdXRfc2NoZW1hX3ZlcnNpb24iOjEsImNvc3RfdXNkIjowLjAxLCJkdXJhdGlvbl9tcyI6MTE1MywidGltZXN0YW1wIjoiMjAyNi0xMS0wNlQxMTo0MzowNC43ODMzMTE0MzhaIiwicmVhc29uaW5nIjoiSW50ZW50OiBtaW5lciB2ZXJpZnl3aXJlLWxpcXVpZGl0eS1kZXB0aCBnaXZlbiBieSB0aGUgY2FsbGVyXG5NaW5lcjogVGhlIHVzZXIgcHJvdmlkZWQgYSBzcGVjaWZpYyBwb29sIGFkZHJlc3MgYW5kIGNoYWluIGZvciB3aGljaCB0byB2ZXJpZnkgbGlxdWlkaXR5IGRlcHRoLiBUaGUgJy9kZXB0aCcgZW5kcG9pbnQgaXMgZGVzY3JpYmVkIGFzIHNlcnZpbmcgdGhpcyBpbnRlbnQgYW5kIGFjY2VwdHMgJ3Bvb2wnIGFuZCAnY2hhaW4nIGFzIHF1ZXJ5IHBhcmFtZXRlcnMsIHdoaWNoIGFyZSBkaXJlY3RseSBtYXBwZWQgdG8gdGhlICdib2R5JyBmb3IgdGhpcyBHRVQgcmVxdWVzdC4iLCJpbnRlbnQiOiJMSVFVSURJVFlfREVQVEhfVkVSSUZZX0dFTkVSQUwiLCJzaWduYWxfaGFzaCI6IjB4OTlhNWEzNGYyYjM1ZDZkNWYyYjc0YmQ1MTBkNWFjZjlhMDJiOWExZjA0NThmMDE0OTBmNjdlYzJiNWMyZDFjNCJ9"
+    }
+  ]
+}

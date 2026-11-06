@@ -1,0 +1,259 @@
+[
+  {
+    "check": "Contract audit",
+    "method": "POST",
+    "url": "https://devnode.telegraphprotocol.com/engine/v1/ask/9002",
+    "request_body": {
+      "method": "GET",
+      "endpoint": "/smart-contract-audit",
+      "payload": {
+        "contract": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+        "chain": "eth"
+      }
+    },
+    "requested_at": "2026-11-06T11:50:56.386Z",
+    "responded_at": "2026-11-06T11:51:04.959Z",
+    "duration_ms": 8573,
+    "exchanges": [
+      {
+        "status": 402,
+        "headers": {
+          "cf-cache-status": "DYNAMIC",
+          "connection": "keep-alive",
+          "content-length": "917",
+          "content-type": "application/json",
+          "date": "Fri, 06 Nov 2026 11:50:56 GMT",
+          "payment-required": "eyJhY2NlcHRzIjpbeyJhbW91bnQiOiIxMDAwMCIsImFzc2V0IjoiMHhjYzE5NGUxYTg0M0I2NTg1MjZEMEQ1QzQzMWY2NzAwMjg1ODJBZTE3IiwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifSwibWF4VGltZW91dFNlY29uZHMiOjYwLCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRFQjAxMkI1RTk5OEJCNTdCNmJFNkM5Q2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJleGFjdCJ9LHsiYW1vdW50IjoiMTAwMDAiLCJleHRyYSI6eyJkZXNjcmlwdGlvbiI6IkRlZHVjdCBmcm9tIHRoZSBjYWxsZXIncyBUZWxlZ3JhcGggZXNjcm93IGJhbGFuY2UgYXQgdGhlIG5leHQgZXBvY2ggY2xvc2UuIEZ1bmQgaXQgb25jZSB3aXRoIEVzY3Jvd0ZhY2V0LmRlcG9zaXRVU0RDKGFtb3VudCk7IG5vIHBlci1yZXF1ZXN0IHNldHRsZW1lbnQuIiwibWVzc2FnZSI6IlRlbGVncmFwaCBFc2Nyb3cgUGF5bWVudFxuXG5XYWxsZXQ6IHtmcm9tfVxuUGF5IFRvOiAweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWJcbk5ldHdvcms6IGVpcDE1NToxMTE1NTExMVxuQW1vdW50OiAxMDAwMCB1VVNEQ1xuUmVzb3VyY2U6IC92MS9hc2svOTAwMlxuTm9uY2U6IHtub25jZX1cblZhbGlkIEFmdGVyOiB7dmFsaWRBZnRlcn1cblZhbGlkIEJlZm9yZToge3ZhbGlkQmVmb3JlfSIsInJlc291cmNlIjoiL3YxL2Fzay85MDAyIiwic2lnbldpdGgiOiJwZXJzb25hbF9zaWduIChFSVAtMTkxKSJ9LCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJlc2Nyb3cifV0sImVycm9yIjoiUGF5bWVudCByZXF1aXJlZCIsInJlc291cmNlIjp7ImRlc2NyaXB0aW9uIjoiUGF5bWVudCByZXF1aXJlZCBmb3IgZGlyZWN0IHN1Ym5ldCBpbmZlcmVuY2UuIiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIiwidXJsIjoiaHR0cHM6Ly9kZXZub2RlLnRlbGVncmFwaHByb3RvY29sLmNvbS9lbmdpbmUvdjEvYXNrLzkwMDIifSwieDQwMlZlcnNpb24iOjJ9",
+          "vary": "Origin, Origin"
+        }
+      },
+      {
+        "status": 200,
+        "headers": {
+          "cf-cache-status": "DYNAMIC",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Fri, 06 Nov 2026 11:51:05 GMT",
+          "payment-response": "eyJzdWNjZXNzIjp0cnVlLCJwYXllciI6IjB4MjAwOTFGRUQwMUYxYUVhM0U4NDBkNjk4NENGYjExMDc1NkI1QWIxYyIsInRyYW5zYWN0aW9uIjoiMHhkMzVhNmIxODZiMDdlMDY0YjQzNzYyNDkyNmYzZjA2OGM4MzNjNzc4MjZkNzk0OTgzY2Q0NTk1Mzk2M2Y2NDMyIiwibmV0d29yayI6ImVpcDE1NToxMTE1NTExMSJ9",
+          "transfer-encoding": "chunked",
+          "vary": "Origin, Origin",
+          "x-telegraph-receipt": "eyJyZWNlaXB0X2hhc2giOiIweDgyMzZlN2Y0NmU5ZWY3YTZjMWM4NDY4MGFiNTZjMDYxMGY5ODU2ZjA2ZmE3OGY0NmZjZWQyNWVlNzdjYzU4NjAiLCJyYWlsIjoieDQwMiIsInBheWVyIjoiMHgyMDA5MUZFRDAxRjFhRWEzRTg0MGQ2OTg0Q0ZiMTEwNzU2QjVBYjFjIiwibWluZXIiOiI1MDc4IiwiaW50ZW50IjoiU01BUlRfQ09OVFJBQ1RfQVVESVRfR0VORVJBTCIsImFtb3VudF91dXNkYyI6IjEwMDAwIiwiZXBvY2hfaWQiOjIwMjYsInNldHRsZW1lbnQiOiJvbmNoYWluIiwiY2hhaW4iOiJlaXAxNTU6MTExNTUxMTEiLCJ0eF9oYXNoIjoiMHhkMzVhNmIxODZiMDdlMDY0YjQzNzYyNDkyNmYzZjA2OGM4MzNjNzc4MjZkNzk0OTgzY2Q0NTk1Mzk2M2Y2NDMyIiwidGltZXN0YW1wIjoxNzkzOTY1ODY0fQ=="
+        }
+      }
+    ]
+  },
+  {
+    "check": "Token controls",
+    "method": "POST",
+    "url": "https://devnode.telegraphprotocol.com/engine/v1/ask/200001",
+    "request_body": {
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "query": "Token security audit of the ERC-20 contract 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984 on ethereum (chain id 1): honeypot, taxes, owner privileges, proxy, mint."
+    },
+    "requested_at": "2026-11-06T11:50:56.387Z",
+    "responded_at": "2026-11-06T11:51:04.612Z",
+    "duration_ms": 8225,
+    "exchanges": [
+      {
+        "status": 402,
+        "headers": {
+          "cf-cache-status": "DYNAMIC",
+          "connection": "keep-alive",
+          "content-length": "921",
+          "content-type": "application/json",
+          "date": "Fri, 06 Nov 2026 11:50:56 GMT",
+          "payment-required": "eyJhY2NlcHRzIjpbeyJhbW91bnQiOiIxMDAwMCIsImFzc2V0IjoiMHhjYzE5NGUxYTg0M0I2NTg1MjZEMEQ1QzQzMWY2NzAwMjg1ODJBZTE3IiwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifSwibWF4VGltZW91dFNlY29uZHMiOjYwLCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRFQjAxMkI1RTk5OEJCNTdCNmJFNkM5Q2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJleGFjdCJ9LHsiYW1vdW50IjoiMTAwMDAiLCJleHRyYSI6eyJkZXNjcmlwdGlvbiI6IkRlZHVjdCBmcm9tIHRoZSBjYWxsZXIncyBUZWxlZ3JhcGggZXNjcm93IGJhbGFuY2UgYXQgdGhlIG5leHQgZXBvY2ggY2xvc2UuIEZ1bmQgaXQgb25jZSB3aXRoIEVzY3Jvd0ZhY2V0LmRlcG9zaXRVU0RDKGFtb3VudCk7IG5vIHBlci1yZXF1ZXN0IHNldHRsZW1lbnQuIiwibWVzc2FnZSI6IlRlbGVncmFwaCBFc2Nyb3cgUGF5bWVudFxuXG5XYWxsZXQ6IHtmcm9tfVxuUGF5IFRvOiAweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWJcbk5ldHdvcms6IGVpcDE1NToxMTE1NTExMVxuQW1vdW50OiAxMDAwMCB1VVNEQ1xuUmVzb3VyY2U6IC92MS9hc2svMjAwMDAxXG5Ob25jZToge25vbmNlfVxuVmFsaWQgQWZ0ZXI6IHt2YWxpZEFmdGVyfVxuVmFsaWQgQmVmb3JlOiB7dmFsaWRCZWZvcmV9IiwicmVzb3VyY2UiOiIvdjEvYXNrLzIwMDAwMSIsInNpZ25XaXRoIjoicGVyc29uYWxfc2lnbiAoRUlQLTE5MSkifSwibmV0d29yayI6ImVpcDE1NToxMTE1NTExMSIsInBheVRvIjoiMHgzNjI0ZWIwMTJiNWU5OThiYjU3YjZiZTZjOWNmYzljNGJjNWViOTliIiwic2NoZW1lIjoiZXNjcm93In1dLCJlcnJvciI6IlBheW1lbnQgcmVxdWlyZWQiLCJyZXNvdXJjZSI6eyJkZXNjcmlwdGlvbiI6IlBheW1lbnQgcmVxdWlyZWQgZm9yIGRpcmVjdCBzdWJuZXQgaW5mZXJlbmNlLiIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiIsInVybCI6Imh0dHBzOi8vZGV2bm9kZS50ZWxlZ3JhcGhwcm90b2NvbC5jb20vZW5naW5lL3YxL2Fzay8yMDAwMDEifSwieDQwMlZlcnNpb24iOjJ9",
+          "vary": "Origin, Origin"
+        }
+      },
+      {
+        "status": 200,
+        "headers": {
+          "cf-cache-status": "DYNAMIC",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Fri, 06 Nov 2026 11:51:04 GMT",
+          "payment-response": "eyJzdWNjZXNzIjp0cnVlLCJwYXllciI6IjB4MjAwOTFGRUQwMUYxYUVhM0U4NDBkNjk4NENGYjExMDc1NkI1QWIxYyIsInRyYW5zYWN0aW9uIjoiMHhlNWNlYzNkMDA1NzllNTMzMTFkMTg1ZWY3YjE1YzE2MTNhZjEwNjIyYWZiMmJmYTM2ZGNiYWQ3ODNlNGYyMzA1IiwibmV0d29yayI6ImVpcDE1NToxMTE1NTExMSJ9",
+          "transfer-encoding": "chunked",
+          "vary": "Origin, Origin",
+          "x-telegraph-receipt": "eyJyZWNlaXB0X2hhc2giOiIweDU3NTY2Y2VjZDdhOGExMTA2M2M5MWE3ZDRhNzZlZjEyMjk3YmE0N2E1YmQ5ODQ0OTdjYWVlODhhYjhhNDcwMTUiLCJyYWlsIjoieDQwMiIsInBheWVyIjoiMHgyMDA5MUZFRDAxRjFhRWEzRTg0MGQ2OTg0Q0ZiMTEwNzU2QjVBYjFjIiwibWluZXIiOiI0ODE5IiwiaW50ZW50IjoiU01BUlRfQ09OVFJBQ1RfQVVESVRfR0VORVJBTCIsImFtb3VudF91dXNkYyI6IjEwMDAwIiwiZXBvY2hfaWQiOjIwMjYsInNldHRsZW1lbnQiOiJvbmNoYWluIiwiY2hhaW4iOiJlaXAxNTU6MTExNTUxMTEiLCJ0eF9oYXNoIjoiMHhlNWNlYzNkMDA1NzllNTMzMTFkMTg1ZWY3YjE1YzE2MTNhZjEwNjIyYWZiMmJmYTM2ZGNiYWQ3ODNlNGYyMzA1IiwidGltZXN0YW1wIjoxNzkzOTY1ODY0fQ=="
+        }
+      }
+    ]
+  },
+  {
+    "check": "Sanctions screen",
+    "method": "POST",
+    "url": "https://devnode.telegraphprotocol.com/engine/v1/ask",
+    "request_body": {
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "params": {
+        "name": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984"
+      }
+    },
+    "requested_at": "2026-11-06T11:50:56.388Z",
+    "responded_at": "2026-11-06T11:51:08.367Z",
+    "duration_ms": 11979,
+    "exchanges": [
+      {
+        "status": 402,
+        "headers": {
+          "cf-cache-status": "DYNAMIC",
+          "connection": "keep-alive",
+          "content-length": "907",
+          "content-type": "application/json",
+          "date": "Fri, 06 Nov 2026 11:50:57 GMT",
+          "payment-required": "eyJhY2NlcHRzIjpbeyJhbW91bnQiOiIxMDAwMCIsImFzc2V0IjoiMHhjYzE5NGUxYTg0M0I2NTg1MjZEMEQ1QzQzMWY2NzAwMjg1ODJBZTE3IiwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifSwibWF4VGltZW91dFNlY29uZHMiOjYwLCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRFQjAxMkI1RTk5OEJCNTdCNmJFNkM5Q2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJleGFjdCJ9LHsiYW1vdW50IjoiMTAwMDAiLCJleHRyYSI6eyJkZXNjcmlwdGlvbiI6IkRlZHVjdCBmcm9tIHRoZSBjYWxsZXIncyBUZWxlZ3JhcGggZXNjcm93IGJhbGFuY2UgYXQgdGhlIG5leHQgZXBvY2ggY2xvc2UuIEZ1bmQgaXQgb25jZSB3aXRoIEVzY3Jvd0ZhY2V0LmRlcG9zaXRVU0RDKGFtb3VudCk7IG5vIHBlci1yZXF1ZXN0IHNldHRsZW1lbnQuIiwibWVzc2FnZSI6IlRlbGVncmFwaCBFc2Nyb3cgUGF5bWVudFxuXG5XYWxsZXQ6IHtmcm9tfVxuUGF5IFRvOiAweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWJcbk5ldHdvcms6IGVpcDE1NToxMTE1NTExMVxuQW1vdW50OiAxMDAwMCB1VVNEQ1xuUmVzb3VyY2U6IC92MS9hc2tcbk5vbmNlOiB7bm9uY2V9XG5WYWxpZCBBZnRlcjoge3ZhbGlkQWZ0ZXJ9XG5WYWxpZCBCZWZvcmU6IHt2YWxpZEJlZm9yZX0iLCJyZXNvdXJjZSI6Ii92MS9hc2siLCJzaWduV2l0aCI6InBlcnNvbmFsX3NpZ24gKEVJUC0xOTEpIn0sIm5ldHdvcmsiOiJlaXAxNTU6MTExNTUxMTEiLCJwYXlUbyI6IjB4MzYyNGViMDEyYjVlOTk4YmI1N2I2YmU2YzljZmM5YzRiYzVlYjk5YiIsInNjaGVtZSI6ImVzY3JvdyJ9XSwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsiZGVzY3JpcHRpb24iOiJQYXltZW50IHJlcXVpcmVkIGZvciBMTE0tcm91dGVkIGluZmVyZW5jZS4iLCJtaW1lVHlwZSI6ImFwcGxpY2F0aW9uL2pzb24iLCJ1cmwiOiJodHRwczovL2Rldm5vZGUudGVsZWdyYXBocHJvdG9jb2wuY29tL2VuZ2luZS92MS9hc2sifSwieDQwMlZlcnNpb24iOjJ9",
+          "vary": "Origin, Origin"
+        }
+      },
+      {
+        "status": 200,
+        "headers": {
+          "cf-cache-status": "DYNAMIC",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Fri, 06 Nov 2026 11:51:08 GMT",
+          "payment-response": "eyJzdWNjZXNzIjp0cnVlLCJwYXllciI6IjB4MjAwOTFGRUQwMUYxYUVhM0U4NDBkNjk4NENGYjExMDc1NkI1QWIxYyIsInRyYW5zYWN0aW9uIjoiMHgzMGU1NWNkYjhjZTUyMTNmNWI4OWI0YTZlODQ2YmIwMWZmN2MzZDg3NWRiMjU5NDAxNWRiYzAwZTYzNTZmOWUwIiwibmV0d29yayI6ImVpcDE1NToxMTE1NTExMSJ9",
+          "transfer-encoding": "chunked",
+          "vary": "Origin, Origin",
+          "x-telegraph-receipt": "eyJyZWNlaXB0X2hhc2giOiIweGFjNzBkY2Y4N2QxYWMwMzUxYTg0ZDcxMDlkMTE1MzI2NDQwOWM0NGJmMmNiYzhlMzBjYmE5YzkyOTlmNDc3YzMiLCJyYWlsIjoieDQwMiIsInBheWVyIjoiMHgyMDA5MUZFRDAxRjFhRWEzRTg0MGQ2OTg0Q0ZiMTEwNzU2QjVBYjFjIiwibWluZXIiOiI0ODYwIiwiaW50ZW50IjoiU0FOQ1RJT05TX1NDUkVFTklOR19NQVRDSF9HRU5FUkFMIiwiYW1vdW50X3V1c2RjIjoiMTAwMDAiLCJlcG9jaF9pZCI6MjAyNiwic2V0dGxlbWVudCI6Im9uY2hhaW4iLCJjaGFpbiI6ImVpcDE1NToxMTE1NTExMSIsInR4X2hhc2giOiIweDMwZTU1Y2RiOGNlNTIxM2Y1Yjg5YjRhNmU4NDZiYjAxZmY3YzNkODc1ZGIyNTk0MDE1ZGJjMDBlNjM1NmY5ZTAiLCJ0aW1lc3RhbXAiOjE3OTM5NjU4Njh9"
+        }
+      }
+    ]
+  },
+  {
+    "check": "Wash trading",
+    "method": "POST",
+    "url": "https://devnode.telegraphprotocol.com/engine/v1/ask/7378",
+    "request_body": {
+      "method": "GET",
+      "endpoint": "/washtrade",
+      "payload": {
+        "chain": "ethereum",
+        "token": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+        "blocks": 600
+      }
+    },
+    "requested_at": "2026-11-06T11:51:06.166Z",
+    "responded_at": "2026-11-06T11:51:15.706Z",
+    "duration_ms": 9540,
+    "exchanges": [
+      {
+        "status": 402,
+        "headers": {
+          "cf-cache-status": "DYNAMIC",
+          "connection": "keep-alive",
+          "content-length": "917",
+          "content-type": "application/json",
+          "date": "Fri, 06 Nov 2026 11:51:06 GMT",
+          "payment-required": "eyJhY2NlcHRzIjpbeyJhbW91bnQiOiIxMDAwMCIsImFzc2V0IjoiMHhjYzE5NGUxYTg0M0I2NTg1MjZEMEQ1QzQzMWY2NzAwMjg1ODJBZTE3IiwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifSwibWF4VGltZW91dFNlY29uZHMiOjYwLCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRFQjAxMkI1RTk5OEJCNTdCNmJFNkM5Q2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJleGFjdCJ9LHsiYW1vdW50IjoiMTAwMDAiLCJleHRyYSI6eyJkZXNjcmlwdGlvbiI6IkRlZHVjdCBmcm9tIHRoZSBjYWxsZXIncyBUZWxlZ3JhcGggZXNjcm93IGJhbGFuY2UgYXQgdGhlIG5leHQgZXBvY2ggY2xvc2UuIEZ1bmQgaXQgb25jZSB3aXRoIEVzY3Jvd0ZhY2V0LmRlcG9zaXRVU0RDKGFtb3VudCk7IG5vIHBlci1yZXF1ZXN0IHNldHRsZW1lbnQuIiwibWVzc2FnZSI6IlRlbGVncmFwaCBFc2Nyb3cgUGF5bWVudFxuXG5XYWxsZXQ6IHtmcm9tfVxuUGF5IFRvOiAweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWJcbk5ldHdvcms6IGVpcDE1NToxMTE1NTExMVxuQW1vdW50OiAxMDAwMCB1VVNEQ1xuUmVzb3VyY2U6IC92MS9hc2svNzM3OFxuTm9uY2U6IHtub25jZX1cblZhbGlkIEFmdGVyOiB7dmFsaWRBZnRlcn1cblZhbGlkIEJlZm9yZToge3ZhbGlkQmVmb3JlfSIsInJlc291cmNlIjoiL3YxL2Fzay83Mzc4Iiwic2lnbldpdGgiOiJwZXJzb25hbF9zaWduIChFSVAtMTkxKSJ9LCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJlc2Nyb3cifV0sImVycm9yIjoiUGF5bWVudCByZXF1aXJlZCIsInJlc291cmNlIjp7ImRlc2NyaXB0aW9uIjoiUGF5bWVudCByZXF1aXJlZCBmb3IgZGlyZWN0IHN1Ym5ldCBpbmZlcmVuY2UuIiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIiwidXJsIjoiaHR0cHM6Ly9kZXZub2RlLnRlbGVncmFwaHByb3RvY29sLmNvbS9lbmdpbmUvdjEvYXNrLzczNzgifSwieDQwMlZlcnNpb24iOjJ9",
+          "vary": "Origin, Origin"
+        }
+      },
+      {
+        "status": 200,
+        "headers": {
+          "cf-cache-status": "DYNAMIC",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Fri, 06 Nov 2026 11:51:15 GMT",
+          "payment-response": "eyJzdWNjZXNzIjp0cnVlLCJwYXllciI6IjB4MjAwOTFGRUQwMUYxYUVhM0U4NDBkNjk4NENGYjExMDc1NkI1QWIxYyIsInRyYW5zYWN0aW9uIjoiMHhlN2U4Y2JkMjgyNmJjOWIxNmY1ZDdhZTA0MjI2MjU2NzExMWJlYWE3Zjg2ZWI3Y2ZjOTE1NDhmMWE0YmIwOTI3IiwibmV0d29yayI6ImVpcDE1NToxMTE1NTExMSJ9",
+          "transfer-encoding": "chunked",
+          "vary": "Origin, Origin",
+          "x-telegraph-receipt": "eyJyZWNlaXB0X2hhc2giOiIweDVmODU1N2ZmZGM3ODdhNDQ1MzdlNjMxNTlmN2ZkMjNkZDkyZWEyMjhhOGI2ZGViZTRkNTk0ODI0MjY4NDhjYzkiLCJyYWlsIjoieDQwMiIsInBheWVyIjoiMHgyMDA5MUZFRDAxRjFhRWEzRTg0MGQ2OTg0Q0ZiMTEwNzU2QjVBYjFjIiwibWluZXIiOiI0NDM4IiwiaW50ZW50IjoiV0FTSF9UUkFESU5HX0RFVEVDVElPTl9HRU5FUkFMIiwiYW1vdW50X3V1c2RjIjoiMTAwMDAiLCJlcG9jaF9pZCI6MjAyNiwic2V0dGxlbWVudCI6Im9uY2hhaW4iLCJjaGFpbiI6ImVpcDE1NToxMTE1NTExMSIsInR4X2hhc2giOiIweGU3ZThjYmQyODI2YmM5YjE2ZjVkN2FlMDQyMjYyNTY3MTExYmVhYTdmODZlYjdjZmM5MTU0OGYxYTRiYjA5MjciLCJ0aW1lc3RhbXAiOjE3OTM5NjU4NzV9"
+        }
+      }
+    ]
+  },
+  {
+    "check": "Holder count",
+    "method": "POST",
+    "url": "https://devnode.telegraphprotocol.com/engine/v1/ask/7302",
+    "request_body": {
+      "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+      "params": {
+        "token": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+        "chain": "ethereum"
+      }
+    },
+    "requested_at": "2026-11-06T11:51:06.255Z",
+    "responded_at": "2026-11-06T11:51:16.321Z",
+    "duration_ms": 10066,
+    "exchanges": [
+      {
+        "status": 402,
+        "headers": {
+          "cf-cache-status": "DYNAMIC",
+          "connection": "keep-alive",
+          "content-length": "917",
+          "content-type": "application/json",
+          "date": "Fri, 06 Nov 2026 11:51:06 GMT",
+          "payment-required": "eyJhY2NlcHRzIjpbeyJhbW91bnQiOiIxMDAwMCIsImFzc2V0IjoiMHhjYzE5NGUxYTg0M0I2NTg1MjZEMEQ1QzQzMWY2NzAwMjg1ODJBZTE3IiwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifSwibWF4VGltZW91dFNlY29uZHMiOjYwLCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRFQjAxMkI1RTk5OEJCNTdCNmJFNkM5Q2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJleGFjdCJ9LHsiYW1vdW50IjoiMTAwMDAiLCJleHRyYSI6eyJkZXNjcmlwdGlvbiI6IkRlZHVjdCBmcm9tIHRoZSBjYWxsZXIncyBUZWxlZ3JhcGggZXNjcm93IGJhbGFuY2UgYXQgdGhlIG5leHQgZXBvY2ggY2xvc2UuIEZ1bmQgaXQgb25jZSB3aXRoIEVzY3Jvd0ZhY2V0LmRlcG9zaXRVU0RDKGFtb3VudCk7IG5vIHBlci1yZXF1ZXN0IHNldHRsZW1lbnQuIiwibWVzc2FnZSI6IlRlbGVncmFwaCBFc2Nyb3cgUGF5bWVudFxuXG5XYWxsZXQ6IHtmcm9tfVxuUGF5IFRvOiAweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWJcbk5ldHdvcms6IGVpcDE1NToxMTE1NTExMVxuQW1vdW50OiAxMDAwMCB1VVNEQ1xuUmVzb3VyY2U6IC92MS9hc2svNzMwMlxuTm9uY2U6IHtub25jZX1cblZhbGlkIEFmdGVyOiB7dmFsaWRBZnRlcn1cblZhbGlkIEJlZm9yZToge3ZhbGlkQmVmb3JlfSIsInJlc291cmNlIjoiL3YxL2Fzay83MzAyIiwic2lnbldpdGgiOiJwZXJzb25hbF9zaWduIChFSVAtMTkxKSJ9LCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJlc2Nyb3cifV0sImVycm9yIjoiUGF5bWVudCByZXF1aXJlZCIsInJlc291cmNlIjp7ImRlc2NyaXB0aW9uIjoiUGF5bWVudCByZXF1aXJlZCBmb3IgZGlyZWN0IHN1Ym5ldCBpbmZlcmVuY2UuIiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIiwidXJsIjoiaHR0cHM6Ly9kZXZub2RlLnRlbGVncmFwaHByb3RvY29sLmNvbS9lbmdpbmUvdjEvYXNrLzczMDIifSwieDQwMlZlcnNpb24iOjJ9",
+          "vary": "Origin, Origin"
+        }
+      },
+      {
+        "status": 200,
+        "headers": {
+          "cf-cache-status": "DYNAMIC",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Fri, 06 Nov 2026 11:51:16 GMT",
+          "payment-response": "eyJzdWNjZXNzIjp0cnVlLCJwYXllciI6IjB4MjAwOTFGRUQwMUYxYUVhM0U4NDBkNjk4NENGYjExMDc1NkI1QWIxYyIsInRyYW5zYWN0aW9uIjoiMHhjNWM5NTNmMmM2ODBkZDBiM2U2YzE5NzYxZGNiN2RmMzdmM2VmNWY4NjMxMDI1ZmE4NmJiZTVjYzZjNTc0ZTc2IiwibmV0d29yayI6ImVpcDE1NToxMTE1NTExMSJ9",
+          "transfer-encoding": "chunked",
+          "vary": "Origin, Origin",
+          "x-telegraph-receipt": "eyJyZWNlaXB0X2hhc2giOiIweGE1ZGRlYTBjMmU3ZWYzNDMxOTg4NGFiMDllNzUwOTVmY2JjYWQ3NjlkZjIyZWVkNTJkZGM1OTY4NjBlNjBmZDEiLCJyYWlsIjoieDQwMiIsInBheWVyIjoiMHgyMDA5MUZFRDAxRjFhRWEzRTg0MGQ2OTg0Q0ZiMTEwNzU2QjVBYjFjIiwibWluZXIiOiIzNDMiLCJpbnRlbnQiOiJUT0tFTl9IT0xERVJfQ09VTlRfR0VORVJBTCIsImFtb3VudF91dXNkYyI6IjEwMDAwIiwiZXBvY2hfaWQiOjIwMjYsInNldHRsZW1lbnQiOiJvbmNoYWluIiwiY2hhaW4iOiJlaXAxNTU6MTExNTUxMTEiLCJ0eF9oYXNoIjoiMHhjNWM5NTNmMmM2ODBkZDBiM2U2YzE5NzYxZGNiN2RmMzdmM2VmNWY4NjMxMDI1ZmE4NmJiZTVjYzZjNTc0ZTc2IiwidGltZXN0YW1wIjoxNzkzOTY1ODc2fQ=="
+        }
+      }
+    ]
+  },
+  {
+    "check": "Liquidity",
+    "method": "POST",
+    "url": "https://devnode.telegraphprotocol.com/engine/v1/ask/7373",
+    "request_body": {
+      "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+      "params": {
+        "pool": "0x1d42064Fc4Beb5F8aAF85F4617AE8b3b5B8Bd801",
+        "chain": "ethereum"
+      }
+    },
+    "requested_at": "2026-11-06T11:51:09.702Z",
+    "responded_at": "2026-11-06T11:51:16.269Z",
+    "duration_ms": 6567,
+    "exchanges": [
+      {
+        "status": 402,
+        "headers": {
+          "cf-cache-status": "DYNAMIC",
+          "connection": "keep-alive",
+          "content-length": "917",
+          "content-type": "application/json",
+          "date": "Fri, 06 Nov 2026 11:51:10 GMT",
+          "payment-required": "eyJhY2NlcHRzIjpbeyJhbW91bnQiOiIxMDAwMCIsImFzc2V0IjoiMHhjYzE5NGUxYTg0M0I2NTg1MjZEMEQ1QzQzMWY2NzAwMjg1ODJBZTE3IiwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifSwibWF4VGltZW91dFNlY29uZHMiOjYwLCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRFQjAxMkI1RTk5OEJCNTdCNmJFNkM5Q2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJleGFjdCJ9LHsiYW1vdW50IjoiMTAwMDAiLCJleHRyYSI6eyJkZXNjcmlwdGlvbiI6IkRlZHVjdCBmcm9tIHRoZSBjYWxsZXIncyBUZWxlZ3JhcGggZXNjcm93IGJhbGFuY2UgYXQgdGhlIG5leHQgZXBvY2ggY2xvc2UuIEZ1bmQgaXQgb25jZSB3aXRoIEVzY3Jvd0ZhY2V0LmRlcG9zaXRVU0RDKGFtb3VudCk7IG5vIHBlci1yZXF1ZXN0IHNldHRsZW1lbnQuIiwibWVzc2FnZSI6IlRlbGVncmFwaCBFc2Nyb3cgUGF5bWVudFxuXG5XYWxsZXQ6IHtmcm9tfVxuUGF5IFRvOiAweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWJcbk5ldHdvcms6IGVpcDE1NToxMTE1NTExMVxuQW1vdW50OiAxMDAwMCB1VVNEQ1xuUmVzb3VyY2U6IC92MS9hc2svNzM3M1xuTm9uY2U6IHtub25jZX1cblZhbGlkIEFmdGVyOiB7dmFsaWRBZnRlcn1cblZhbGlkIEJlZm9yZToge3ZhbGlkQmVmb3JlfSIsInJlc291cmNlIjoiL3YxL2Fzay83MzczIiwic2lnbldpdGgiOiJwZXJzb25hbF9zaWduIChFSVAtMTkxKSJ9LCJuZXR3b3JrIjoiZWlwMTU1OjExMTU1MTExIiwicGF5VG8iOiIweDM2MjRlYjAxMmI1ZTk5OGJiNTdiNmJlNmM5Y2ZjOWM0YmM1ZWI5OWIiLCJzY2hlbWUiOiJlc2Nyb3cifV0sImVycm9yIjoiUGF5bWVudCByZXF1aXJlZCIsInJlc291cmNlIjp7ImRlc2NyaXB0aW9uIjoiUGF5bWVudCByZXF1aXJlZCBmb3IgZGlyZWN0IHN1Ym5ldCBpbmZlcmVuY2UuIiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIiwidXJsIjoiaHR0cHM6Ly9kZXZub2RlLnRlbGVncmFwaHByb3RvY29sLmNvbS9lbmdpbmUvdjEvYXNrLzczNzMifSwieDQwMlZlcnNpb24iOjJ9",
+          "vary": "Origin, Origin"
+        }
+      },
+      {
+        "status": 200,
+        "headers": {
+          "cf-cache-status": "DYNAMIC",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Fri, 06 Nov 2026 11:51:16 GMT",
+          "payment-response": "eyJzdWNjZXNzIjp0cnVlLCJwYXllciI6IjB4MjAwOTFGRUQwMUYxYUVhM0U4NDBkNjk4NENGYjExMDc1NkI1QWIxYyIsInRyYW5zYWN0aW9uIjoiMHg4ZWQ2YzEyYzg5NDViOWZkMWRmZmFkZDNjYTBjYzgyNWI0ZGE5ZDE2Yzk1NWE2ZTM1MGU4MzgxMDUwMjQyODI2IiwibmV0d29yayI6ImVpcDE1NToxMTE1NTExMSJ9",
+          "transfer-encoding": "chunked",
+          "vary": "Origin, Origin",
+          "x-telegraph-receipt": "eyJyZWNlaXB0X2hhc2giOiIweDkyMTdmODhhOTNhNTQ4NTNjNzIxNWJmMWYyODVjYmI1MWJmZTNlNTIwZDQyNWFmZTQ5ODYyYTgxYmI5MTkxY2MiLCJyYWlsIjoieDQwMiIsInBheWVyIjoiMHgyMDA5MUZFRDAxRjFhRWEzRTg0MGQ2OTg0Q0ZiMTEwNzU2QjVBYjFjIiwibWluZXIiOiI0NDM0IiwiaW50ZW50IjoiTElRVUlESVRZX0RFUFRIX1ZFUklGWV9HRU5FUkFMIiwiYW1vdW50X3V1c2RjIjoiMTAwMDAiLCJlcG9jaF9pZCI6MjAyNiwic2V0dGxlbWVudCI6Im9uY2hhaW4iLCJjaGFpbiI6ImVpcDE1NToxMTE1NTExMSIsInR4X2hhc2giOiIweDhlZDZjMTJjODk0NWI5ZmQxZGZmYWRkM2NhMGNjODI1YjRkYTlkMTZjOTU1YTZlMzUwZTgzODEwNTAyNDI4MjYiLCJ0aW1lc3RhbXAiOjE3OTM5NjU4NzZ9"
+        }
+      }
+    ]
+  }
+]
